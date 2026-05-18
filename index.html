@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Temonis - Vos témoignages clients générés automatiquement</title>
+<meta name="description" content="Temonis connecte Modjo ou Gong, détecte vos meilleurs clients et génère des témoignages clients complets - mise en page et charte graphique comprises. 100% automatisé, dès 249€/mois." />
+<meta name="author" content="Temonis" />
+<meta property="og:title" content="Temonis - Vos témoignages clients générés automatiquement" />
+<meta property="og:description" content="Le témoignage client, entièrement automatisé. Connectez Modjo ou Gong, Temonis s'occupe du reste. Dès 249€/mois." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --navy: #0F2744;
+    --navy-2: #0A1C33;
+    --navy-soft: #1C3A5E;
+    --gold: #C8A96A;
+    --gold-deep: #B5934C;
+    --gold-soft: #EFE6D2;
+    --bg: #F7F5F0;
+    --white: #FFFFFF;
+    --text: #1A1A1A;
+    --muted: #4A5568;
+    --line: #E4E0D6;
+    --line-navy: rgba(255,255,255,0.14);
+    --shadow: 0 1px 2px rgba(15,39,68,.05), 0 10px 30px rgba(15,39,68,.08);
+    --shadow-lg: 0 4px 8px rgba(15,39,68,.06), 0 28px 60px rgba(15,39,68,.16);
+    --r: 14px;
+    --maxw: 1180px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    font-size: 17px;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4, .display { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; letter-spacing: -0.02em; line-height: 1.12; color: var(--navy); }
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 28px; }
+  .eyebrow {
+    font-size: 13px; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase;
+    color: var(--gold-deep); display: inline-flex; align-items: center; gap: 9px;
+  }
+  .eyebrow::before { content: ""; width: 24px; height: 2px; background: var(--gold); display: inline-block; }
+  .on-navy .eyebrow { color: var(--gold); }
+
+  /* ---------- Buttons ---------- */
+  .btn {
+    display: inline-flex; align-items: center; gap: 9px; cursor: pointer;
+    font-family: 'Inter', sans-serif; font-size: 15.5px; font-weight: 600;
+    padding: 14px 26px; border-radius: 10px; border: 1.5px solid transparent;
+    transition: transform .18s ease, background .18s ease, box-shadow .18s ease, color .18s ease;
+    white-space: nowrap;
+  }
+  .btn-primary { background: var(--gold); color: var(--navy); box-shadow: 0 6px 18px rgba(200,169,106,.34); }
+  .btn-primary:hover { background: var(--gold-deep); transform: translateY(-2px); box-shadow: 0 10px 26px rgba(200,169,106,.42); }
+  .btn-navy { background: var(--navy); color: #fff; }
+  .btn-navy:hover { background: var(--navy-2); transform: translateY(-2px); box-shadow: 0 10px 26px rgba(15,39,68,.3); }
+  .btn-ghost-light { background: transparent; color: #fff; border-color: rgba(255,255,255,.4); }
+  .btn-ghost-light:hover { background: #fff; color: var(--navy); border-color: #fff; transform: translateY(-2px); }
+  .btn-ghost-navy { background: transparent; color: var(--navy); border-color: var(--line); }
+  .btn-ghost-navy:hover { background: var(--navy); color: #fff; border-color: var(--navy); transform: translateY(-2px); }
+  .btn-arrow { transition: transform .18s ease; }
+  .btn:hover .btn-arrow { transform: translateX(3px); }
+
+  /* ---------- Nav ---------- */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    transition: background .3s ease, box-shadow .3s ease;
+    border-bottom: 1px solid transparent;
+  }
+  nav.scrolled {
+    background: rgba(15,39,68,0.96); backdrop-filter: blur(12px);
+    box-shadow: 0 4px 24px rgba(15,39,68,.22);
+  }
+  .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 78px; }
+  .logo { display: flex; align-items: center; gap: 11px; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 23px; font-weight: 800; color: #fff; letter-spacing: -0.02em; }
+  .logo-mark { width: 36px; height: 36px; flex-shrink: 0; transition: transform .25s cubic-bezier(.2,.8,.2,1); }
+  .logo:hover .logo-mark { transform: rotate(-6deg) scale(1.06); }
+  .logo-mark svg { width: 100%; height: 100%; display: block; }
+  .nav-links { display: flex; align-items: center; gap: 32px; }
+  .nav-links a.navlink { font-size: 15px; font-weight: 500; color: rgba(255,255,255,.82); transition: color .15s ease; position: relative; }
+  .nav-links a.navlink::after {
+    content: ""; position: absolute; left: 0; bottom: -5px; height: 2px; width: 0;
+    background: var(--gold); transition: width .25s ease;
+  }
+  .nav-links a.navlink:hover { color: var(--gold); }
+  .nav-links a.navlink:hover::after, .nav-links a.navlink.active::after { width: 100%; }
+  .nav-links a.navlink.active { color: #fff; }
+  /* scroll progress bar */
+  .scroll-bar { position: fixed; top: 0; left: 0; height: 3px; width: 0; background: var(--gold); z-index: 200; transition: width .1s linear; }
+  .nav-cta { display: flex; align-items: center; gap: 12px; }
+  .burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; }
+  .burger span { width: 22px; height: 2px; background: #fff; border-radius: 2px; }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    background: var(--navy); color: #fff; padding: 158px 0 110px; position: relative; overflow: hidden;
+  }
+  .hero::before {
+    content: ""; position: absolute; width: 620px; height: 620px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(200,169,106,.16), transparent 68%);
+    top: -200px; right: -160px;
+  }
+  .hero::after {
+    content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .5;
+    background-image: radial-gradient(rgba(255,255,255,.045) 1px, transparent 1px);
+    background-size: 26px 26px;
+  }
+  .hero-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 60px; align-items: center; position: relative; }
+  .hero h1 { font-size: clamp(42px, 5.4vw, 66px); color: #fff; margin: 22px 0 20px; }
+  .hero h1 em { font-style: normal; color: var(--gold); }
+  .hero-sub { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 19px; font-style: italic; font-weight: 500; color: var(--gold); margin-bottom: 16px; }
+  .hero-lead { font-size: 17px; color: rgba(255,255,255,.74); max-width: 32em; margin-bottom: 30px; }
+  .hero-actions { display: flex; gap: 13px; flex-wrap: wrap; }
+  .hero-stats { display: flex; gap: 34px; margin-top: 40px; flex-wrap: wrap; }
+  .hstat .n { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 34px; font-weight: 800; color: var(--gold); line-height: 1; }
+  .hstat .l { font-size: 13px; color: rgba(255,255,255,.62); margin-top: 6px; max-width: 15em; }
+
+  .reveal-h { opacity: 0; transform: translateY(22px); animation: rise .8s cubic-bezier(.2,.7,.2,1) forwards; }
+  .d1{animation-delay:.05s}.d2{animation-delay:.15s}.d3{animation-delay:.25s}.d4{animation-delay:.35s}.d5{animation-delay:.45s}.d6{animation-delay:.55s}
+  @keyframes rise { to { opacity: 1; transform: translateY(0); } }
+
+  /* hero case study mock */
+  .hero-visual { position: relative; perspective: 1100px; }
+  .csmock {
+    background: var(--white); border-radius: 16px; box-shadow: var(--shadow-lg);
+    overflow: hidden; position: relative;
+    transition: transform .25s cubic-bezier(.2,.8,.2,1);
+    transform-style: preserve-3d; will-change: transform;
+  }
+  .csmock-top { background: var(--navy-2); padding: 17px 22px; display: flex; align-items: center; justify-content: space-between; }
+  .csmock-brand { display: flex; align-items: center; gap: 9px; }
+  .csmock-dot { width: 26px; height: 26px; border-radius: 7px; background: var(--gold); display:grid; place-items:center; }
+  .csmock-dot span { color: var(--navy); font-family:'Plus Jakarta Sans',sans-serif; font-size: 14px; font-weight: 800; }
+  .csmock-brand b { color: #fff; font-size: 14px; font-weight: 600; }
+  .csmock-tag { font-size: 10.5px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.5); }
+  .csmock-body { padding: 24px 24px 26px; }
+  .csmock-cat { font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-deep); }
+  .csmock-title { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 21px; font-weight: 800; color: var(--navy); margin: 9px 0 16px; line-height: 1.2; }
+  .csmock-metrics { display: flex; gap: 12px; margin-bottom: 18px; }
+  .csmock-metric { flex: 1; background: var(--bg); border-radius: 10px; padding: 13px; border: 1px solid var(--line); }
+  .csmock-metric .num { font-family:'Plus Jakarta Sans',sans-serif; font-size: 25px; font-weight: 800; color: var(--gold-deep); }
+  .csmock-metric .lbl { font-size: 11.5px; color: var(--muted); }
+  .csmock-quote { font-size: 14px; color: var(--text); font-style: italic; border-left: 3px solid var(--gold); padding-left: 13px; }
+  .csmock-foot { display: flex; align-items: center; gap: 10px; margin-top: 17px; padding-top: 15px; border-top: 1px solid var(--line); }
+  .csmock-av { width: 33px; height: 33px; border-radius: 50%; background: linear-gradient(135deg, var(--gold), var(--gold-deep)); flex-shrink:0; }
+  .csmock-foot .who b { font-size: 12.5px; color: var(--navy); display:block; }
+  .csmock-foot .who small { font-size: 11.5px; color: var(--muted); }
+  .csmock-stamp {
+    position: absolute; bottom: 18px; right: 16px;
+    font-size: 9.5px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase;
+    color: var(--gold-deep); border: 1.5px solid var(--gold); border-radius: 5px; padding: 4px 8px;
+    transform: rotate(-7deg); background: var(--white);
+  }
+  .float-badge {
+    position: absolute; background: var(--white); border-radius: 11px; box-shadow: var(--shadow);
+    padding: 11px 14px; display: flex; align-items: center; gap: 9px;
+    font-size: 12.5px; font-weight: 600; color: var(--navy);
+  }
+  .float-badge svg { color: var(--gold-deep); }
+  .fb-1 { top: -20px; left: -32px; animation: bob 5s ease-in-out infinite; }
+  .fb-2 { bottom: 30px; left: -42px; animation: bob 5s ease-in-out infinite .9s; }
+  @keyframes bob { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-9px)} }
+
+  /* ---------- Integrations strip ---------- */
+  .strip { background: var(--navy-2); padding: 26px 0; }
+  .strip-inner { display: flex; align-items: center; gap: 36px; flex-wrap: wrap; justify-content: center; }
+  .strip-lbl { font-size: 13px; font-weight: 600; color: rgba(255,255,255,.55); }
+  .strip-logos { display: flex; gap: 30px; flex-wrap: wrap; }
+  .strip-logos span { font-family:'Plus Jakarta Sans',sans-serif; font-size: 20px; font-weight: 800; color: #fff; opacity: .62; }
+
+  /* ---------- Sections ---------- */
+  .sec { padding: 104px 0; }
+  .sec-head { max-width: 38em; margin-bottom: 56px; }
+  .sec-head.center { margin-left: auto; margin-right: auto; text-align: center; }
+  .sec-head h2 { font-size: clamp(32px, 4vw, 47px); margin: 16px 0 16px; }
+  .sec-head p { font-size: 18px; color: var(--muted); }
+
+  .fade { opacity: 0; transform: translateY(28px); transition: opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1); }
+  .fade.in { opacity: 1; transform: translateY(0); }
+
+  /* ---------- Problem ---------- */
+  .prob-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 22px; }
+  .prob-card { background: var(--white); border: 1px solid var(--line); border-radius: var(--r); padding: 30px 26px; box-shadow: var(--shadow); transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease; }
+  .prob-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); border-color: var(--gold); }
+  .prob-stat { font-family:'Plus Jakarta Sans',sans-serif; font-size: 46px; font-weight: 800; color: var(--gold-deep); line-height: 1; }
+  .prob-card h3 { font-size: 18px; margin: 13px 0 8px; }
+  .prob-card p { font-size: 15px; color: var(--muted); }
+  .prob-quote {
+    margin-top: 44px; text-align: center; font-family:'Plus Jakarta Sans',sans-serif; font-style: italic; font-weight: 500;
+    font-size: clamp(21px,2.5vw,29px); color: var(--navy); max-width: 23em; margin-left:auto; margin-right:auto; line-height: 1.34;
+  }
+  .prob-quote span { color: var(--gold-deep); }
+
+  /* ---------- Cost breakdown panel ---------- */
+  .cost-panel { margin-top: 30px; background: var(--white); border: 1px solid var(--line); border-radius: var(--r); box-shadow: var(--shadow); overflow: hidden; }
+  .cost-head { padding: 26px 30px 18px; border-bottom: 1px solid var(--line); }
+  .cost-head h3 { font-size: 21px; margin-top: 10px; }
+  .cost-rows { padding: 8px 30px; }
+  .cost-row { display: flex; justify-content: space-between; align-items: baseline; gap: 18px; padding: 11px 0; border-bottom: 1px solid var(--line); font-size: 15px; color: var(--muted); }
+  .cost-row:last-child { border-bottom: none; }
+  .cost-row b { font-family:'Plus Jakarta Sans',sans-serif; font-weight: 800; color: var(--navy); font-size: 16px; white-space: nowrap; }
+  .cost-total { display: flex; flex-wrap: wrap; }
+  .cost-total > div { flex: 1; min-width: 220px; padding: 28px 32px; display: flex; flex-direction: column; gap: 6px; }
+  .cost-total > div:first-child { background: var(--navy); }
+  .cost-total > div span.lbl { font-size: 12px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; }
+  .cost-total > div:first-child span.lbl { color: rgba(255,255,255,.58); }
+  .cost-total > div b { font-family:'Plus Jakarta Sans',sans-serif; font-weight: 800; line-height: 1; display: flex; align-items: baseline; flex-wrap: wrap; }
+  .cost-total > div:first-child b { font-size: 56px; color: #fff; }
+  .cost-total .cost-vs { background: var(--gold); }
+  .cost-total .cost-vs span.lbl { color: rgba(15,39,68,.66); }
+  .cost-total .cost-vs b { font-size: 56px; color: var(--navy); }
+  .cost-per { font-family:'Inter',sans-serif; font-size: 17px; font-weight: 600; opacity: .68; margin-left: 7px; white-space: nowrap; }
+
+  /* ---------- Steps ---------- */
+  .steps { display: grid; grid-template-columns: repeat(3,1fr); gap: 26px; }
+  .step { position: relative; }
+  .step-num {
+    width: 46px; height: 46px; border-radius: 11px; background: var(--navy); color: var(--gold);
+    font-family:'Plus Jakarta Sans',sans-serif; font-size: 20px; font-weight: 800; display:grid; place-items:center;
+    margin-bottom: 20px;
+  }
+  .step-icon { color: var(--gold-deep); margin-bottom: 13px; }
+  .step h3 { font-size: 21px; margin-bottom: 9px; }
+  .step p { font-size: 15.5px; color: var(--muted); }
+  .step-line { position:absolute; top: 23px; right: -13px; width: 26px; height: 2px; background: var(--line); }
+  .step:last-child .step-line { display:none; }
+
+  /* ---------- Features (navy) ---------- */
+  .dark { background: var(--navy); color: #fff; }
+  .dark .sec-head h2 { color: #fff; }
+  .dark .sec-head p { color: rgba(255,255,255,.66); }
+  .feat-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 1px; background: var(--line-navy); border: 1px solid var(--line-navy); border-radius: var(--r); overflow:hidden; }
+  .feat { background: var(--navy); padding: 34px 32px; transition: background .25s ease; }
+  .feat:hover { background: var(--navy-soft); }
+  .feat-ic { width: 44px; height: 44px; border-radius: 11px; background: rgba(200,169,106,.16); display:grid; place-items:center; color: var(--gold); margin-bottom: 17px; }
+  .feat h3 { font-size: 20px; color: #fff; margin-bottom: 9px; }
+  .feat p { font-size: 15px; color: rgba(255,255,255,.66); }
+
+  /* ---------- Pricing ---------- */
+  .price-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 22px; align-items: stretch; }
+  .price-card {
+    background: var(--white); border: 1px solid var(--line); border-radius: 16px;
+    padding: 34px 30px; display: flex; flex-direction: column; box-shadow: var(--shadow); position: relative;
+  }
+  .price-card.featured { background: var(--navy); border-color: var(--navy); box-shadow: var(--shadow-lg); transform: translateY(-12px); }
+  .price-flag {
+    position: absolute; top: -13px; left: 50%; transform: translateX(-50%); background: var(--gold); color: var(--navy);
+    font-size: 11.5px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; padding: 6px 15px; border-radius: 999px; white-space: nowrap;
+  }
+  .price-name { font-family:'Plus Jakarta Sans',sans-serif; font-size: 21px; font-weight: 800; color: var(--navy); }
+  .price-card.featured .price-name { color: #fff; }
+  .price-desc { font-size: 13.5px; color: var(--muted); margin: 6px 0 20px; min-height: 38px; }
+  .price-card.featured .price-desc { color: rgba(255,255,255,.62); }
+  .price-amount { display: flex; align-items: baseline; gap: 5px; }
+  .price-amount .big { font-family:'Plus Jakarta Sans',sans-serif; font-size: 46px; font-weight: 800; color: var(--navy); line-height: 1; }
+  .price-card.featured .price-amount .big { color: #fff; }
+  .price-amount .per { font-size: 14px; color: var(--muted); font-weight: 500; }
+  .price-card.featured .price-amount .per { color: rgba(255,255,255,.6); }
+  .price-unit { font-size: 13px; color: var(--gold-deep); font-weight: 700; margin-top: 9px; }
+  .price-card.featured .price-unit { color: var(--gold); }
+  .price-list { list-style: none; margin: 22px 0 26px; display: flex; flex-direction: column; gap: 11px; }
+  .price-list li { display: flex; gap: 10px; font-size: 14.5px; color: var(--text); }
+  .price-card.featured .price-list li { color: rgba(255,255,255,.86); }
+  .price-list li svg { color: var(--gold-deep); flex-shrink: 0; margin-top: 3px; }
+  .price-card.featured .price-list li svg { color: var(--gold); }
+  .price-card .btn { width: 100%; justify-content: center; margin-top: auto; }
+  .price-foot { margin-top: 30px; text-align: center; font-size: 14.5px; color: var(--muted); }
+  .price-foot b { color: var(--navy); }
+
+  /* ---------- Testimonials ---------- */
+  .tst-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 22px; }
+  .tst { background: var(--white); border: 1px solid var(--line); border-radius: var(--r); padding: 30px 28px; box-shadow: var(--shadow); display:flex; flex-direction:column; transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease; }
+  .tst:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); border-color: var(--gold); }
+  .tst-mark { font-family:'Plus Jakarta Sans',sans-serif; font-size: 56px; font-weight: 800; color: var(--gold-soft); line-height: .55; height: 28px; }
+  .tst p { font-size: 16px; color: var(--text); font-style: italic; margin-bottom: 22px; flex: 1; }
+  .tst-who { display: flex; align-items: center; gap: 12px; }
+  .tst-av { width: 42px; height: 42px; border-radius: 50%; background: linear-gradient(135deg,var(--navy),var(--navy-soft)); flex-shrink:0; }
+  .tst-who b { font-size: 14.5px; color: var(--navy); display:block; }
+  .tst-who small { font-size: 13px; color: var(--muted); }
+
+  /* ---------- Blog ---------- */
+  .blog-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 22px; }
+  .post { background: var(--white); border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; box-shadow: var(--shadow); transition: transform .2s ease, box-shadow .2s ease; display: flex; flex-direction: column; cursor: pointer; }
+  .post:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+  .post-cover { height: 130px; position: relative; }
+  .pc-1 { background: linear-gradient(135deg,#0F2744,#1C3A5E); }
+  .pc-2 { background: linear-gradient(135deg,#C8A96A,#B5934C); }
+  .pc-3 { background: linear-gradient(135deg,#1C3A5E,#0A1C33); }
+  .post-cover span { position:absolute; bottom: 12px; left: 16px; font-size: 11px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: #fff; background: rgba(0,0,0,.26); padding: 5px 10px; border-radius: 6px; }
+  .post-body { padding: 22px 22px 24px; display:flex; flex-direction:column; flex:1; }
+  .post-body h3 { font-size: 17.5px; line-height: 1.3; margin-bottom: 10px; }
+  .post-body p { font-size: 14px; color: var(--muted); flex: 1; }
+  .post-more { font-size: 13.5px; font-weight: 700; color: var(--gold-deep); margin-top: 15px; }
+
+  /* ---------- FAQ ---------- */
+  .faq-list { max-width: 760px; margin: 0 auto; }
+  .faq-item { border-bottom: 1px solid var(--line); }
+  .faq-q {
+    width: 100%; background: none; border: none; cursor: pointer; text-align: left;
+    padding: 23px 4px; display: flex; justify-content: space-between; align-items: center; gap: 20px;
+    font-family: 'Plus Jakarta Sans', sans-serif; font-size: 18px; font-weight: 700; color: var(--navy);
+  }
+  .faq-ic { flex-shrink: 0; width: 24px; height: 24px; position: relative; }
+  .faq-ic::before, .faq-ic::after { content:""; position:absolute; background: var(--gold-deep); border-radius: 2px; transition: transform .25s ease; }
+  .faq-ic::before { width: 14px; height: 2px; top: 11px; left: 5px; }
+  .faq-ic::after { width: 2px; height: 14px; top: 5px; left: 11px; }
+  .faq-item.open .faq-ic::after { transform: rotate(90deg); opacity: 0; }
+  .faq-a { max-height: 0; overflow: hidden; transition: max-height .3s ease; }
+  .faq-a p { padding: 0 4px 23px; font-size: 15.5px; color: var(--muted); }
+
+  /* ---------- CTA ---------- */
+  .cta { padding: 0 0 110px; }
+  .cta-box { background: var(--gold); border-radius: 22px; padding: 70px 40px; text-align: center; position: relative; overflow: hidden; }
+  .cta-box::before { content:""; position:absolute; width: 360px; height: 360px; border-radius: 50%; background: radial-gradient(circle, rgba(15,39,68,.16), transparent 70%); top: -150px; left: -90px; }
+  .cta-box h2 { font-size: clamp(30px,3.8vw,44px); color: var(--navy); position: relative; max-width: 17em; margin: 0 auto 14px; }
+  .cta-box p { color: rgba(15,39,68,.78); font-size: 17.5px; position: relative; margin-bottom: 28px; }
+  .cta-box .btn { position: relative; }
+
+  /* ---------- Footer ---------- */
+  footer { background: var(--navy); color: #fff; padding: 64px 0 32px; }
+  .foot-grid { display: grid; grid-template-columns: 1.7fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 46px; }
+  .foot-brand p { font-size: 14.5px; color: rgba(255,255,255,.6); margin-top: 16px; max-width: 26em; }
+  .foot-col h4 { font-size: 12.5px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: var(--gold); margin-bottom: 15px; }
+  .foot-col a { display: block; font-size: 14.5px; color: rgba(255,255,255,.66); margin-bottom: 10px; transition: color .15s ease; }
+  .foot-col a:hover { color: var(--gold); }
+  .foot-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 26px; border-top: 1px solid var(--line-navy); flex-wrap: wrap; gap: 12px; }
+  .foot-bottom small { font-size: 13px; color: rgba(255,255,255,.5); }
+
+  /* ---------- Modal ---------- */
+  .modal-bg { position: fixed; inset: 0; background: rgba(15,39,68,.62); backdrop-filter: blur(4px); z-index: 1000; display: none; align-items: center; justify-content: center; padding: 24px; }
+  .modal-bg.show { display: flex; }
+  .modal { background: var(--white); border-radius: 18px; max-width: 480px; width: 100%; padding: 38px 36px; box-shadow: var(--shadow-lg); position: relative; animation: pop .3s cubic-bezier(.2,.8,.2,1); }
+  @keyframes pop { from { opacity:0; transform: translateY(20px) scale(.97); } to { opacity:1; transform:none; } }
+  .modal-close { position: absolute; top: 18px; right: 18px; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--line); background: var(--bg); cursor: pointer; font-size: 16px; color: var(--muted); display:grid; place-items:center; transition: .15s; }
+  .modal-close:hover { background: var(--navy); color: #fff; }
+  .modal h3 { font-size: 25px; margin-bottom: 6px; }
+  .modal .sub { font-size: 14.5px; color: var(--muted); margin-bottom: 22px; }
+  .field { margin-bottom: 15px; }
+  .field label { display: block; font-size: 13px; font-weight: 600; color: var(--navy); margin-bottom: 6px; }
+  .field input { width: 100%; padding: 12px 14px; border-radius: 9px; border: 1.5px solid var(--line); background: var(--bg); font-family: inherit; font-size: 15px; color: var(--text); transition: border .15s; }
+  .field input:focus { outline: none; border-color: var(--gold); background: #fff; }
+  .field.err input { border-color: #C0392B; }
+  .field .msg { font-size: 12.5px; color: #C0392B; margin-top: 4px; display: none; }
+  .field.err .msg { display: block; }
+  .modal .btn { width: 100%; justify-content: center; margin-top: 6px; }
+  .modal .btn[disabled] { opacity: .6; cursor: progress; }
+  .form-error { display: none; margin-top: 12px; font-size: 13px; color: #C0392B; text-align: center; }
+  .form-error.show { display: block; }
+  .modal-success { text-align: center; padding: 16px 0; }
+  .modal-success .check { width: 64px; height: 64px; border-radius: 50%; background: var(--gold-soft); display: grid; place-items: center; margin: 0 auto 18px; color: var(--gold-deep); }
+  .modal-success h3 { margin-bottom: 8px; }
+  .modal-success p { font-size: 15px; color: var(--muted); }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 940px) {
+    .hero-grid { grid-template-columns: 1fr; gap: 54px; }
+    .hero { padding: 132px 0 76px; }
+    .prob-grid, .steps, .feat-grid, .tst-grid, .blog-grid, .price-grid { grid-template-columns: 1fr; }
+    .price-card.featured { transform: none; }
+    .step-line { display: none; }
+    .foot-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+    .nav-links { display: none; }
+    .burger { display: flex; }
+    .nav-links.open { display: flex; position: absolute; top: 78px; left: 0; right: 0; flex-direction: column; background: var(--navy-2); padding: 22px 28px; gap: 18px; align-items: flex-start; }
+    .nav-links.open .nav-cta { flex-direction: column; align-items: stretch; width: 100%; }
+    .fb-1, .fb-2 { display: none; }
+    .sec { padding: 78px 0; }
+    .cta-box { padding: 54px 26px; }
+  }
+  @media (max-width: 560px) {
+    .wrap { padding: 0 20px; }
+    .hero h1 { font-size: 38px; }
+    .hero-stats { gap: 24px; }
+    .foot-grid { grid-template-columns: 1fr; }
+    .price-card { padding: 30px 24px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+    .fade { opacity: 1 !important; transform: none !important; }
+    .reveal-h { opacity: 1 !important; transform: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<div class="scroll-bar" id="scrollBar"></div>
+
+<!-- ============ NAV ============ -->
+<nav id="nav">
+  <div class="wrap nav-inner">
+    <a href="#top" class="logo">
+      <span class="logo-mark">
+        <svg viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="56" height="56" rx="13" fill="#ffffff" fill-opacity="0.12"/>
+          <rect width="55" height="55" x="0.5" y="0.5" rx="12.5" fill="none" stroke="#ffffff" stroke-opacity="0.22"/>
+          <rect x="11" y="14" width="34" height="7" rx="3.5" fill="#ffffff"/>
+          <rect x="24.5" y="21" width="7" height="18" rx="3.5" fill="#ffffff"/>
+          <circle cx="28" cy="43" r="3.5" fill="#ffffff"/>
+        </svg>
+      </span>
+      Temonis
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a class="navlink" href="#how">Comment ça marche</a>
+      <a class="navlink" href="#features">Automatisation</a>
+      <a class="navlink" href="#pricing">Tarifs</a>
+      <a class="navlink" href="#blog">Ressources</a>
+      <a class="navlink" href="#faq">FAQ</a>
+      <div class="nav-cta">
+        <button class="btn btn-primary" data-demo>Demander une démo</button>
+      </div>
+    </div>
+    <div class="burger" id="burger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<span id="top"></span>
+
+<!-- ============ HERO ============ -->
+<header class="hero on-navy">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow reveal-h d1">Le case study, en pilote automatique</span>
+      <h1 class="reveal-h d2">Vos témoignages clients <em>générés automatiquement.</em></h1>
+      <p class="hero-sub reveal-h d3">Connectez Modjo ou Gong. Détectez vos meilleurs clients. Publiez automatiquement.</p>
+      <p class="hero-lead reveal-h d3">
+        Temonis transforme vos conversations clients en témoignages complets - rédigés,
+        mis en page et à votre charte graphique grâce à l'IA. Sans brief, sans relance, sans agence.
+      </p>
+      <div class="hero-actions reveal-h d4">
+        <button class="btn btn-primary" data-demo>Demander une démo<span class="btn-arrow">→</span></button>
+        <a class="btn btn-ghost-light" href="#how">Voir comment ça marche</a>
+      </div>
+      <div class="hero-stats reveal-h d5">
+        <div class="hstat"><div class="n" data-count="97" data-suffix=" %">0 %</div><div class="l">des acheteurs B2B lisent un témoignage client avant de signer</div></div>
+        <div class="hstat"><div class="n" data-count="100" data-suffix=" %">0 %</div><div class="l">automatisé, jusqu'à la publication</div></div>
+        <div class="hstat"><div class="n">0</div><div class="l">brief à rédiger, relance à envoyer, agence à payer</div></div>
+      </div>
+    </div>
+
+    <div class="reveal-h d4 hero-visual" id="heroVisual">
+      <div class="float-badge fb-1">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg>
+        Publication automatique
+      </div>
+      <div class="float-badge fb-2">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 6h16M4 12h10M4 18h7"/></svg>
+        À votre charte
+      </div>
+      <div class="csmock">
+        <div class="csmock-top">
+          <div class="csmock-brand">
+            <span class="csmock-dot"><span>N</span></span>
+            <b>Nimbus CRM</b>
+          </div>
+          <span class="csmock-tag">Témoignage client</span>
+        </div>
+        <div class="csmock-body">
+          <span class="csmock-cat">Customer Marketing</span>
+          <div class="csmock-title">Comment Nimbus a divisé par deux son cycle de vente</div>
+          <div class="csmock-metrics">
+            <div class="csmock-metric"><div class="num">−48 %</div><div class="lbl">durée du cycle</div></div>
+            <div class="csmock-metric"><div class="num">3,2×</div><div class="lbl">taux de closing</div></div>
+          </div>
+          <div class="csmock-quote">« On avait la preuve sous les yeux dans nos appels. Temonis l'a juste transformée en contenu. »</div>
+          <div class="csmock-foot">
+            <div class="csmock-av"></div>
+            <div class="who"><b>Camille Béranger</b><small>Head of Customer Marketing</small></div>
+          </div>
+        </div>
+        <div class="csmock-stamp">Généré par Temonis</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ INTEGRATIONS STRIP ============ -->
+<div class="strip">
+  <div class="wrap strip-inner">
+    <span class="strip-lbl">Branché sur votre stack en 30 minutes</span>
+    <div class="strip-logos">
+      <span>Modjo</span><span>Gong</span><span>HubSpot</span><span>Salesforce</span><span>Aircall</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============ PROBLEM ============ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head fade">
+      <span class="eyebrow">Pourquoi maintenant</span>
+      <h2>La preuve client existe déjà. Personne ne la produit.</h2>
+      <p>Vos acheteurs réclament des références. Vos équipes, elles, n'ont ni le temps ni les outils pour les produire au rythme attendu.</p>
+    </div>
+    <div class="prob-grid">
+      <div class="prob-card fade">
+        <div class="prob-stat" data-count="97" data-suffix=" %">0 %</div>
+        <h3>des acheteurs B2B lisent les case studies</h3>
+        <p>C'est le contenu le plus consulté avant une décision d'achat - et le plus rare sur la plupart des sites SaaS.</p>
+      </div>
+      <div class="prob-card fade">
+        <div class="prob-stat" data-count="2">0</div>
+        <h3>case studies produits par an, en moyenne</h3>
+        <p>L'écart entre la demande et la production est immense. Le customer marketing reste à la traîne, faute de temps.</p>
+      </div>
+      <div class="prob-card fade">
+        <div class="prob-stat" data-count="1115" data-suffix=" €">0 €</div>
+        <h3>le vrai coût mensuel d'une production externe</h3>
+        <p>Quatre témoignages confiés à un freelance et un designer : avec le brief, les allers-retours et les relances, la facture réelle dépasse 1 100 € par mois.</p>
+      </div>
+    </div>
+
+    <div class="cost-panel fade">
+      <div class="cost-head">
+        <span class="eyebrow">Le détail du calcul</span>
+        <h3>Produire 4 témoignages par mois, sans Temonis</h3>
+      </div>
+      <div class="cost-rows">
+        <div class="cost-row"><span>Rédaction freelance - 4 × 80 €</span><b>320 €</b></div>
+        <div class="cost-row"><span>Mise en page designer - 4 × 50 €</span><b>200 €</b></div>
+        <div class="cost-row"><span>Brief initial au prestataire - 45 min</span><b>45 €</b></div>
+        <div class="cost-row"><span>Allers-retours de validation - 2 à 3 tours</span><b>90 €</b></div>
+        <div class="cost-row"><span>Relances pour recueillir les informations - 2 h</span><b>120 €</b></div>
+        <div class="cost-row"><span>Reformatage pour chaque support (web, PDF, LinkedIn)</span><b>60 €</b></div>
+        <div class="cost-row"><span>Retards de production = deals ralentis</span><b>250 €</b></div>
+        <div class="cost-row"><span>Incohérences de charte à corriger</span><b>30 €</b></div>
+      </div>
+      <div class="cost-total">
+        <div><span class="lbl">Coût réel - production externe</span><b>≈&nbsp;<span data-count="1115" data-suffix=" €">0 €</span><span class="cost-per">/ mois</span></b></div>
+        <div class="cost-vs"><span class="lbl">Le même travail avec Temonis</span><b><span data-count="249" data-suffix=" €">0 €</span><span class="cost-per">/ mois</span></b></div>
+      </div>
+    </div>
+
+    <p class="prob-quote fade">
+      « Depuis Temonis, notre CMO a arrêté de relancer les CSM toutes les semaines.
+      Les case studies <span>arrivent</span>. »
+    </p>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section class="sec" id="how" style="background:var(--white);">
+  <div class="wrap">
+    <div class="sec-head fade">
+      <span class="eyebrow">Comment ça marche</span>
+      <h2>Trois étapes. Aucune intervention.</h2>
+      <p>Vous branchez Temonis une fois. Ensuite, chaque case study se produit, se met en page et se publie sans que vous ayez à y penser.</p>
+    </div>
+    <div class="steps">
+      <div class="step fade">
+        <div class="step-line"></div>
+        <div class="step-num">1</div>
+        <div class="step-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 17H7A5 5 0 017 7h2M15 7h2a5 5 0 010 10h-2M8 12h8"/></svg></div>
+        <h3>Connectez vos appels</h3>
+        <p>Liez Modjo ou Gong en lecture seule. Temonis analyse vos conversations clients existantes - rien à enregistrer en plus.</p>
+      </div>
+      <div class="step fade">
+        <div class="step-line"></div>
+        <div class="step-num">2</div>
+        <div class="step-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l2.4 7.4H22l-6 4.5 2.3 7.1L12 16.6 5.7 21l2.3-7.1-6-4.5h7.6z"/></svg></div>
+        <h3>Temonis repère vos pépites</h3>
+        <p>L'IA identifie les clients dont les résultats et les verbatims feront les meilleurs case studies, puis structure le récit.</p>
+      </div>
+      <div class="step fade">
+        <div class="step-num">3</div>
+        <div class="step-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 15V3M7 10l5 5 5-5M5 21h14"/></svg></div>
+        <h3>Le case study est publié</h3>
+        <p>Rédigé, mis en page à votre charte graphique et prêt en 24h. Vous validez d'un clic - ou vous laissez Temonis publier.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURES (NAVY) ============ -->
+<section class="sec dark on-navy" id="features">
+  <div class="wrap">
+    <div class="sec-head fade">
+      <span class="eyebrow">L'automatisation, de bout en bout</span>
+      <h2>Pas un assistant. Une chaîne de production.</h2>
+      <p>Temonis ne vous aide pas à écrire un case study. Il le produit entièrement - de l'analyse de l'appel jusqu'à la page mise en forme.</p>
+    </div>
+    <div class="feat-grid">
+      <div class="feat fade">
+        <div class="feat-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1018 0 9 9 0 00-18 0zM12 7v5l3 3"/></svg></div>
+        <h3>Zéro brief, zéro relance</h3>
+        <p>Aucun questionnaire à envoyer, aucun client à relancer. Temonis travaille à partir de ce qui s'est déjà dit dans vos appels.</p>
+      </div>
+      <div class="feat fade">
+        <div class="feat-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3zM18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><circle cx="11" cy="11" r="2"/></svg></div>
+        <h3>Mise en page à votre charte</h3>
+        <p>Couleurs, typographies, logo : l'IA applique votre identité visuelle. Chaque case study ressemble aux vôtres, pas à un template.</p>
+      </div>
+      <div class="feat fade">
+        <div class="feat-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg></div>
+        <h3>Prêt à publier partout</h3>
+        <p>Page web, PDF commercial, one-pager, posts LinkedIn : chaque étude est déclinée dans les formats dont vos équipes ont besoin.</p>
+      </div>
+      <div class="feat fade">
+        <div class="feat-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4M12 3l7 4v5c0 5-3 8-7 9-4-1-7-4-7-9V7l7-4z"/></svg></div>
+        <h3>Validation avant publication</h3>
+        <p>Rien ne sort sans votre accord. Vous relisez, ajustez si besoin, puis publiez - ou laissez Temonis le faire pour vous.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRICING ============ -->
+<section class="sec" id="pricing">
+  <div class="wrap">
+    <div class="sec-head center fade">
+      <span class="eyebrow" style="justify-content:center;">Tarifs</span>
+      <h2>Choisissez jusqu'où Temonis va pour vous.</h2>
+      <p>Trois paliers, une même promesse : zéro intervention de votre part. Chacun ajoute une couche de travail en moins - créer, puis diffuser, puis convertir.</p>
+    </div>
+    <div class="price-grid">
+
+      <!-- STARTER -->
+      <div class="price-card fade">
+        <div class="price-name">Starter</div>
+        <div class="price-desc">Vos témoignages créés et prêts à l'emploi.</div>
+        <div class="price-amount"><span class="big">249 €</span><span class="per">HT / mois</span></div>
+        <div class="price-unit">4 témoignages / mois - soit ~62 € pièce</div>
+        <ul class="price-list">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> 4 témoignages / mois, collectés automatiquement</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> Connexion Modjo ou Gong</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> Mise en page à votre charte (PDF + visuel web)</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> Workflow d'approbation client automatisé (validation email 1 clic)</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> 2 formats de sortie : PDF + image web</li>
+        </ul>
+        <button class="btn btn-ghost-navy" data-demo>Demander une démo<span class="btn-arrow">→</span></button>
+      </div>
+
+      <!-- GROWTH (featured) -->
+      <div class="price-card featured fade">
+        <span class="price-flag">Le plus populaire</span>
+        <div class="price-name">Growth</div>
+        <div class="price-desc">Vos témoignages créés ET diffusés automatiquement.</div>
+        <div class="price-amount"><span class="big">499 €</span><span class="per">HT / mois</span></div>
+        <div class="price-unit">12 témoignages / mois - soit ~42 € pièce</div>
+        <ul class="price-list">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> Tout le plan Starter, et&nbsp;:</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> 12 témoignages / mois</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> Distribution automatique : page LinkedIn, Google Business Profile, widget site embarquable</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> Repurposing IA : chaque témoignage décliné en post LinkedIn, snippet email, slide et format web</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> Intégration CRM : push automatique HubSpot / Salesforce</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> Dashboard de performance (clics et engagement par témoignage)</li>
+        </ul>
+        <button class="btn btn-primary" data-demo>Demander une démo<span class="btn-arrow">→</span></button>
+      </div>
+
+      <!-- SCALE -->
+      <div class="price-card fade">
+        <div class="price-name">Scale</div>
+        <div class="price-desc">Vos témoignages travaillent activement pour convertir.</div>
+        <div class="price-amount"><span class="big">849 €</span><span class="per">HT / mois</span></div>
+        <div class="price-unit">Témoignages illimités</div>
+        <ul class="price-list">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> Tout le plan Growth, et&nbsp;:</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> Témoignages illimités</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> Scoring IA prédictif : le bon témoignage au bon prospect (secteur, stade du deal, ICP)</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> Case study lite auto-généré : 1 / mois, à partir de vos meilleurs témoignages</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> A/B testing automatique des formats et des accroches</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> Multi-langue automatique (FR / EN / DE)</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> Accès API pour l'intégration à votre outbound</li>
+        </ul>
+        <button class="btn btn-ghost-navy" data-demo>Parler à l'équipe<span class="btn-arrow">→</span></button>
+      </div>
+
+    </div>
+    <p class="price-foot fade">
+      Sans engagement · Résiliable à tout moment · <b>Premier témoignage offert</b> pendant la démo.
+    </p>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="sec" id="testimonials" style="background:var(--white);">
+  <div class="wrap">
+    <div class="sec-head center fade">
+      <span class="eyebrow" style="justify-content:center;">Elles ont arrêté de courir après</span>
+      <h2>Ce que disent les équipes marketing.</h2>
+    </div>
+    <div class="tst-grid">
+      <div class="tst fade">
+        <div class="tst-mark">&ldquo;</div>
+        <p>Depuis que nous utilisons Temonis, notre CMO a arrêté de relancer les CSM toutes les semaines. Les case studies arrivent. C'est simple.</p>
+        <div class="tst-who"><div class="tst-av"></div><div><b>Marie D.</b><small>Head of Customer Marketing · SaaS B2B (20 M€ ARR)</small></div></div>
+      </div>
+      <div class="tst fade">
+        <div class="tst-mark">&ldquo;</div>
+        <p>On a remplacé notre agence à 8 K€ la pièce. ROI atteint en trois semaines, et la qualité est au rendez-vous.</p>
+        <div class="tst-who"><div class="tst-av"></div><div><b>Thomas L.</b><small>CMO · Scale-up FinTech</small></div></div>
+      </div>
+      <div class="tst fade">
+        <div class="tst-mark">&ldquo;</div>
+        <p>Le premier case study livré en 18h. Avec notre charte graphique. Je ne pensais pas que c'était possible.</p>
+        <div class="tst-who"><div class="tst-av"></div><div><b>Sophie R.</b><small>VP Marketing · SaaS RH</small></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BLOG ============ -->
+<section class="sec" id="blog">
+  <div class="wrap">
+    <div class="sec-head fade">
+      <span class="eyebrow">Ressources</span>
+      <h2>Le journal de la preuve client.</h2>
+      <p>Nos analyses sur le customer marketing, la preuve sociale et les cycles de vente B2B.</p>
+    </div>
+    <div class="blog-grid">
+      <article class="post fade">
+        <div class="post-cover pc-1"><span>Preuve sociale</span></div>
+        <div class="post-body">
+          <h3>97 % des acheteurs B2B lisent les case studies - et votre équipe n'en produit que 2 par an</h3>
+          <p>L'écart entre la demande de preuve et la capacité à la produire, et ce qu'il coûte réellement à vos ventes.</p>
+          <span class="post-more">Lire l'article →</span>
+        </div>
+      </article>
+      <article class="post fade">
+        <div class="post-cover pc-2"><span>Customer Marketing</span></div>
+        <div class="post-body">
+          <h3>Comment Modjo change tout pour les équipes customer marketing</h3>
+          <p>Vos conversations clients contiennent déjà vos meilleurs case studies. Encore faut-il les exploiter.</p>
+          <span class="post-more">Lire l'article →</span>
+        </div>
+      </article>
+      <article class="post fade">
+        <div class="post-cover pc-3"><span>Stratégie GTM</span></div>
+        <div class="post-body">
+          <h3>Pourquoi les cycles de vente B2B s'allongent - et comment la preuve sociale peut les raccourcir</h3>
+          <p>Les acheteurs veulent être rassurés. Le bon case study, au bon moment, fait gagner des semaines.</p>
+          <span class="post-more">Lire l'article →</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="sec" id="faq" style="background:var(--white);">
+  <div class="wrap">
+    <div class="sec-head center fade">
+      <span class="eyebrow" style="justify-content:center;">Questions fréquentes</span>
+      <h2>Tout ce que vous voulez savoir.</h2>
+    </div>
+    <div class="faq-list fade">
+      <div class="faq-item">
+        <button class="faq-q">Comment Temonis accède-t-il à mes conversations clients ?<span class="faq-ic"></span></button>
+        <div class="faq-a"><p>Temonis se connecte à Modjo ou Gong en lecture seule, via les intégrations officielles. Aucune donnée n'est modifiée et rien n'est enregistré en dehors de votre périmètre. Vous gardez le contrôle des accès à tout moment.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Combien de temps pour recevoir un case study ?<span class="faq-ic"></span></button>
+        <div class="faq-a"><p>Comptez 24 heures entre le moment où Temonis identifie un client et la livraison du case study complet, rédigé et mis en page. Aucune relance ni aller-retour : tout est automatisé.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Les case studies respectent-ils vraiment ma charte graphique ?<span class="faq-ic"></span></button>
+        <div class="faq-a"><p>Oui. Vous renseignez votre charte une fois - couleurs, typographies, logo, ton - et l'IA l'applique à chaque production. Le résultat ressemble à vos contenus, pas à un modèle générique.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Puis-je relire avant publication ?<span class="faq-ic"></span></button>
+        <div class="faq-a"><p>Absolument. Chaque case study vous est soumis pour validation. Vous pouvez l'ajuster, le publier d'un clic, ou laisser Temonis le publier automatiquement selon vos règles.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Que se passe-t-il si je dépasse mon quota mensuel ?<span class="faq-ic"></span></button>
+        <div class="faq-a"><p>Vous pouvez passer au plan supérieur à tout moment, ou ajouter des case studies à l'unité. Plus le volume augmente, plus le prix unitaire baisse - la logique est dégressive.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Y a-t-il un engagement de durée ?<span class="faq-ic"></span></button>
+        <div class="faq-a"><p>Non. Temonis fonctionne en abonnement mensuel sans engagement, à partir de 249 € HT/mois pour 4 case studies. Vous pouvez résilier à tout moment.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="cta">
+  <div class="wrap">
+    <div class="cta-box fade">
+      <h2>Prêt à transformer vos appels clients en preuves commerciales ?</h2>
+      <p>Votre prochain case study peut être prêt dans 24h. Le premier est offert.</p>
+      <button class="btn btn-navy" data-demo>Demander une démo<span class="btn-arrow">→</span></button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="#top" class="logo">
+          <span class="logo-mark">
+            <svg viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect width="56" height="56" rx="13" fill="#ffffff" fill-opacity="0.12"/>
+              <rect width="55" height="55" x="0.5" y="0.5" rx="12.5" fill="none" stroke="#ffffff" stroke-opacity="0.22"/>
+              <rect x="11" y="14" width="34" height="7" rx="3.5" fill="#ffffff"/>
+              <rect x="24.5" y="21" width="7" height="18" rx="3.5" fill="#ffffff"/>
+              <circle cx="28" cy="43" r="3.5" fill="#ffffff"/>
+            </svg>
+          </span>
+          Temonis
+        </a>
+        <p>La chaîne de production de case studies pour les équipes marketing B2B SaaS. Vos preuves clients, publiées toutes seules.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Produit</h4>
+        <a href="#how">Comment ça marche</a>
+        <a href="#features">Automatisation</a>
+        <a href="#pricing">Tarifs</a>
+        <a href="#" data-demo>Demander une démo</a>
+      </div>
+      <div class="foot-col">
+        <h4>Ressources</h4>
+        <a href="#blog">Blog</a>
+        <a href="#faq">FAQ</a>
+        <a href="#testimonials">Témoignages</a>
+      </div>
+      <div class="foot-col">
+        <h4>Société</h4>
+        <a href="#">Mentions légales</a>
+        <a href="#">Confidentialité &amp; RGPD</a>
+        <a href="#" data-demo>Nous contacter</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <small>© 2026 Temonis. Tous droits réservés.</small>
+      <small>temonis.com · temonis.fr</small>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ MODAL ============ -->
+<div class="modal-bg" id="modalBg">
+  <div class="modal" id="modal">
+    <button class="modal-close" id="modalClose" aria-label="Fermer">✕</button>
+    <div id="modalForm">
+      <h3>Demander une démo</h3>
+      <p class="sub">15 minutes pour voir Temonis produire un case study à votre charte. Le premier est offert.</p>
+      <div class="field" id="f-name">
+        <label for="i-name">Nom complet</label>
+        <input type="text" id="i-name" placeholder="Camille Béranger" />
+        <span class="msg">Indiquez votre nom.</span>
+      </div>
+      <div class="field" id="f-email">
+        <label for="i-email">E-mail professionnel</label>
+        <input type="email" id="i-email" placeholder="camille@votre-entreprise.com" />
+        <span class="msg">Indiquez un e-mail valide.</span>
+      </div>
+      <div class="field" id="f-company">
+        <label for="i-company">Entreprise</label>
+        <input type="text" id="i-company" placeholder="Votre entreprise" />
+        <span class="msg">Indiquez votre entreprise.</span>
+      </div>
+      <div class="field" id="f-phone">
+        <label for="i-phone">Téléphone portable</label>
+        <input type="tel" id="i-phone" placeholder="06 12 34 56 78" autocomplete="tel" inputmode="tel" />
+        <span class="msg">Indiquez un numéro de portable valide.</span>
+      </div>
+      <button class="btn btn-primary" id="submitBtn">Réserver ma démo<span class="btn-arrow">→</span></button>
+      <p class="form-error" id="formError">L'envoi a échoué. Réessayez dans un instant, ou contactez-nous directement.</p>
+    </div>
+    <div class="modal-success" id="modalSuccess" style="display:none;">
+      <div class="check"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div>
+      <h3>C'est noté&nbsp;!</h3>
+      <p>Merci - l'équipe Temonis vous recontacte sous 24h pour caler votre démo.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  const nav = document.getElementById('nav');
+  const scrollBar = document.getElementById('scrollBar');
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function onScroll() {
+    const y = window.scrollY;
+    nav.classList.toggle('scrolled', y > 20);
+    const h = document.documentElement.scrollHeight - window.innerHeight;
+    scrollBar.style.width = (h > 0 ? (y / h) * 100 : 0) + '%';
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  const burger = document.getElementById('burger');
+  const navLinks = document.getElementById('navLinks');
+  burger.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+  /* Staggered scroll reveal */
+  document.querySelectorAll('.fade').forEach(el => {
+    const sibs = [...el.parentElement.children].filter(c => c.classList.contains('fade'));
+    if (sibs.length > 1) {
+      el.style.transitionDelay = Math.min(sibs.indexOf(el), 5) * 0.085 + 's';
+    }
+  });
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.fade').forEach(el => io.observe(el));
+
+  /* Count-up animation for the stat figures */
+  function formatNum(n, prefix, suffix) {
+    const s = Math.round(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g, '\u202F');
+    return prefix + s + suffix;
+  }
+  function animateCount(el) {
+    const target = parseFloat(el.dataset.count);
+    const prefix = el.dataset.prefix || '';
+    const suffix = el.dataset.suffix || '';
+    if (reduceMotion) { el.textContent = formatNum(target, prefix, suffix); return; }
+    const dur = 1500, start = performance.now();
+    function tick(now) {
+      const p = Math.min((now - start) / dur, 1);
+      const eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = formatNum(target * eased, prefix, suffix);
+      if (p < 1) requestAnimationFrame(tick);
+      else el.textContent = formatNum(target, prefix, suffix);
+    }
+    requestAnimationFrame(tick);
+  }
+  const countObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { animateCount(e.target); countObs.unobserve(e.target); } });
+  }, { threshold: 0.6 });
+  document.querySelectorAll('[data-count]').forEach(el => countObs.observe(el));
+
+  /* Scroll-spy: highlight the active nav link */
+  const spyLinks = [...document.querySelectorAll('.nav-links a.navlink')];
+  const spySections = spyLinks.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+  const spyObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const id = '#' + e.target.id;
+        spyLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === id));
+      }
+    });
+  }, { rootMargin: '-45% 0px -50% 0px' });
+  spySections.forEach(s => spyObs.observe(s));
+
+  /* Subtle 3D parallax on the hero mock */
+  const heroVisual = document.getElementById('heroVisual');
+  const csmock = document.querySelector('.csmock');
+  if (heroVisual && csmock && !reduceMotion && window.matchMedia('(pointer:fine)').matches) {
+    heroVisual.addEventListener('mousemove', (e) => {
+      const r = heroVisual.getBoundingClientRect();
+      const dx = (e.clientX - r.left) / r.width - 0.5;
+      const dy = (e.clientY - r.top) / r.height - 0.5;
+      csmock.style.transform = 'rotateY(' + (dx * 9) + 'deg) rotateX(' + (-dy * 9) + 'deg)';
+    });
+    heroVisual.addEventListener('mouseleave', () => {
+      csmock.style.transform = 'rotateY(0deg) rotateX(0deg)';
+    });
+  }
+
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      const ans = item.querySelector('.faq-a');
+      const open = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => { i.classList.remove('open'); i.querySelector('.faq-a').style.maxHeight = null; });
+      if (!open) { item.classList.add('open'); ans.style.maxHeight = ans.scrollHeight + 'px'; }
+    });
+  });
+
+  const modalBg = document.getElementById('modalBg');
+  const modalForm = document.getElementById('modalForm');
+  const modalSuccess = document.getElementById('modalSuccess');
+  const submitBtn = document.getElementById('submitBtn');
+  const formError = document.getElementById('formError');
+  const submitBtnHTML = submitBtn.innerHTML;
+
+  /* ===================================================================
+     ENVOI DU FORMULAIRE PAR E-MAIL  -  via Formspree
+     -------------------------------------------------------------------
+     Le formulaire est connecté : les demandes de démo sont envoyées
+     par e-mail au destinataire configuré dans le compte Formspree.
+     Pour changer de destinataire ou de service, modifier la ligne
+     FORM_ENDPOINT ci-dessous.
+     =================================================================== */
+  const FORM_ENDPOINT = 'https://formspree.io/f/mvzyonwl';
+
+  function resetForm() {
+    submitBtn.disabled = false;
+    submitBtn.innerHTML = submitBtnHTML;
+    formError.classList.remove('show');
+  }
+  function openModal() {
+    modalForm.style.display = 'block';
+    modalSuccess.style.display = 'none';
+    resetForm();
+    modalBg.classList.add('show');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal() { modalBg.classList.remove('show'); document.body.style.overflow = ''; }
+  document.querySelectorAll('[data-demo]').forEach(b => b.addEventListener('click', (e) => { e.preventDefault(); openModal(); }));
+  document.getElementById('modalClose').addEventListener('click', closeModal);
+  modalBg.addEventListener('click', (e) => { if (e.target === modalBg) closeModal(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+
+  submitBtn.addEventListener('click', async () => {
+    const name = document.getElementById('i-name');
+    const email = document.getElementById('i-email');
+    const company = document.getElementById('i-company');
+    const phone = document.getElementById('i-phone');
+    let ok = true;
+    function mark(field, valid) { document.getElementById(field).classList.toggle('err', !valid); if (!valid) ok = false; }
+    mark('f-name', name.value.trim().length > 1);
+    mark('f-email', /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim()));
+    mark('f-company', company.value.trim().length > 1);
+    mark('f-phone', /^\+?\d{8,15}$/.test(phone.value.replace(/[\s.\-()]/g, '')));
+    if (!ok) return;
+    formError.classList.remove('show');
+
+    const payload = {
+      Nom: name.value.trim(),
+      Email: email.value.trim(),
+      Entreprise: company.value.trim(),
+      'Téléphone portable': phone.value.trim(),
+      _subject: 'Nouvelle demande de démo - Temonis'
+    };
+
+    // Mode démo tant que l'identifiant Formspree n'est pas renseigné
+    if (FORM_ENDPOINT.indexOf('VOTRE_ID_FORMSPREE') !== -1) {
+      modalForm.style.display = 'none';
+      modalSuccess.style.display = 'block';
+      return;
+    }
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Envoi en cours...';
+    try {
+      const res = await fetch(FORM_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      if (res.ok) {
+        modalForm.style.display = 'none';
+        modalSuccess.style.display = 'block';
+      } else {
+        throw new Error('Envoi refusé');
+      }
+    } catch (err) {
+      formError.classList.add('show');
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = submitBtnHTML;
+    }
+  });
+  ['i-name','i-email','i-company','i-phone'].forEach(id => {
+    document.getElementById(id).addEventListener('input', (e) => e.target.closest('.field').classList.remove('err'));
+  });
+</script>
+</body>
+</html>
