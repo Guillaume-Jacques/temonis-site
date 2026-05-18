@@ -137,7 +137,7 @@
   .hero-visual { position: relative; perspective: 1100px; }
   .csmock {
     background: var(--white); border-radius: 16px; box-shadow: var(--shadow-lg);
-    overflow: hidden; position: relative;
+    overflow: hidden; position: relative; z-index: 1;
     transition: transform .25s cubic-bezier(.2,.8,.2,1);
     transform-style: preserve-3d; will-change: transform;
   }
@@ -168,11 +168,11 @@
   .float-badge {
     position: absolute; background: var(--white); border-radius: 11px; box-shadow: var(--shadow);
     padding: 11px 14px; display: flex; align-items: center; gap: 9px;
-    font-size: 12.5px; font-weight: 600; color: var(--navy);
+    font-size: 12.5px; font-weight: 600; color: var(--navy); z-index: 5;
   }
   .float-badge svg { color: var(--gold-deep); }
-  .fb-1 { top: -20px; left: -32px; animation: bob 5s ease-in-out infinite; }
-  .fb-2 { bottom: 30px; left: -42px; animation: bob 5s ease-in-out infinite .9s; }
+  .fb-1 { top: -26px; right: -14px; animation: bob 5s ease-in-out infinite; }
+  .fb-2 { bottom: -18px; left: 24px; animation: bob 5s ease-in-out infinite .9s; }
   @keyframes bob { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-9px)} }
 
   /* ---------- Integrations strip ---------- */
