@@ -1121,7 +1121,7 @@
   })();
 
   /* Scroll-spy: highlight the active nav link */
-  const spyLinks = [...document.querySelectorAll('.nav-links a.navlink')];
+  const spyLinks = [...document.querySelectorAll('.nav-links a.navlink')].filter(a => a.getAttribute('href').startsWith('#'));
   const spySections = spyLinks.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
   const spyObs = new IntersectionObserver((entries) => {
     entries.forEach(e => {
