@@ -102,8 +102,8 @@
   }
   .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 78px; }
   .logo { display: flex; align-items: center; gap: 11px; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 23px; font-weight: 800; color: #fff; letter-spacing: -0.02em; }
-  .logo-mark { width: 36px; height: 36px; flex-shrink: 0; transition: transform .25s cubic-bezier(.2,.8,.2,1); }
-  .logo:hover .logo-mark { transform: rotate(-6deg) scale(1.06); }
+  .logo-mark { width: 36px; height: 36px; flex-shrink: 0; }
+  
   .logo-mark svg { width: 100%; height: 100%; display: block; }
   .nav-links { display: flex; align-items: center; gap: 32px; }
   .nav-links a.navlink { font-size: 15px; font-weight: 500; color: rgba(255,255,255,.82); transition: color .15s ease; position: relative; }
@@ -285,10 +285,10 @@
   /* Pricing calculator */
   .calc-wrap { max-width: 560px; margin: 0 auto 44px; text-align: center; }
   .calc-label { font-size: 15px; color: var(--muted); margin-bottom: 16px; }
-  .calc-slider { width: 100%; -webkit-appearance: none; appearance: none; height: 6px; border-radius: 3px; background: var(--line); outline: none; margin: 12px 0 8px; cursor: pointer; }
-  .calc-slider::-webkit-slider-thumb { -webkit-appearance: none; width: 28px; height: 28px; border-radius: 50%; background: var(--gold); cursor: pointer; box-shadow: 0 2px 8px rgba(200,169,106,.4); transition: transform .15s; }
-  .calc-slider::-webkit-slider-thumb:hover { transform: scale(1.15); }
-  .calc-slider::-moz-range-thumb { width: 28px; height: 28px; border-radius: 50%; background: var(--gold); border: none; cursor: pointer; }
+  .calc-btns { display: flex; gap: 12px; justify-content: center; margin: 16px 0 8px; }
+  .calc-btn { padding: 12px 28px; border-radius: 10px; border: 2px solid var(--line); background: var(--white); font-family: 'Plus Jakarta Sans',sans-serif; font-size: 16px; font-weight: 700; color: var(--navy); cursor: pointer; transition: .2s; }
+  .calc-btn:hover { border-color: var(--gold); }
+  .calc-btn.active { background: var(--navy); color: var(--gold); border-color: var(--navy); }
   .calc-out { display: flex; justify-content: center; gap: 32px; flex-wrap: wrap; margin-top: 18px; }
   .calc-stat { text-align: center; }
   .calc-stat .val { font-family:'Plus Jakarta Sans',sans-serif; font-size: 36px; font-weight: 800; color: var(--navy); }
@@ -455,7 +455,7 @@
   }
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Temonis","url":"https://temonis.com","logo":"https://temonis.com/favicon-192x192.png","description":"Vos témoignages clients générés automatiquement","address":{"@type":"PostalAddress","streetAddress":"27 rue Daguerre","addressLocality":"Cormeilles-en-Parisis","postalCode":"95240","addressCountry":"FR"},"contactPoint":{"@type":"ContactPoint","email":"contact@temonis.com","contactType":"sales"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Comment Temonis accède-t-il à mes conversations clients ?","acceptedAnswer":{"@type":"Answer","text":"Temonis se connecte à Modjo, Gong ou Chorus en lecture seule, via les intégrations officielles. Vous pouvez aussi connecter votre CRM (HubSpot, Salesforce)."}},{"@type":"Question","name":"Quel est le prix de Temonis ?","acceptedAnswer":{"@type":"Answer","text":"Trois plans : Starter à 249 € HT/mois (4 témoignages), Growth à 499 €/mois (12 + distribution auto), Scale à 849 €/mois (illimité + scoring IA). Sans engagement."}},{"@type":"Question","name":"Temonis est-il conforme au RGPD ?","acceptedAnswer":{"@type":"Answer","text":"Oui. Hébergement UE, consentement client recueilli avant publication, données conservées 12 mois maximum."}},{"@type":"Question","name":"Quel retour sur investissement attendre ?","acceptedAnswer":{"@type":"Answer","text":"Le plan Starter remplace un processus à plus de 1 100 €/mois. Économie directe de 866 €/mois, ROI supérieur à 1 000 % en comptant l'impact sur le closing."}},{"@type":"Question","name":"Y a-t-il un engagement de durée ?","acceptedAnswer":{"@type":"Answer","text":"Non. Abonnement mensuel, résiliable à tout moment, sans frais ni préavis."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Comment Temonis accède-t-il à mes conversations clients ?","acceptedAnswer":{"@type":"Answer","text":"Temonis se connecte à Modjo, Gong ou Chorus en lecture seule, via les intégrations officielles. Vous pouvez aussi connecter votre CRM (HubSpot, Salesforce)."}},{"@type":"Question","name":"Quel est le prix de Temonis ?","acceptedAnswer":{"@type":"Answer","text":"Trois plans : Starter à 249 € HT/mois (4 témoignages), Growth à 499 €/mois (12 + distribution auto), Scale à 849 €/mois (40 témoignages + scoring IA). Sans engagement."}},{"@type":"Question","name":"Temonis est-il conforme au RGPD ?","acceptedAnswer":{"@type":"Answer","text":"Oui. Hébergement UE, consentement client recueilli avant publication, données conservées 12 mois maximum."}},{"@type":"Question","name":"Quel retour sur investissement attendre ?","acceptedAnswer":{"@type":"Answer","text":"Le plan Starter remplace un processus à plus de 1 100 €/mois. Économie directe de 866 €/mois, ROI supérieur à 1 000 % en comptant l'impact sur le closing."}},{"@type":"Question","name":"Y a-t-il un engagement de durée ?","acceptedAnswer":{"@type":"Answer","text":"Non. Abonnement mensuel, résiliable à tout moment, sans frais ni préavis."}}]}</script>
 </head>
 <body>
 
@@ -566,7 +566,7 @@
   <div class="wrap">
     <div class="sec-head fade">
       <span class="eyebrow">Pourquoi maintenant</span>
-      <h2>La preuve client existe déjà. Personne ne la produit.</h2>
+      <h2>La preuve client existe déjà, personne ne la produit</h2>
       <p>Vos acheteurs réclament des références. Vos équipes, elles, n'ont ni le temps ni les outils pour les produire au rythme attendu.</p>
     </div>
     <div class="prob-grid">
@@ -620,7 +620,7 @@
   <div class="wrap">
     <div class="sec-head fade">
       <span class="eyebrow">Comment ça marche</span>
-      <h2>Trois étapes. Aucune intervention.</h2>
+      <h2>Trois étapes, aucune intervention</h2>
       <p>Vous branchez Temonis une fois. Ensuite, chaque témoignage se produit, se met en page et se publie sans que vous ayez à y penser.</p>
     </div>
     <div class="steps">
@@ -653,7 +653,7 @@
   <div class="wrap">
     <div class="sec-head fade">
       <span class="eyebrow">L'automatisation, de bout en bout</span>
-      <h2>Pas un assistant. Une chaîne de production.</h2>
+      <h2>Pas un assistant, une chaîne de production</h2>
       <p>Temonis ne vous aide pas à écrire un témoignage. Il le produit entièrement - de l'analyse de l'appel jusqu'à la page mise en forme.</p>
     </div>
     <div class="feat-grid">
@@ -691,7 +691,11 @@
     </div>
     <div class="calc-wrap fade">
       <p class="calc-label">Combien de témoignages par mois souhaitez-vous produire ?</p>
-      <input type="range" class="calc-slider" id="calcSlider" min="1" max="30" value="4" />
+      <div class="calc-btns" id="calcBtns">
+        <button class="calc-btn active" data-vol="4">4 / mois</button>
+        <button class="calc-btn" data-vol="12">12 / mois</button>
+        <button class="calc-btn" data-vol="40">40 / mois</button>
+      </div>
       <div class="calc-out">
         <div class="calc-stat"><div class="val" id="calcVol">4</div><div class="lbl">témoignages / mois</div></div>
         <div class="calc-stat"><div class="val" id="calcUnit">62 €</div><div class="lbl">par témoignage</div></div>
@@ -766,7 +770,7 @@
   <div class="wrap">
     <div class="sec-head center fade">
       <span class="eyebrow" style="justify-content:center;">Elles ont arrêté de courir après</span>
-      <h2>Ce que disent les équipes marketing.</h2>
+      <h2>Ce que disent les équipes marketing</h2>
     </div>
     <div class="tst-grid">
       <div class="tst fade">
@@ -793,7 +797,7 @@
   <div class="wrap">
     <div class="sec-head fade">
       <span class="eyebrow">Ressources</span>
-      <h2>Le journal de la preuve client.</h2>
+      <h2>Le journal de la preuve client</h2>
       <p>Nos analyses sur le customer marketing, la preuve sociale et les cycles de vente B2B.</p>
     </div>
     <div class="blog-grid">
@@ -833,7 +837,7 @@
   <div class="wrap">
     <div class="sec-head center fade">
       <span class="eyebrow" style="justify-content:center;">Questions fréquentes</span>
-      <h2>Tout ce que vous voulez savoir.</h2>
+      <h2>Tout ce que vous voulez savoir</h2>
     </div>
     <div class="faq-list fade">
       <div class="faq-item">
@@ -1097,26 +1101,22 @@
 
   /* Pricing calculator */
   (function(){
-    const slider=document.getElementById('calcSlider');
+    const btns=document.querySelectorAll('.calc-btn');
     const volEl=document.getElementById('calcVol'),unitEl=document.getElementById('calcUnit'),saveEl=document.getElementById('calcSave'),planEl=document.getElementById('calcPlan');
-    if(!slider)return;
-    function update(){
-      const v=parseInt(slider.value);
-      let price,plan,name;
-      if(v<=4){price=249;plan='Starter';name='Starter - 249 €/mois';}
-      else if(v<=12){price=499;plan='Growth';name='Growth - 499 €/mois';}
-      else{price=849;plan='Scale';name='Scale - 849 €/mois';}
-      const vol=v>40?40:v;
-      const unit=Math.round(price/Math.min(v,plan==='Starter'?4:plan==='Growth'?12:40));
-      const manualCost=Math.round(v*275);
-      const saving=manualCost-price;
-      volEl.textContent=v+(v>=30?' +':'');
+    if(!btns.length)return;
+    const plans={4:{price:249,name:'Starter - 249 €/mois'},12:{price:499,name:'Growth - 499 €/mois'},40:{price:849,name:'Scale - 849 €/mois'}};
+    function update(v){
+      const p=plans[v];
+      const unit=Math.round(p.price/v);
+      const manual=Math.round(v*275);
+      volEl.textContent=v;
       unitEl.textContent=unit+' €';
-      saveEl.textContent=saving.toLocaleString('fr-FR')+' €';
-      planEl.textContent='Plan recommandé : '+name;
+      saveEl.textContent=(manual-p.price).toLocaleString('fr-FR')+' €';
+      planEl.textContent='Plan recommandé : '+p.name;
+      btns.forEach(b=>{b.classList.toggle('active',parseInt(b.dataset.vol)===v);});
     }
-    slider.addEventListener('input',update);
-    update();
+    btns.forEach(b=>b.addEventListener('click',()=>update(parseInt(b.dataset.vol))));
+    update(4);
   })();
 
   /* Scroll-spy: highlight the active nav link */
@@ -1295,14 +1295,14 @@
   const KB = [
     {k:["comment","marche","fonctionne","fonctionnement","principe"],a:"Temonis se connecte à vos outils (Modjo, Gong, HubSpot, Salesforce), identifie automatiquement les conversations clients à fort potentiel, puis génère un témoignage complet - rédigé, mis en page à votre charte. Vous validez d'un clic."},
     {k:["qu'est","temonis","c'est quoi","présent"],a:"Temonis est une plateforme qui génère automatiquement vos témoignages clients à partir de vos conversations Modjo ou Gong. Sans brief, sans relance, sans agence. Le tout mis en page à votre charte graphique."},
-    {k:["prix","tarif","coût","coûte","combien","cher","abonnement"],a:"Trois plans : Starter à 249 € HT/mois (4 témoignages), Growth à 499 €/mois (12 + distribution auto), Scale à 849 €/mois (illimité + scoring IA). Sans engagement, résiliable à tout moment. Le premier témoignage est offert pendant la démo !"},
+    {k:["prix","tarif","coût","coûte","combien","cher","abonnement"],a:"Trois plans : Starter à 249 € HT/mois (4 témoignages), Growth à 499 €/mois (12 + distribution auto), Scale à 849 €/mois (40 témoignages + scoring IA). Sans engagement, résiliable à tout moment. Le premier témoignage est offert pendant la démo !"},
     {k:["intégr","connect","outil","compatible","modjo","gong","hubspot","salesforce","crm","aircall","chorus"],a:"Temonis s'intègre avec Modjo, Gong, Chorus et Aircall pour les conversations, et HubSpot et Salesforce côté CRM. La connexion se fait en lecture seule, via les API officielles, en environ 30 minutes."},
     {k:["format","pdf","linkedin","slide","image","déclin"],a:"Selon votre plan : PDF, image web, posts LinkedIn, slides et one-pager. Sur Growth et Scale, chaque témoignage est automatiquement décliné dans tous les formats nécessaires."},
     {k:["charte","graphique","design","mise en page","couleur","typo","logo"],a:"Vous renseignez votre charte une fois (couleurs, typographies, logo, ton) et l'IA l'applique à chaque production. Chaque témoignage ressemble à vos contenus, pas à un template générique."},
     {k:["valid","relire","modifier","approuv","publi","client"],a:"Chaque témoignage vous est soumis pour validation. Le client reçoit un e-mail et valide en un clic. Rien n'est publié sans accord explicite. Vous pouvez aussi ajuster le contenu avant envoi."},
     {k:["essai","gratuit","test","offert","démo","demo"],a:"Le premier témoignage est offert pendant la démo de 15 minutes. Temonis produit un vrai témoignage à partir de vos conversations, mis en page à votre charte. Vous repartez avec, sans engagement. Cliquez sur 'Demander une démo' pour réserver !"},
     {k:["engagement","résili","annul","mensuel","sans engagement"],a:"Aucun engagement. L'abonnement est mensuel, résiliable à tout moment, sans frais ni préavis."},
-    {k:["différence","plan","starter","growth","scale","palier"],a:"Starter = créer vos témoignages (4/mois). Growth = créer + diffuser automatiquement sur LinkedIn, Google Business, CRM (12/mois). Scale = créer + diffuser + convertir avec scoring IA, A/B testing et multi-langue (illimité)."},
+    {k:["différence","plan","starter","growth","scale","palier"],a:"Starter = créer vos témoignages (4/mois). Growth = créer + diffuser automatiquement sur LinkedIn, Google Business, CRM (12/mois). Scale = créer + diffuser + convertir avec scoring IA, A/B testing et multi-langue (40/mois)."},
     {k:["quota","dépasse","plus","limite"],a:"Vous pouvez passer au plan supérieur à tout moment. La mise à niveau est immédiate et le prix unitaire baisse à chaque palier."},
     {k:["sécurité","donnée","héberg","serveur","eu","europe","souveraineté"],a:"Vos données sont hébergées dans l'Union Européenne, conformément au RGPD. Les conversations sont accédées en lecture seule et ne sont jamais stockées au-delà du nécessaire. C'est un avantage clé face aux solutions américaines."},
     {k:["rgpd","confidential","cnil","consent","droit","suppression","gdpr"],a:"Temonis est RGPD-natif. Le consentement client est recueilli avant publication. Le droit de retrait est garanti. Les données sont conservées 12 mois maximum. Consultez notre politique de confidentialité pour tous les détails."},
