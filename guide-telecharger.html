@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Guide gratuit : Le témoignage client automatisé en B2B - Temonis</title>
+<meta name="description" content="Téléchargez gratuitement le guide complet du témoignage client automatisé en B2B. 5 clés pour passer de 2 témoignages par an à des dizaines par mois." />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<script defer data-domain="temonis.com" src="https://plausible.io/js/script.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+<noscript><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" /></noscript>
+<style>
+  :root{--navy:#0F2744;--navy-2:#0A1C33;--gold:#C8A96A;--gold-deep:#B5934C;--gold-soft:#EFE6D2;--bg:#F7F5F0;--white:#FFFFFF;--text:#1A1A1A;--muted:#4A5568;--line:#E4E0D6;--shadow:0 1px 2px rgba(15,39,68,.05),0 10px 30px rgba(15,39,68,.08);--shadow-lg:0 4px 8px rgba(15,39,68,.06),0 28px 60px rgba(15,39,68,.16);}
+  *{box-sizing:border-box;margin:0;padding:0;} html{scroll-behavior:smooth;}
+  body{font-family:'Inter',-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;letter-spacing:-0.02em;line-height:1.15;color:var(--navy);}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 28px;}
+  nav{background:var(--navy);padding:0;}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:78px;}
+  .logo{display:flex;align-items:center;gap:11px;font-family:'Plus Jakarta Sans',sans-serif;font-size:23px;font-weight:800;color:#fff;letter-spacing:-0.02em;}
+  .logo-mark{width:36px;height:36px;flex-shrink:0;} .logo-mark svg{width:100%;height:100%;display:block;}
+  .hero{background:var(--navy);padding:60px 0 80px;color:#fff;}
+  .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center;}
+  .hero h1{font-size:clamp(28px,4vw,40px);color:#fff;margin-bottom:16px;}
+  .hero h1 em{font-style:normal;color:var(--gold);}
+  .hero-sub{font-size:17px;color:rgba(255,255,255,.7);margin-bottom:28px;}
+  .hero-list{list-style:none;display:flex;flex-direction:column;gap:12px;margin-bottom:24px;}
+  .hero-list li{display:flex;gap:10px;font-size:15px;color:rgba(255,255,255,.85);}
+  .hero-list li svg{color:var(--gold);flex-shrink:0;margin-top:2px;}
+  .hero-note{font-size:13px;color:rgba(255,255,255,.5);}
+  .form-card{background:var(--white);border-radius:18px;padding:34px 32px;box-shadow:var(--shadow-lg);}
+  .form-card h2{font-size:22px;margin-bottom:6px;color:var(--navy);}
+  .form-card .sub{font-size:14px;color:var(--muted);margin-bottom:22px;}
+  .field{margin-bottom:15px;}
+  .field label{display:block;font-size:13px;font-weight:600;color:var(--navy);margin-bottom:6px;}
+  .field input{width:100%;padding:12px 14px;border-radius:9px;border:1.5px solid var(--line);background:var(--bg);font-family:inherit;font-size:15px;color:var(--text);transition:border .15s;}
+  .field input:focus{outline:none;border-color:var(--gold);background:#fff;}
+  .field.err input{border-color:#C0392B;}
+  .field .msg{font-size:12.5px;color:#C0392B;margin-top:4px;display:none;}
+  .field.err .msg{display:block;}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;cursor:pointer;font-family:'Inter',sans-serif;font-size:15.5px;font-weight:600;padding:14px 26px;border-radius:10px;border:none;width:100%;transition:transform .18s,background .18s;white-space:nowrap;}
+  .btn-primary{background:var(--gold);color:var(--navy);box-shadow:0 6px 18px rgba(200,169,106,.34);}
+  .btn-primary:hover{background:var(--gold-deep);transform:translateY(-2px);}
+  .btn[disabled]{opacity:.6;cursor:progress;}
+  .form-error{display:none;margin-top:12px;font-size:13px;color:#C0392B;text-align:center;}
+  .form-error.show{display:block;}
+  .success{display:none;text-align:center;padding:24px 0;}
+  .success.show{display:block;}
+  .success .check{width:64px;height:64px;border-radius:50%;background:var(--gold-soft);display:grid;place-items:center;margin:0 auto 18px;color:var(--gold-deep);}
+  .success h3{font-size:22px;margin-bottom:8px;}
+  .success p{font-size:15px;color:var(--muted);margin-bottom:20px;}
+  .btn-dl{background:var(--navy);color:#fff;display:inline-flex;width:auto;padding:14px 28px;border-radius:10px;font-weight:600;font-size:15px;text-decoration:none;}
+  .btn-dl:hover{background:var(--navy-2);transform:translateY(-2px);}
+  .privacy{font-size:11.5px;color:var(--muted);margin-top:14px;text-align:center;}
+  .privacy a{color:var(--gold-deep);text-decoration:underline;}
+  footer{background:var(--navy);color:#fff;padding:40px 0 24px;margin-top:60px;}
+  .foot-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+  .foot-inner small{font-size:13px;color:rgba(255,255,255,.5);}
+  .foot-inner a{color:rgba(255,255,255,.6);font-size:13px;margin-left:20px;transition:color .15s;} .foot-inner a:hover{color:var(--gold);}
+  @media(max-width:768px){.hero-grid{grid-template-columns:1fr;gap:36px;}.hero{padding:40px 0 50px;}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="wrap nav-inner">
+    <a href="/" class="logo">
+      <span class="logo-mark"><svg viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg"><rect width="56" height="56" rx="13" fill="#ffffff" fill-opacity="0.12"/><rect width="55" height="55" x="0.5" y="0.5" rx="12.5" fill="none" stroke="#ffffff" stroke-opacity="0.22"/><rect x="11" y="14" width="34" height="7" rx="3.5" fill="#ffffff"/><rect x="24.5" y="21" width="7" height="18" rx="3.5" fill="#ffffff"/><circle cx="28" cy="43" r="3.5" fill="#ffffff"/></svg></span>
+      Temonis
+    </a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>Le guide du témoignage client <em>automatisé en B2B</em></h1>
+      <p class="hero-sub">5 clés pour passer de 2 témoignages par an à des dizaines par mois — sans agence, sans relance, sans freelance.</p>
+      <ul class="hero-list">
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> Pourquoi 97 % des acheteurs B2B lisent les témoignages</li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> Les 4 formats qui convertissent (avec exemples)</li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> Comment automatiser la collecte en 4 étapes</li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> Le calcul ROI complet (1 115 € vs 249 €/mois)</li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> RGPD et conformité : ce qu'il faut savoir</li>
+      </ul>
+      <p class="hero-note">PDF gratuit · 6 pages · Lecture 5 min</p>
+    </div>
+    <div>
+      <div class="form-card">
+        <div id="formView">
+          <h2>Télécharger le guide gratuit</h2>
+          <p class="sub">Remplissez le formulaire et recevez le guide immédiatement.</p>
+          <div class="field" id="f-name">
+            <label for="i-name">Prénom</label>
+            <input type="text" id="i-name" placeholder="Votre prénom" />
+            <span class="msg">Indiquez votre prénom.</span>
+          </div>
+          <div class="field" id="f-email">
+            <label for="i-email">E-mail professionnel</label>
+            <input type="email" id="i-email" placeholder="vous@entreprise.com" />
+            <span class="msg">Indiquez un e-mail valide.</span>
+          </div>
+          <div class="field" id="f-company">
+            <label for="i-company">Entreprise</label>
+            <input type="text" id="i-company" placeholder="Votre entreprise" />
+            <span class="msg">Indiquez votre entreprise.</span>
+          </div>
+          <button class="btn btn-primary" id="submitBtn">Recevoir le guide<span style="margin-left:6px;">→</span></button>
+          <p class="form-error" id="formError">L'envoi a échoué. Réessayez ou contactez contact@temonis.com.</p>
+          <p class="privacy">Vos données sont protégées. <a href="confidentialite.html">Politique de confidentialité</a></p>
+        </div>
+        <div class="success" id="successView">
+          <div class="check"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div>
+          <h3>Votre guide est prêt !</h3>
+          <p>Cliquez ci-dessous pour le télécharger.</p>
+          <a href="guide-temoignage-client.pdf" download class="btn-dl">Télécharger le PDF<span style="margin-left:8px;">↓</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap foot-inner">
+    <small>© 2026 Temonis. Tous droits réservés.</small>
+    <div>
+      <a href="/">Accueil</a>
+      <a href="blog.html">Blog</a>
+      <a href="confidentialite.html">Confidentialité</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const ENDPOINT = 'https://formspree.io/f/mvzyonwl';
+  const btn = document.getElementById('submitBtn');
+  const btnHTML = btn.innerHTML;
+  btn.addEventListener('click', async () => {
+    const n = document.getElementById('i-name');
+    const e = document.getElementById('i-email');
+    const c = document.getElementById('i-company');
+    let ok = true;
+    function m(f, v) { document.getElementById(f).classList.toggle('err', !v); if (!v) ok = false; }
+    m('f-name', n.value.trim().length > 1);
+    m('f-email', /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e.value.trim()));
+    m('f-company', c.value.trim().length > 1);
+    if (!ok) return;
+    document.getElementById('formError').classList.remove('show');
+    btn.disabled = true; btn.textContent = 'Envoi en cours...';
+    try {
+      const r = await fetch(ENDPOINT, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          Prénom: n.value.trim(),
+          Email: e.value.trim(),
+          Entreprise: c.value.trim(),
+          _subject: 'Téléchargement guide - Temonis',
+          Source: 'Landing page guide PDF'
+        })
+      });
+      if (r.ok) {
+        document.getElementById('formView').style.display = 'none';
+        document.getElementById('successView').classList.add('show');
+      } else throw new Error();
+    } catch (err) {
+      document.getElementById('formError').classList.add('show');
+      btn.disabled = false; btn.innerHTML = btnHTML;
+    }
+  });
+  ['i-name','i-email','i-company'].forEach(id => {
+    document.getElementById(id).addEventListener('input', e => e.target.closest('.field').classList.remove('err'));
+  });
+</script>
+</body>
+</html>
