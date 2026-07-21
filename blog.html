@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Blog - Temonis</title>
+<meta name="description" content="Analyses et guides sur les témoignages clients automatisés, le customer marketing et la croissance B2B SaaS." />
+<meta property="og:title" content="Blog - Temonis" />
+<meta property="og:description" content="Analyses et guides sur les témoignages clients automatisés, le customer marketing B2B." />
+<meta property="og:image" content="https://temonis.com/og-image.png" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<script defer data-domain="temonis.com" src="https://plausible.io/js/script.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root { --navy:#0F2744;--navy-2:#0A1C33;--navy-soft:#1C3A5E;--gold:#C8A96A;--gold-deep:#B5934C;--gold-soft:#EFE6D2;--bg:#F7F5F0;--white:#FFFFFF;--text:#1A1A1A;--muted:#4A5568;--line:#E4E0D6;--line-navy:rgba(255,255,255,0.14);--shadow:0 1px 2px rgba(15,39,68,.05),0 10px 30px rgba(15,39,68,.08);--shadow-lg:0 4px 8px rgba(15,39,68,.06),0 28px 60px rgba(15,39,68,.16);--r:14px;--maxw:1180px; }
+  *{box-sizing:border-box;margin:0;padding:0;} html{scroll-behavior:smooth;} a{color:inherit;text-decoration:none;}
+  body{font-family:'Inter',-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;letter-spacing:-0.02em;line-height:1.15;color:var(--navy);}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;}
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(15,39,68,0.96);backdrop-filter:blur(12px);box-shadow:0 4px 24px rgba(15,39,68,.22);}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:78px;}
+  .logo{display:flex;align-items:center;gap:11px;font-family:'Plus Jakarta Sans',sans-serif;font-size:23px;font-weight:800;color:#fff;letter-spacing:-0.02em;}
+  .logo-mark{width:36px;height:36px;flex-shrink:0;} .logo-mark svg{width:100%;height:100%;display:block;}
+  .nav-links{display:flex;align-items:center;gap:32px;}
+  .nav-links a.navlink{font-size:15px;font-weight:500;color:rgba(255,255,255,.82);transition:color .15s;} .nav-links a.navlink:hover{color:var(--gold);}
+  .nav-cta{display:flex;align-items:center;gap:12px;}
+  .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;} .burger span{width:22px;height:2px;background:#fff;border-radius:2px;}
+  .btn{display:inline-flex;align-items:center;gap:9px;cursor:pointer;font-family:'Inter',sans-serif;font-size:15.5px;font-weight:600;padding:14px 26px;border-radius:10px;border:1.5px solid transparent;transition:transform .18s,background .18s;white-space:nowrap;}
+  .btn-primary{background:var(--gold);color:var(--navy);} .btn-primary:hover{background:var(--gold-deep);transform:translateY(-2px);}
+  .blog-hero{padding:130px 0 50px;background:var(--navy);}
+  .blog-hero h1{font-size:clamp(32px,4vw,44px);color:#fff;margin-bottom:10px;}
+  .blog-hero p{color:rgba(255,255,255,.6);font-size:18px;}
+  .blog-body{padding:56px 0 80px;}
+  .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .post{background:var(--white);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);transition:transform .2s,box-shadow .2s;display:flex;flex-direction:column;cursor:pointer;}
+  .post:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);}
+  .post-cover{height:180px;position:relative;background-size:cover;background-position:center;}
+  .post-cover span{position:absolute;bottom:12px;left:16px;font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:#fff;background:rgba(0,0,0,.26);padding:5px 10px;border-radius:6px;}
+  .post-body{padding:22px;display:flex;flex-direction:column;flex:1;}
+  .post-body h3{font-size:18px;line-height:1.3;margin-bottom:10px;}
+  .post-body p{font-size:14px;color:var(--muted);flex:1;}
+  .post-meta{font-size:12.5px;color:var(--muted);margin-bottom:10px;}
+  .post-more{font-size:13.5px;font-weight:700;color:var(--gold-deep);margin-top:15px;}
+  footer{background:var(--navy);color:#fff;padding:64px 0 32px;}
+  .foot-grid{display:grid;grid-template-columns:1.7fr 1fr 1fr 1fr;gap:40px;margin-bottom:46px;}
+  .foot-brand p{font-size:14.5px;color:rgba(255,255,255,.6);margin-top:16px;}
+  .foot-col h4{font-size:12.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--gold);margin-bottom:15px;}
+  .foot-col a{display:block;font-size:14.5px;color:rgba(255,255,255,.66);margin-bottom:10px;transition:color .15s;} .foot-col a:hover{color:var(--gold);}
+  .foot-bottom{display:flex;justify-content:space-between;padding-top:26px;border-top:1px solid var(--line-navy);flex-wrap:wrap;gap:12px;}
+  .foot-bottom small{font-size:13px;color:rgba(255,255,255,.5);}
+  @media(max-width:940px){.blog-grid{grid-template-columns:1fr;}.nav-links{display:none;}.burger{display:flex;}.nav-links.open{display:flex;position:absolute;top:78px;left:0;right:0;flex-direction:column;background:var(--navy-2);padding:22px 28px;gap:18px;}.foot-grid{grid-template-columns:1fr 1fr;}}
+  @media(max-width:560px){.wrap{padding:0 20px;}.foot-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="wrap nav-inner">
+    <a href="/" class="logo"><span class="logo-mark"><svg viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg"><rect width="56" height="56" rx="13" fill="#ffffff" fill-opacity="0.12"/><rect width="55" height="55" x="0.5" y="0.5" rx="12.5" fill="none" stroke="#ffffff" stroke-opacity="0.22"/><rect x="11" y="14" width="34" height="7" rx="3.5" fill="#ffffff"/><rect x="24.5" y="21" width="7" height="18" rx="3.5" fill="#ffffff"/><circle cx="28" cy="43" r="3.5" fill="#ffffff"/></svg></span> Temonis</a>
+    <div class="nav-links" id="navLinks">
+      <a class="navlink" href="/#how">Comment ça marche</a>
+      <a class="navlink" href="/#features">Automatisation</a>
+      <a class="navlink" href="/#pricing">Tarifs</a>
+      <a class="navlink" href="/blog.html" style="color:var(--gold)">Blog</a>
+      <a class="navlink" href="/#faq">FAQ</a>
+      <div class="nav-cta"><button class="btn btn-primary" onclick="window.location='/#top'">Demander une démo</button></div>
+    </div>
+    <div class="burger" id="burger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+<div class="blog-hero"><div class="wrap">
+  <h1>Le journal de la preuve client</h1>
+  <p>Analyses et guides sur les témoignages clients automatisés, le customer marketing et la croissance B2B SaaS.</p>
+</div></div>
+<div class="blog-body"><div class="wrap">
+  <div class="blog-grid">
+    <a href="blog-roi-customer-marketing.html" class="post">
+      <div class="post-cover" style="background-image:url(blog-img-roi.jpg)"><span>ROI & Stratégie</span></div>
+      <div class="post-body">
+        <div class="post-meta">2 juin 2026 · 5 min de lecture</div>
+        <h3>ROI du customer marketing : combien coûte (vraiment) l'absence de témoignages clients</h3>
+        <p>L'absence de témoignages coûte des dizaines de milliers d'euros par an. Voici le calcul complet.</p>
+        <span class="post-more">Lire l'article →</span>
+      </div>
+    </a>
+    <a href="blog-automatiser-temoignages-b2b.html" class="post">
+      <div class="post-cover" style="background-image:url(blog-img-automatiser.jpg)"><span>Automatisation</span></div>
+      <div class="post-body">
+        <div class="post-meta">2 juin 2026 · 5 min de lecture</div>
+        <h3>Comment automatiser la collecte de témoignages clients en B2B</h3>
+        <p>La collecte manuelle ne passe pas à l'échelle. Voici les 4 étapes d'une production automatisée.</p>
+        <span class="post-more">Lire l'article →</span>
+      </div>
+    </a>
+    <a href="blog-acheteurs-b2b-case-studies.html" class="post">
+      <div class="post-cover" style="background-image:url(blog-img-97-acheteurs.jpg)"><span>Preuve sociale</span></div>
+      <div class="post-body">
+        <div class="post-meta">18 mai 2026 · 6 min de lecture</div>
+        <h3>97 % des acheteurs B2B lisent les témoignages - et votre équipe n'en produit que 2 par an</h3>
+        <p>L'écart entre la demande de preuve et la capacité à la produire coûte des deals.</p>
+        <span class="post-more">Lire l'article →</span>
+      </div>
+    </a>
+    <a href="blog-modjo-customer-marketing.html" class="post">
+      <div class="post-cover" style="background-image:url(blog-img-modjo.jpg)"><span>Customer Marketing</span></div>
+      <div class="post-body">
+        <div class="post-meta">18 mai 2026 · 5 min de lecture</div>
+        <h3>Comment Modjo change tout pour les équipes customer marketing</h3>
+        <p>Vos conversations clients contiennent déjà vos meilleurs témoignages.</p>
+        <span class="post-more">Lire l'article →</span>
+      </div>
+    </a>
+    <a href="blog-cycles-vente-preuve-sociale.html" class="post">
+      <div class="post-cover" style="background-image:url(blog-img-cycles-vente.jpg)"><span>Stratégie GTM</span></div>
+      <div class="post-body">
+        <div class="post-meta">18 mai 2026 · 6 min de lecture</div>
+        <h3>Pourquoi les cycles de vente B2B s'allongent - et comment la preuve sociale peut les raccourcir</h3>
+        <p>Le bon témoignage, au bon moment, fait gagner des semaines.</p>
+        <span class="post-more">Lire l'article →</span>
+      </div>
+    </a>
+  </div>
+</div></div>
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="/" class="logo"><span class="logo-mark"><svg viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg"><rect width="56" height="56" rx="13" fill="#ffffff" fill-opacity="0.12"/><rect width="55" height="55" x="0.5" y="0.5" rx="12.5" fill="none" stroke="#ffffff" stroke-opacity="0.22"/><rect x="11" y="14" width="34" height="7" rx="3.5" fill="#ffffff"/><rect x="24.5" y="21" width="7" height="18" rx="3.5" fill="#ffffff"/><circle cx="28" cy="43" r="3.5" fill="#ffffff"/></svg></span> Temonis</a>
+        <p>Vos témoignages clients, générés automatiquement.</p>
+      </div>
+      <div class="foot-col"><h4>Produit</h4><a href="/#how">Comment ça marche</a><a href="/#pricing">Tarifs</a></div>
+      <div class="foot-col"><h4>Ressources</h4><a href="/blog.html">Blog</a><a href="/#faq">FAQ</a></div>
+      <div class="foot-col"><h4>Société</h4><a href="mentions-legales.html">Mentions légales</a><a href="confidentialite.html">Confidentialité &amp; RGPD</a><a href="mailto:contact@temonis.com">Nous contacter</a></div>
+    </div>
+    <div class="foot-bottom"><small>© 2026 Temonis. Tous droits réservés.</small><small>temonis.com</small></div>
+  </div>
+</footer>
+<script>
+  const burger=document.getElementById('burger'),navLinks=document.getElementById('navLinks');
+  burger.addEventListener('click',()=>navLinks.classList.toggle('open'));
+</script>
+</body>
+</html>
