@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>FAQ - Questions fréquentes - Temonis</title>
+<meta name="description" content="Toutes les réponses à vos questions sur Temonis : fonctionnement, intégrations, tarifs, RGPD, qualité des témoignages clients automatisés et retour sur investissement." />
+<meta property="og:title" content="FAQ - Temonis" />
+<meta property="og:image" content="https://temonis.com/og-image.png" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<script defer data-domain="temonis.com" src="https://plausible.io/js/script.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+<noscript><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" /></noscript>
+<style>
+  :root{--navy:#0F2744;--navy-2:#0A1C33;--navy-soft:#1C3A5E;--gold:#C8A96A;--gold-deep:#B5934C;--gold-soft:#EFE6D2;--bg:#F7F5F0;--white:#FFFFFF;--text:#1A1A1A;--muted:#4A5568;--line:#E4E0D6;--line-navy:rgba(255,255,255,0.14);--shadow:0 1px 2px rgba(15,39,68,.05),0 10px 30px rgba(15,39,68,.08);--r:14px;--maxw:1180px;}
+  *{box-sizing:border-box;margin:0;padding:0;} html{scroll-behavior:smooth;} a{color:inherit;text-decoration:none;}
+  body{font-family:'Inter',-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;letter-spacing:-0.02em;line-height:1.15;color:var(--navy);}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;}
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(15,39,68,0.96);backdrop-filter:blur(12px);box-shadow:0 4px 24px rgba(15,39,68,.22);}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:78px;}
+  .logo{display:flex;align-items:center;gap:11px;font-family:'Plus Jakarta Sans',sans-serif;font-size:23px;font-weight:800;color:#fff;letter-spacing:-0.02em;}
+  .logo-mark{width:36px;height:36px;flex-shrink:0;} .logo-mark svg{width:100%;height:100%;display:block;}
+  .nav-links{display:flex;align-items:center;gap:32px;}
+  .nav-links a.navlink{font-size:15px;font-weight:500;color:rgba(255,255,255,.82);transition:color .15s;} .nav-links a.navlink:hover{color:var(--gold);}
+  .nav-cta{display:flex;align-items:center;gap:12px;}
+  .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;} .burger span{width:22px;height:2px;background:#fff;border-radius:2px;}
+  .btn{display:inline-flex;align-items:center;gap:9px;cursor:pointer;font-family:'Inter',sans-serif;font-size:15.5px;font-weight:600;padding:14px 26px;border-radius:10px;border:1.5px solid transparent;transition:transform .18s,background .18s;white-space:nowrap;}
+  .btn-primary{background:var(--gold);color:var(--navy);} .btn-primary:hover{background:var(--gold-deep);transform:translateY(-2px);}
+  .btn-navy{background:var(--navy);color:#fff;} .btn-navy:hover{background:var(--navy-2);transform:translateY(-2px);}
+  /* Hero */
+  .faq-hero{padding:130px 0 50px;background:var(--navy);}
+  .faq-hero h1{font-size:clamp(30px,4vw,42px);color:#fff;margin-bottom:10px;}
+  .faq-hero p{color:rgba(255,255,255,.6);font-size:18px;}
+  /* Search */
+  .search-wrap{max-width:680px;margin:-28px auto 40px;position:relative;z-index:10;}
+  .search-box{width:100%;padding:16px 22px 16px 52px;border-radius:14px;border:2px solid var(--line);background:var(--white);font-family:inherit;font-size:16px;color:var(--text);box-shadow:var(--shadow);transition:border .2s;}
+  .search-box:focus{outline:none;border-color:var(--gold);}
+  .search-icon{position:absolute;left:20px;top:50%;transform:translateY(-50%);color:var(--muted);pointer-events:none;}
+  .search-suggestions{position:absolute;top:100%;left:0;right:0;background:var(--white);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);margin-top:6px;display:none;max-height:280px;overflow-y:auto;z-index:20;}
+  .search-suggestions.show{display:block;}
+  .search-sug{padding:12px 20px;font-size:14.5px;color:var(--text);cursor:pointer;transition:background .1s;border-bottom:1px solid var(--line);}
+  .search-sug:last-child{border-bottom:none;}
+  .search-sug:hover,.search-sug.active{background:var(--gold-soft);}
+  .search-sug mark{background:none;color:var(--gold-deep);font-weight:700;}
+  .search-count{text-align:center;font-size:14px;color:var(--muted);margin-bottom:24px;}
+  /* FAQ */
+  .faq-section{max-width:760px;margin:0 auto;padding:0 28px 80px;}
+  .faq-cat{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-deep);margin:36px 0 16px;padding-top:20px;border-top:1px solid var(--line);}
+  .faq-cat:first-child{border-top:none;margin-top:0;padding-top:0;}
+  .faq-item{border-bottom:1px solid var(--line);transition:opacity .2s;}
+  .faq-item.hidden{display:none;}
+  .faq-q{width:100%;background:none;border:none;cursor:pointer;text-align:left;padding:20px 4px;display:flex;justify-content:space-between;align-items:center;gap:20px;font-family:'Plus Jakarta Sans',sans-serif;font-size:17px;font-weight:700;color:var(--navy);}
+  .faq-ic{flex-shrink:0;width:24px;height:24px;position:relative;}
+  .faq-ic::before,.faq-ic::after{content:"";position:absolute;background:var(--gold-deep);border-radius:2px;transition:transform .25s;}
+  .faq-ic::before{width:14px;height:2px;top:11px;left:5px;}
+  .faq-ic::after{width:2px;height:14px;top:5px;left:11px;}
+  .faq-item.open .faq-ic::after{transform:rotate(90deg);opacity:0;}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .3s;}
+  .faq-a p{padding:0 4px 20px;font-size:15.5px;color:var(--muted);line-height:1.65;}
+  /* CTA */
+  .faq-cta{max-width:760px;margin:0 auto 60px;padding:0 28px;}
+  .faq-cta-box{background:var(--gold);border-radius:18px;padding:44px 36px;text-align:center;}
+  .faq-cta-box h2{font-size:24px;color:var(--navy);margin-bottom:10px;}
+  .faq-cta-box p{color:rgba(15,39,68,.72);font-size:16px;margin-bottom:22px;}
+  /* Footer */
+  footer{background:var(--navy);color:#fff;padding:64px 0 32px;}
+  .foot-grid{display:grid;grid-template-columns:1.7fr 1fr 1fr 1fr;gap:40px;margin-bottom:46px;}
+  .foot-brand p{font-size:14.5px;color:rgba(255,255,255,.6);margin-top:16px;}
+  .foot-col h4{font-size:12.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--gold);margin-bottom:15px;}
+  .foot-col a{display:block;font-size:14.5px;color:rgba(255,255,255,.66);margin-bottom:10px;transition:color .15s;} .foot-col a:hover{color:var(--gold);}
+  .foot-bottom{display:flex;justify-content:space-between;padding-top:26px;border-top:1px solid var(--line-navy);flex-wrap:wrap;gap:12px;}
+  .foot-bottom small{font-size:13px;color:rgba(255,255,255,.5);}
+  @media(max-width:940px){.nav-links{display:none;}.burger{display:flex;}.nav-links.open{display:flex;position:absolute;top:78px;left:0;right:0;flex-direction:column;background:var(--navy-2);padding:22px 28px;gap:18px;}.foot-grid{grid-template-columns:1fr 1fr;}}
+  @media(max-width:560px){.wrap{padding:0 20px;}.foot-grid{grid-template-columns:1fr;}.search-box{font-size:15px;padding:14px 18px 14px 46px;}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="wrap nav-inner">
+    <a href="/" class="logo"><span class="logo-mark"><svg viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg"><rect width="56" height="56" rx="13" fill="#ffffff" fill-opacity="0.12"/><rect width="55" height="55" x="0.5" y="0.5" rx="12.5" fill="none" stroke="#ffffff" stroke-opacity="0.22"/><rect x="11" y="14" width="34" height="7" rx="3.5" fill="#ffffff"/><rect x="24.5" y="21" width="7" height="18" rx="3.5" fill="#ffffff"/><circle cx="28" cy="43" r="3.5" fill="#ffffff"/></svg></span> Temonis</a>
+    <div class="nav-links" id="navLinks">
+      <a class="navlink" href="/#how">Comment ça marche</a>
+      <a class="navlink" href="/#features">Automatisation</a>
+      <a class="navlink" href="/#pricing">Tarifs</a>
+      <a class="navlink" href="blog.html">Ressources</a>
+      <a class="navlink" href="faq.html" style="color:var(--gold)">FAQ</a>
+      <div class="nav-cta"><button class="btn btn-primary" onclick="window.location='/#top'">Demander une démo</button></div>
+    </div>
+    <div class="burger" id="burger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<div class="faq-hero"><div class="wrap">
+  <h1>Questions fréquentes</h1>
+  <p>Tout ce que vous devez savoir sur Temonis et les témoignages clients automatisés</p>
+</div></div>
+
+<div class="search-wrap">
+  <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+  <input type="text" class="search-box" id="faqSearch" placeholder="Rechercher une question..." autocomplete="off" />
+  <div class="search-suggestions" id="faqSuggestions"></div>
+</div>
+
+<div class="search-count" id="faqCount"></div>
+
+<div class="faq-section" id="faqSection">
+
+  <div class="faq-cat">Comment ça marche</div>
+
+  <div class="faq-item">
+    <button class="faq-q">Comment Temonis accède-t-il à mes conversations clients ?<span class="faq-ic"></span></button>
+    <div class="faq-a"><p>Temonis se connecte à Modjo, Gong ou Chorus en lecture seule, via les intégrations officielles. Aucune donnée n'est modifiée. Vous pouvez aussi connecter votre CRM (HubSpot, Salesforce) pour enrichir le contexte client. Vous gardez le contrôle des accès à tout moment.</p></div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-q">Combien de temps pour recevoir mon premier témoignage ?<span class="faq-ic"></span></button>
+    <div class="faq-a"><p>La mise en place prend environ 30 minutes (connexion de vos outils). Ensuite, la production est entièrement automatisée : dès que Temonis détecte une conversation client à fort potentiel, le témoignage est généré, mis en page et soumis à votre validation.</p></div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-q">Comment se passe la validation par le client ?<span class="faq-ic"></span></button>
+    <div class="faq-a"><p>Le client reçoit un e-mail avec un aperçu du témoignage et le valide en un clic. Pas de questionnaire, pas d'entretien. Il peut demander des modifications si nécessaire. Rien n'est publié sans son accord explicite.</p></div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-q">Les témoignages respectent-ils vraiment ma charte graphique ?<span class="faq-ic"></span></button>
+    <div class="faq-a"><p>Oui. Vous renseignez votre charte une fois - couleurs, typographies, logo, ton - et l'IA l'applique à chaque production. Le résultat ressemble à vos contenus, pas à un modèle générique.</p></div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-q">Puis-je relire et modifier avant publication ?<span class="faq-ic"></span></button>
+    <div class="faq-a"><p>Absolument. Chaque témoignage vous est soumis pour validation. Vous pouvez l'ajuster, le publier d'un clic, ou laisser Temonis le publier automatiquement selon vos règles.</p></div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-q">Quelle est la qualité des témoignages générés par l'IA ?<span class="faq-ic"></span></button>
+    <div class="faq-a"><p>Les témoignages sont rédigés à partir de vraies conversations clients - ce sont les mots de vos clients, structurés et mis en forme. Le ton est professionnel et fidèle. Vous validez chaque production et pouvez ajuster avant publication.</p></div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-q">Est-ce que le client doit être interviewé ?<span class="faq-ic"></span></button>
+    <div class="faq-a"><p>Non. Temonis travaille à partir des conversations déjà enregistrées dans Modjo ou Gong. Le client n'est sollicité que pour une validation en un clic avant publication. Aucun entretien, aucun questionnaire.</p></div>
+  </div>
+
+  <div class="faq-cat">Intégrations</div>
+
+  <div class="faq-item">
+    <button class="faq-q">Quels outils sont compatibles avec Temonis ?<span class="faq-ic"></span></button>
+    <div class="faq-a"><p>Temonis s'intègre avec les outils d'intelligence conversationnelle (Modjo, Gong, Chorus, Aircall) et les CRM (HubSpot, Salesforce). La connexion se fait via les API officielles, en lecture seule, en environ 30 minutes.</p></div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-q">Combien de temps pour connecter Temonis à mes outils ?<span class="faq-ic"></span></button>
+    <div class="faq-a"><p>Environ 30 minutes. La connexion se fait via les intégrations officielles de Modjo, Gong, HubSpot ou Salesforce. Pas de développement technique nécessaire.</p></div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-q">Les données de mes conversations sont-elles modifiées ?<span class="faq-ic"></span></button>
+    <div class="faq-a"><p>Non, jamais. Temonis accède à vos conversations en lecture seule. Aucune donnée n'est modifiée, déplacée ou supprimée dans vos outils. Vous gardez le contrôle total.</p></div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-q">Temonis fonctionne-t-il avec d'autres outils que Modjo et Gong ?<span class="faq-ic"></span></button>
+    <div class="faq-a"><p>Oui. Temonis est aussi compatible avec Chorus, Aircall, HubSpot et Salesforce. D'autres intégrations sont en développement. Contactez-nous si vous utilisez un outil non listé.</p></div>
+  </div>
+
+  <div class="faq-cat">Formats et publication</div>
+
+  <div class="faq-item">
+    <button class="faq-q">Quels formats de témoignages sont disponibles ?<span class="faq-ic"></span></button>
+    <div class="faq-a"><p>Selon votre plan : PDF, image web, posts LinkedIn, slides, one-pager. Sur le plan Growth et Scale, chaque témoignage est automatiquement décliné dans tous les formats dont vos équipes ont besoin.</p></div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-q">Les témoignages peuvent-ils être publiés automatiquement sur LinkedIn ?<span class="faq-ic"></span></button>
+    <div class="faq-a"><p>Oui, à partir du plan Growth. Temonis peut publier automatiquement sur LinkedIn, Google Business Profile, et intégrer un widget sur votre site web. Vous gardez un droit de validation avant chaque publication si vous le souhaitez.</p></div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-q">Puis-je intégrer les témoignages directement sur mon site web ?<span class="faq-ic"></span></button>
+    <div class="faq-a"><p>Oui. Le plan Growth inclut un widget embarquable que vous pouvez intégrer sur votre site en quelques minutes. Les témoignages se mettent à jour automatiquement.</p></div>
+  </div>
+
+  <div class="faq-cat">Tarifs et abonnement</div>
+
+  <div class="faq-item">
+    <button class="faq-q">Quel est le prix de Temonis ?<span class="faq-ic"></span></button>
+    <div class="faq-a"><p>Trois plans : Starter à 249 € HT/mois (4 témoignages, création automatique), Growth à 499 € HT/mois (12 témoignages + distribution automatique + intégration CRM), Scale à 849 € HT/mois (40 témoignages + scoring IA + multi-langue). Sans engagement, résiliable à tout moment.</p></div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-q">Le premier témoignage est-il vraiment offert ?<span class="faq-ic"></span></button>
+    <div class="faq-a"><p>Oui. Pendant la démo de 15 minutes, Temonis produit un vrai témoignage à partir de vos conversations - mis en page à votre charte. Vous repartez avec, sans engagement.</p></div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-q">Que se passe-t-il si je dépasse mon quota mensuel ?<span class="faq-ic"></span></button>
+    <div class="faq-a"><p>Vous pouvez passer au plan supérieur à tout moment. La mise à niveau est immédiate, sans interruption de service, et vous bénéficiez d'un prix unitaire plus avantageux à chaque palier.</p></div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-q">Y a-t-il un engagement de durée ?<span class="faq-ic"></span></button>
+    <div class="faq-a"><p>Non. Temonis fonctionne en abonnement mensuel sans engagement. Vous pouvez résilier à tout moment, sans frais ni préavis.</p></div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-q">Quels moyens de paiement acceptez-vous ?<span class="faq-ic"></span></button>
+    <div class="faq-a"><p>Carte bancaire (Visa, Mastercard, American Express) et virement bancaire pour les plans Growth et Scale. La facturation est mensuelle, en euros HT.</p></div>
+  </div>
+
+  <div class="faq-cat">Sécurité et RGPD</div>
+
+  <div class="faq-item">
+    <button class="faq-q">Où sont hébergées mes données ?<span class="faq-ic"></span></button>
+    <div class="faq-a"><p>Vos données sont hébergées dans l'Union Européenne, conformément au RGPD. C'est un avantage clé par rapport aux solutions américaines. Vos conversations ne sont jamais stockées au-delà du traitement nécessaire.</p></div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-q">Temonis est-il conforme au RGPD ?<span class="faq-ic"></span></button>
+    <div class="faq-a"><p>Oui. Le consentement du client est recueilli par validation email avant toute publication. Le droit de retrait est garanti. Les données sont conservées 12 mois maximum. Consultez notre <a href="confidentialite.html" style="color:var(--gold-deep);text-decoration:underline;">politique de confidentialité</a>.</p></div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-q">Mes conversations clients sont-elles stockées par Temonis ?<span class="faq-ic"></span></button>
+    <div class="faq-a"><p>Non. Temonis accède aux conversations en lecture seule pour l'analyse, puis ne conserve que les éléments extraits nécessaires à la génération du témoignage. Les transcripts complets ne sont pas stockés.</p></div>
+  </div>
+
+  <div class="faq-cat">Résultats et ROI</div>
+
+  <div class="faq-item">
+    <button class="faq-q">Quel retour sur investissement attendre ?<span class="faq-ic"></span></button>
+    <div class="faq-a"><p>Le plan Starter à 249 €/mois remplace un processus qui coûte plus de 1 100 €/mois. L'économie directe est de 866 €/mois. En ajoutant l'impact sur le closing (+3-5 points de taux), le ROI dépasse 1 000 % dès les premiers mois.</p></div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-q">Combien de témoignages puis-je produire par mois ?<span class="faq-ic"></span></button>
+    <div class="faq-a"><p>Cela dépend de votre plan : 4 (Starter), 12 (Growth) ou 40 (Scale) témoignages par mois. Le volume dépend aussi du nombre de conversations clients enregistrées dans vos outils.</p></div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-q">En combien de temps vais-je voir des résultats ?<span class="faq-ic"></span></button>
+    <div class="faq-a"><p>Les premiers témoignages sont générés dès la mise en place (30 minutes). L'impact sur le closing et les cycles de vente se mesure généralement à partir du deuxième mois, quand vos commerciaux commencent à utiliser les témoignages dans leurs échanges.</p></div>
+  </div>
+
+</div>
+
+<div class="faq-cta">
+  <div class="faq-cta-box">
+    <h2>Vous n'avez pas trouvé votre réponse ?</h2>
+    <p>Contactez-nous ou demandez une démo de 15 minutes - le premier témoignage est offert</p>
+    <a href="mailto:contact@temonis.com" class="btn btn-navy" style="margin-right:10px;">Nous contacter</a>
+    <a href="/#top" class="btn btn-navy">Demander une démo</a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="/" class="logo"><span class="logo-mark"><svg viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg"><rect width="56" height="56" rx="13" fill="#ffffff" fill-opacity="0.12"/><rect width="55" height="55" x="0.5" y="0.5" rx="12.5" fill="none" stroke="#ffffff" stroke-opacity="0.22"/><rect x="11" y="14" width="34" height="7" rx="3.5" fill="#ffffff"/><rect x="24.5" y="21" width="7" height="18" rx="3.5" fill="#ffffff"/><circle cx="28" cy="43" r="3.5" fill="#ffffff"/></svg></span> Temonis</a>
+        <p>Vos témoignages clients, générés automatiquement.</p>
+      </div>
+      <div class="foot-col"><h4>Produit</h4><a href="/#how">Comment ça marche</a><a href="/#pricing">Tarifs</a><a href="/#top">Demander une démo</a></div>
+      <div class="foot-col"><h4>Ressources</h4><a href="blog.html">Blog</a><a href="faq.html">FAQ</a><a href="/#testimonials">Témoignages</a></div>
+      <div class="foot-col"><h4>Société</h4><a href="mentions-legales.html">Mentions légales</a><a href="confidentialite.html">Confidentialité &amp; RGPD</a><a href="mailto:contact@temonis.com">Nous contacter</a><a href="https://www.linkedin.com/company/temonis" target="_blank" rel="noopener">LinkedIn</a></div>
+    </div>
+    <div class="foot-bottom"><small>© 2026 Temonis. Tous droits réservés.</small><small>temonis.com</small></div>
+  </div>
+</footer>
+
+<script>
+  const burger=document.getElementById('burger'),navLinks=document.getElementById('navLinks');
+  burger.addEventListener('click',()=>navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navLinks.classList.remove('open')));
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(q=>{
+    q.addEventListener('click',()=>{
+      const item=q.parentElement,ans=item.querySelector('.faq-a'),open=item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-a').style.maxHeight=null;});
+      if(!open){item.classList.add('open');ans.style.maxHeight=ans.scrollHeight+'px';}
+    });
+  });
+
+  // Search with autocomplete
+  const searchInput=document.getElementById('faqSearch');
+  const suggestions=document.getElementById('faqSuggestions');
+  const countEl=document.getElementById('faqCount');
+  const items=[...document.querySelectorAll('.faq-item')];
+  const cats=[...document.querySelectorAll('.faq-cat')];
+  const questions=items.map(i=>({el:i,text:i.querySelector('.faq-q').textContent.replace('+',' ').toLowerCase(),answer:i.querySelector('.faq-a p').textContent.toLowerCase()}));
+
+  function normalize(s){return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');}
+
+  searchInput.addEventListener('input',()=>{
+    const q=normalize(searchInput.value.trim());
+    if(q.length<2){
+      items.forEach(i=>i.classList.remove('hidden'));
+      cats.forEach(c=>c.style.display='');
+      suggestions.classList.remove('show');
+      countEl.textContent='';
+      return;
+    }
+    // Filter items
+    let visible=0;
+    questions.forEach(({el,text,answer})=>{
+      const match=normalize(text).includes(q)||normalize(answer).includes(q);
+      el.classList.toggle('hidden',!match);
+      if(match)visible++;
+    });
+    // Hide category headers with no visible items
+    cats.forEach(cat=>{
+      let next=cat.nextElementSibling,hasVisible=false;
+      while(next&&!next.classList.contains('faq-cat')){
+        if(next.classList.contains('faq-item')&&!next.classList.contains('hidden'))hasVisible=true;
+        next=next.nextElementSibling;
+      }
+      cat.style.display=hasVisible?'':'none';
+    });
+    countEl.textContent=visible+' résultat'+(visible>1?'s':'')+' pour « '+searchInput.value.trim()+' »';
+    // Suggestions dropdown
+    const matches=questions.filter(({text,answer})=>normalize(text).includes(q)||normalize(answer).includes(q)).slice(0,5);
+    if(matches.length>0&&q.length>=2){
+      suggestions.innerHTML=matches.map(({el,text})=>{
+        const qText=el.querySelector('.faq-q').textContent.replace('+',' ');
+        const highlighted=qText.replace(new RegExp('('+searchInput.value.trim().replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','gi'),'<mark>$1</mark>');
+        return '<div class="search-sug">'+highlighted+'</div>';
+      }).join('');
+      suggestions.classList.add('show');
+      suggestions.querySelectorAll('.search-sug').forEach((s,i)=>{
+        s.addEventListener('click',()=>{
+          searchInput.value='';
+          items.forEach(it=>it.classList.remove('hidden'));
+          cats.forEach(c=>c.style.display='');
+          suggestions.classList.remove('show');
+          countEl.textContent='';
+          const target=matches[i].el;
+          target.scrollIntoView({behavior:'smooth',block:'center'});
+          target.querySelector('.faq-q').click();
+        });
+      });
+    }else{
+      suggestions.classList.remove('show');
+    }
+  });
+  document.addEventListener('click',e=>{if(!e.target.closest('.search-wrap'))suggestions.classList.remove('show');});
+</script>
+</body>
+</html>
