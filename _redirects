@@ -1,0 +1,27 @@
+# Temonis - normalisation des URLs
+# Une seule URL indexable par page : la version SANS extension .html
+#
+# Le "!" (force) est indispensable. Sans lui, Netlify sert en priorite le
+# fichier statique .html qui existe reellement, et la regle ne se declenche
+# jamais.
+
+# --- Articles de blog ---
+/blog-collecter-temoignages-clients.html     /blog-collecter-temoignages-clients      301!
+/blog-exemples-temoignages-clients-b2b.html  /blog-exemples-temoignages-clients-b2b   301!
+/blog-logiciel-temoignage-client.html        /blog-logiciel-temoignage-client         301!
+/blog-roi-customer-marketing.html            /blog-roi-customer-marketing             301!
+/blog-automatiser-temoignages-b2b.html       /blog-automatiser-temoignages-b2b        301!
+/blog-acheteurs-b2b-case-studies.html        /blog-acheteurs-b2b-case-studies         301!
+/blog-modjo-customer-marketing.html          /blog-modjo-customer-marketing           301!
+/blog-cycles-vente-preuve-sociale.html       /blog-cycles-vente-preuve-sociale        301!
+
+# --- Guide pilier ---
+/guide-temoignage-client-b2b.html            /guide-temoignage-client-b2b             301!
+/guide-telecharger.html                      /guide-telecharger                       301!
+
+# --- Pages du site ---
+/blog.html                                   /blog                                    301!
+/faq.html                                    /faq                                     301!
+/mentions-legales.html                       /mentions-legales                        301!
+/confidentialite.html                        /confidentialite                         301!
+/index.html                                  /                                        301!
