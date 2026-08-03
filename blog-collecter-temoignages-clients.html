@@ -105,11 +105,11 @@
       Temonis
     </a>
     <div class="nav-links" id="navLinks">
-      <a class="navlink" href="/#how">Comment ça marche</a>
+      <a class="navlink" href="/#how">Fonctionnement</a>
       <a class="navlink" href="/#features">Automatisation</a>
       <a class="navlink" href="/#pricing">Tarifs</a>
       <a class="navlink" href="/blog">Ressources</a>
-      <a class="navlink" href="/pourquoi-temonis">Pourquoi Temonis</a>
+      <a class="navlink" href="/pourquoi-temonis">Notre approche</a>
       <a class="navlink" href="/faq">Centre d'aide</a>
       <div class="nav-cta">
         <button class="btn btn-primary" data-demo>Demander une démo</button>
@@ -212,9 +212,9 @@
         </a>
         <p>Vos témoignages clients, générés automatiquement.</p>
       </div>
-      <div class="foot-col"><h4>Produit</h4><a href="/#how">Comment ça marche</a><a href="/#pricing">Tarifs</a><a href="#" data-demo>Demander une démo</a></div>
+      <div class="foot-col"><h4>Produit</h4><a href="/#how">Fonctionnement</a><a href="/#pricing">Tarifs</a><a href="#" data-demo>Demander une démo</a></div>
       <div class="foot-col"><h4>Ressources</h4><a href="/blog">Blog</a><a href="/faq">Centre d'aide</a></div>
-      <div class="foot-col"><h4>Société</h4><a href="/pourquoi-temonis">Pourquoi Temonis</a><a href="/mentions-legales">Mentions légales</a><a href="/confidentialite">Confidentialité &amp; RGPD</a><a href="mailto:contact@temonis.com">Nous contacter</a></div>
+      <div class="foot-col"><h4>Société</h4><a href="/pourquoi-temonis">Notre approche</a><a href="/mentions-legales">Mentions légales</a><a href="/confidentialite">Confidentialité &amp; RGPD</a><a href="mailto:contact@temonis.com">Nous contacter</a></div>
     </div>
     <div class="foot-bottom"><small>© 2026 Temonis. Tous droits réservés.</small><small>temonis.com</small></div>
   </div>
@@ -369,11 +369,12 @@ footer{background:var(--bg-alt);color:var(--text);border-top:1px solid var(--lin
 .temo-send:hover{background:var(--gold-hover);}
 </style>
 <style id="nav-fix">
-  .nav-inner{gap:18px;}
-  .logo{white-space:nowrap;}
-  .nav-links{gap:22px;}
-  .nav-links a.navlink{white-space:nowrap;font-size:14.5px;}
-  @media(max-width:1100px){
+  .nav-inner{gap:28px;}
+  .logo{white-space:nowrap;flex-shrink:0;}
+  .nav-links{gap:20px;flex-wrap:nowrap;}
+  .nav-links a.navlink{white-space:nowrap !important;flex-shrink:0;font-size:14.5px;}
+  .nav-cta{flex-shrink:0;}
+  @media(max-width:1080px){
     .nav-links{display:none;}
     .burger{display:flex;}
     .nav-links.open{display:flex;position:absolute;top:78px;left:0;right:0;flex-direction:column;background:var(--white);border:1px solid var(--line);box-shadow:var(--shadow);padding:22px 28px;gap:18px;align-items:flex-start;}

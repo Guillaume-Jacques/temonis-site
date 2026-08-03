@@ -132,7 +132,7 @@
     <small>© 2026 Temonis. Tous droits réservés.</small>
     <div>
       <a href="/">Accueil</a>
-      <a href="/pourquoi-temonis">Pourquoi Temonis</a><a href="/blog">Blog</a>
+      <a href="/pourquoi-temonis">Notre approche</a><a href="/blog">Blog</a>
       <a href="/confidentialite">Confidentialité</a>
     </div>
   </div>
@@ -281,11 +281,12 @@ footer{background:var(--bg-alt);color:var(--text);border-top:1px solid var(--lin
 .temo-send:hover{background:var(--gold-hover);}
 </style>
 <style id="nav-fix">
-  .nav-inner{gap:18px;}
-  .logo{white-space:nowrap;}
-  .nav-links{gap:22px;}
-  .nav-links a.navlink{white-space:nowrap;font-size:14.5px;}
-  @media(max-width:1100px){
+  .nav-inner{gap:28px;}
+  .logo{white-space:nowrap;flex-shrink:0;}
+  .nav-links{gap:20px;flex-wrap:nowrap;}
+  .nav-links a.navlink{white-space:nowrap !important;flex-shrink:0;font-size:14.5px;}
+  .nav-cta{flex-shrink:0;}
+  @media(max-width:1080px){
     .nav-links{display:none;}
     .burger{display:flex;}
     .nav-links.open{display:flex;position:absolute;top:78px;left:0;right:0;flex-direction:column;background:var(--white);border:1px solid var(--line);box-shadow:var(--shadow);padding:22px 28px;gap:18px;align-items:flex-start;}
