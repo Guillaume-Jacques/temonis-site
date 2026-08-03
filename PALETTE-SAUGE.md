@@ -65,3 +65,11 @@ Le logo inline dans la nav et le pied de page est repassé en sauge dans le HTML
 ## Pour revenir en arrière
 
 Supprimer le bloc `<style id="palette-sauge">` et remettre l'ancien `:root`. Les deux modifications sont isolées et repérables.
+
+## Correctif FAQ (centre d'aide)
+
+- Bouton « Nous contacter » supprimé de l'encart bas de page (c'était un lien `mailto:` qui ne déclenchait rien sans client mail configuré).
+- « Demander une démo » ouvre désormais le formulaire en modale directement sur la page, au lieu de renvoyer vers `/#top`. Le formulaire pointe sur le même endpoint Formspree que le reste du site (`mvzyonwl`), avec le sujet « Nouvelle demande de démo - Temonis (FAQ) » pour distinguer la source.
+- Même changement appliqué au bouton de la barre de navigation et au lien du pied de page, qui renvoyaient aussi vers la page d'accueil.
+- Encart bas de page : fond passé de `--gold` (#6B8A6E) à `--gold-deep` (#4A6B4E), titre et texte en blanc, bouton blanc à texte vert. Le titre était en encre sur vert clair, contraste 3,0:1. Il est maintenant à 5,99:1, conforme AA.
+- Le tout est ajouté dans un bloc `<style id="faq-modal-css">` plus une modale et un script isolé en fin de page, juste avant le bloc `palette-sauge`.
