@@ -51,12 +51,9 @@
 </style>
 </head>
 <body>
-<nav id="nav">
+<nav id="nav" class="scrolled">
   <div class="wrap nav-inner">
-    <a href="/" class="logo">
-      <span class="logo-mark"><svg viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg"><rect width="56" height="56" rx="13" fill="#4A6B4E" fill-opacity="0.10"/><rect width="55" height="55" x="0.5" y="0.5" rx="12.5" fill="none" stroke="#4A6B4E" stroke-opacity="0.32"/><rect x="11" y="14" width="34" height="7" rx="3.5" fill="#4A6B4E"/><rect x="24.5" y="21" width="7" height="18" rx="3.5" fill="#4A6B4E"/><circle cx="28" cy="43" r="3.5" fill="#4A6B4E"/></svg></span>
-      Temonis
-    </a>
+    <a href="/" class="logo"><span class="logo-mark"><svg viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="56" height="56" rx="13" fill="#4A6B4E" fill-opacity="0.10"/><rect width="55" height="55" x="0.5" y="0.5" rx="12.5" fill="none" stroke="#4A6B4E" stroke-opacity="0.32"/><rect x="11" y="14" width="34" height="7" rx="3.5" fill="#4A6B4E"/><rect x="24.5" y="21" width="7" height="18" rx="3.5" fill="#4A6B4E"/><circle cx="28" cy="43" r="3.5" fill="#4A6B4E"/></svg></span> Temonis</a>
     <div class="nav-links" id="navLinks">
       <a class="navlink" href="/#how">Fonctionnement</a>
       <a class="navlink" href="/#features">Automatisation</a>
@@ -64,7 +61,7 @@
       <a class="navlink" href="/blog">Ressources</a>
       <a class="navlink" href="/pourquoi-temonis">Notre approche</a>
       <a class="navlink" href="/faq">Centre d'aide</a>
-      <div class="nav-cta"><button class="btn btn-primary" onclick="window.location='/#top'">Demander une démo</button></div>
+      <div class="nav-cta"><button class="btn btn-primary" data-demo>Demander une démo</button></div>
     </div>
     <div class="burger" id="burger"><span></span><span></span><span></span></div>
   </div>
@@ -109,14 +106,35 @@
   <div class="wrap">
     <div class="foot-grid">
       <div class="foot-brand">
-        <a href="/" class="logo"><span class="logo-mark"><svg viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg"><rect width="56" height="56" rx="13" fill="#4A6B4E" fill-opacity="0.10"/><rect width="55" height="55" x="0.5" y="0.5" rx="12.5" fill="none" stroke="#4A6B4E" stroke-opacity="0.32"/><rect x="11" y="14" width="34" height="7" rx="3.5" fill="#4A6B4E"/><rect x="24.5" y="21" width="7" height="18" rx="3.5" fill="#4A6B4E"/><circle cx="28" cy="43" r="3.5" fill="#4A6B4E"/></svg></span> Temonis</a>
-        <p>Vos témoignages clients, générés automatiquement.</p>
+        <a href="/" class="logo"><span class="logo-mark"><svg viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="56" height="56" rx="13" fill="#4A6B4E" fill-opacity="0.10"/><rect width="55" height="55" x="0.5" y="0.5" rx="12.5" fill="none" stroke="#4A6B4E" stroke-opacity="0.32"/><rect x="11" y="14" width="34" height="7" rx="3.5" fill="#4A6B4E"/><rect x="24.5" y="21" width="7" height="18" rx="3.5" fill="#4A6B4E"/><circle cx="28" cy="43" r="3.5" fill="#4A6B4E"/></svg></span> Temonis</a>
+        <p>La chaîne de production de témoignages pour les équipes marketing B2B SaaS. Vos preuves clients, publiées toutes seules.</p>
       </div>
-      <div class="foot-col"><h4>Produit</h4><a href="/#how">Fonctionnement</a><a href="/#pricing">Tarifs</a></div>
-      <div class="foot-col"><h4>Ressources</h4><a href="/#blog">Blog</a><a href="/#faq">FAQ</a></div>
-      <div class="foot-col"><h4>Société</h4><a href="/pourquoi-temonis">Notre approche</a><a href="/mentions-legales">Mentions légales</a><a href="/confidentialite">Confidentialité &amp; RGPD</a><a href="mailto:contact@temonis.com">Nous contacter</a></div>
+      <div class="foot-col">
+        <h4>Produit</h4>
+        <a href="/#how">Fonctionnement</a>
+        <a href="/#features">Automatisation</a>
+        <a href="/#pricing">Tarifs</a>
+        <a href="#" data-demo>Demander une démo</a>
+      </div>
+      <div class="foot-col">
+        <h4>Ressources</h4>
+        <a href="/blog">Blog</a>
+        <a href="/faq">Centre d'aide</a>
+        <a href="/#testimonials">Exemple de rendu</a>
+      </div>
+      <div class="foot-col">
+        <h4>Société</h4>
+        <a href="/pourquoi-temonis">Notre approche</a>
+        <a href="/mentions-legales">Mentions légales</a>
+        <a href="/confidentialite">Confidentialité &amp; RGPD</a>
+        <a href="mailto:contact@temonis.com">Nous contacter</a>
+        <a href="https://www.linkedin.com/company/temonis" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
     </div>
-    <div class="foot-bottom"><small>© 2026 Temonis. Tous droits réservés.</small><small>temonis.com</small></div>
+    <div class="foot-bottom">
+      <small>© 2026 Temonis. Tous droits réservés.</small>
+      <small>temonis.com · temonis.fr</small>
+    </div>
   </div>
 </footer>
 <script>
@@ -225,11 +243,15 @@ footer{background:var(--bg-alt);color:var(--text);border-top:1px solid var(--lin
 .temo-send:hover{background:var(--gold-hover);}
 </style>
 <style id="nav-fix">
+  nav{background:rgba(255,255,255,.94) !important;backdrop-filter:blur(12px);border-bottom:1px solid var(--line);box-shadow:0 4px 24px rgba(51,55,47,.05);}
   .nav-inner{gap:28px;}
-  .logo{white-space:nowrap;flex-shrink:0;}
+  .logo{white-space:nowrap;flex-shrink:0;color:var(--navy) !important;}
   .nav-links{gap:20px;flex-wrap:nowrap;}
-  .nav-links a.navlink{white-space:nowrap !important;flex-shrink:0;font-size:14.5px;}
+  .nav-links a.navlink{white-space:nowrap !important;flex-shrink:0;font-size:14.5px;color:var(--muted);}
+  .nav-links a.navlink:hover{color:var(--gold-deep);}
   .nav-cta{flex-shrink:0;}
+  .burger span{background:var(--navy);}
+  footer .logo{color:var(--navy) !important;}
   @media(max-width:1080px){
     .nav-links{display:none;}
     .burger{display:flex;}
@@ -237,5 +259,77 @@ footer{background:var(--bg-alt);color:var(--text);border-top:1px solid var(--lin
     .nav-links.open .nav-cta{flex-direction:column;align-items:stretch;width:100%;}
   }
 </style>
+<style id="page-modal-css">
+  .modal-bg{position:fixed;inset:0;background:rgba(51,55,47,.36);backdrop-filter:blur(4px);z-index:1000;display:none;align-items:center;justify-content:center;padding:24px;}
+  .modal-bg.show{display:flex;}
+  .modal{background:var(--white);border-radius:18px;max-width:480px;width:100%;padding:38px 36px;box-shadow:0 28px 60px rgba(51,55,47,.16);position:relative;animation:pop .3s cubic-bezier(.2,.8,.2,1);text-align:left;}
+  @keyframes pop{from{opacity:0;transform:translateY(20px) scale(.97);}to{opacity:1;transform:none;}}
+  .modal-close{position:absolute;top:18px;right:18px;width:34px;height:34px;border-radius:50%;border:1px solid var(--line);background:var(--bg);cursor:pointer;font-size:16px;color:var(--muted);display:grid;place-items:center;transition:.15s;}
+  .modal-close:hover{background:var(--gold-deep);color:#fff;}
+  .modal h3{font-size:25px;margin-bottom:6px;color:var(--navy);}
+  .modal .sub{font-size:14.5px;color:var(--muted);margin-bottom:22px;}
+  .modal .field{margin-bottom:15px;}
+  .modal .field label{display:block;font-size:13px;font-weight:600;color:var(--navy);margin-bottom:6px;}
+  .modal .field input{width:100%;padding:12px 14px;border-radius:9px;border:1.5px solid var(--line);background:var(--bg);font-family:inherit;font-size:15px;color:var(--text);transition:border .15s;}
+  .modal .field input:focus{outline:none;border-color:var(--gold);background:#fff;}
+  .modal .field.err input{border-color:#C0392B;}
+  .modal .field .msg{font-size:12.5px;color:#C0392B;margin-top:4px;display:none;}
+  .modal .field.err .msg{display:block;}
+  .modal .btn{width:100%;justify-content:center;margin-top:6px;}
+  .modal .btn[disabled]{opacity:.6;cursor:progress;}
+  .form-error{display:none;margin-top:12px;font-size:13px;color:#C0392B;text-align:center;}
+  .form-error.show{display:block;}
+  .modal-success{text-align:center;padding:16px 0;}
+  .modal-success .check{width:64px;height:64px;border-radius:50%;background:var(--gold-soft);display:grid;place-items:center;margin:0 auto 18px;color:var(--gold-deep);}
+  .modal-success h3{margin-bottom:8px;}
+  .modal-success p{font-size:15px;color:var(--muted);}
+</style>
+
+<div class="modal-bg" id="modalBg">
+  <div class="modal" id="modal">
+    <button class="modal-close" id="modalClose" aria-label="Fermer">✕</button>
+    <div id="modalForm">
+      <h3>Demander une démo</h3>
+      <p class="sub">15 minutes pour voir Temonis en action. Le premier témoignage est offert.</p>
+      <div class="field" id="f-name"><label for="i-name">Nom complet</label><input type="text" id="i-name" placeholder="Camille Béranger" /><span class="msg">Indiquez votre nom.</span></div>
+      <div class="field" id="f-email"><label for="i-email">E-mail professionnel</label><input type="email" id="i-email" placeholder="camille@entreprise.com" /><span class="msg">Indiquez un e-mail valide.</span></div>
+      <div class="field" id="f-company"><label for="i-company">Entreprise</label><input type="text" id="i-company" placeholder="Votre entreprise" /><span class="msg">Indiquez votre entreprise.</span></div>
+      <div class="field" id="f-phone"><label for="i-phone">Téléphone portable</label><input type="tel" id="i-phone" placeholder="06 12 34 56 78" autocomplete="tel" inputmode="tel" /><span class="msg">Indiquez un numéro valide.</span></div>
+      <button class="btn btn-primary" id="submitBtn">Réserver ma démo<span class="btn-arrow">→</span></button>
+      <p class="form-error" id="formError">L'envoi a échoué. Réessayez ou écrivez-nous à contact@temonis.com.</p>
+    </div>
+    <div class="modal-success" id="modalSuccess" style="display:none;">
+      <div class="check"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div>
+      <h3>C'est noté !</h3><p>L'équipe Temonis vous recontacte sous 24h.</p>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var modalBg=document.getElementById('modalBg'),modalForm=document.getElementById('modalForm'),modalSuccess=document.getElementById('modalSuccess');
+  var submitBtn=document.getElementById('submitBtn'),formError=document.getElementById('formError'),submitBtnHTML=submitBtn.innerHTML;
+  var FORM_ENDPOINT='https://formspree.io/f/mvzyonwl';
+  function resetForm(){submitBtn.disabled=false;submitBtn.innerHTML=submitBtnHTML;formError.classList.remove('show');}
+  function openModal(){modalForm.style.display='block';modalSuccess.style.display='none';resetForm();modalBg.classList.add('show');document.body.style.overflow='hidden';}
+  function closeModal(){modalBg.classList.remove('show');document.body.style.overflow='';}
+  document.querySelectorAll('[data-demo]').forEach(function(b){b.addEventListener('click',function(e){e.preventDefault();openModal();});});
+  document.getElementById('modalClose').addEventListener('click',closeModal);
+  modalBg.addEventListener('click',function(e){if(e.target===modalBg)closeModal();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeModal();});
+  submitBtn.addEventListener('click',async function(){
+    var n=document.getElementById('i-name'),e=document.getElementById('i-email'),c=document.getElementById('i-company'),p=document.getElementById('i-phone');
+    var ok=true;function m(f,v){document.getElementById(f).classList.toggle('err',!v);if(!v)ok=false;}
+    m('f-name',n.value.trim().length>1);m('f-email',/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e.value.trim()));
+    m('f-company',c.value.trim().length>1);m('f-phone',/^\+?\d{8,15}$/.test(p.value.replace(/[\s.\-()]/g,'')));
+    if(!ok)return;formError.classList.remove('show');
+    var payload={Nom:n.value.trim(),Email:e.value.trim(),Entreprise:c.value.trim(),'Téléphone portable':p.value.trim(),_subject:'Nouvelle demande de démo - Temonis (FAQ)'};
+    submitBtn.disabled=true;submitBtn.textContent='Envoi en cours...';
+    try{var r=await fetch(FORM_ENDPOINT,{method:'POST',headers:{'Accept':'application/json','Content-Type':'application/json'},body:JSON.stringify(payload)});
+    if(r.ok){modalForm.style.display='none';modalSuccess.style.display='block';}else throw new Error();}
+    catch(err){formError.classList.add('show');submitBtn.disabled=false;submitBtn.innerHTML=submitBtnHTML;}
+  });
+  ['i-name','i-email','i-company','i-phone'].forEach(function(id){document.getElementById(id).addEventListener('input',function(ev){ev.target.closest('.field').classList.remove('err');});});
+})();
+</script>
 </body>
 </html>
