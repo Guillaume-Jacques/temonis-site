@@ -279,6 +279,16 @@
   .calc-stat .lbl { font-size: 13px; color: var(--muted); margin-top: 4px; }
   .calc-plan { margin-top: 14px; font-size: 14px; font-weight: 700; color: var(--gold-deep); }
 
+  /* Bascule mensuel / annuel (22/09) */
+  .periode { display: flex; flex-direction: column; align-items: center; gap: 10px; margin: 0 auto 34px; }
+  .periode-choix { display: inline-flex; padding: 4px; border-radius: 999px; background: var(--white); border: 1px solid var(--line-strong); }
+  .periode-choix button { border: 0; background: transparent; padding: 10px 22px; border-radius: 999px; font-family: 'Plus Jakarta Sans',sans-serif; font-size: 15px; font-weight: 700; color: var(--navy); cursor: pointer; display: inline-flex; align-items: center; gap: 8px; transition: .2s; }
+  .periode-choix button[aria-pressed="true"] { background: var(--navy); color: #fff; }
+  .periode-choix .remise { font-size: 12px; font-weight: 800; padding: 3px 8px; border-radius: 999px; background: var(--gold-soft); color: var(--gold-deep); }
+  .periode-choix button[aria-pressed="true"] .remise { background: var(--gold); color: #fff; }
+  .periode-aide { font-size: 13.5px; color: var(--muted); text-align: center; }
+  .price-annuel { font-size: 13px; color: var(--muted); margin-top: 8px; min-height: 18px; }
+  .price-annuel b { color: var(--gold-deep); }
   .price-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 22px; align-items: stretch; }
   .price-card {
     background: var(--white); border: 1px solid var(--line); border-radius: 16px;
@@ -439,7 +449,7 @@
   }
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Temonis","url":"https://temonis.com","logo":"https://temonis.com/favicon-192x192.png","description":"Vos témoignages clients générés automatiquement","address":{"@type":"PostalAddress","streetAddress":"27 rue Daguerre","addressLocality":"Cormeilles-en-Parisis","postalCode":"95240","addressCountry":"FR"},"contactPoint":{"@type":"ContactPoint","email":"contact@temonis.com","contactType":"sales"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Comment Temonis accède-t-il à mes conversations clients ?","acceptedAnswer":{"@type":"Answer","text":"Temonis se connecte à Modjo, Gong ou Chorus en lecture seule, via les intégrations officielles. Vous pouvez aussi connecter votre CRM (HubSpot, Salesforce)."}},{"@type":"Question","name":"Quel est le prix de Temonis ?","acceptedAnswer":{"@type":"Answer","text":"Trois plans : Starter à 249 € HT/mois (4 témoignages), Growth à 499 €/mois (12 + distribution auto), Scale à 849 €/mois (40 témoignages + scoring IA). Sans engagement."}},{"@type":"Question","name":"Temonis est-il conforme au RGPD ?","acceptedAnswer":{"@type":"Answer","text":"Oui. Hébergement UE, consentement client recueilli avant publication, données conservées 12 mois maximum."}},{"@type":"Question","name":"Quel retour sur investissement attendre ?","acceptedAnswer":{"@type":"Answer","text":"Le plan Starter à 249 €/mois remplace un processus que nous estimons à 1 115 €/mois, soit 866 € d'économie directe par mois, environ 3,5 fois le prix de l'abonnement. L'effet sur le taux de closing n'est pas inclus dans ce calcul, il dépend de votre cycle de vente."}},{"@type":"Question","name":"Y a-t-il un engagement de durée ?","acceptedAnswer":{"@type":"Answer","text":"Non. Abonnement mensuel, résiliable à tout moment, sans frais ni préavis."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Comment Temonis accède-t-il à mes conversations clients ?","acceptedAnswer":{"@type":"Answer","text":"Temonis se connecte à Modjo, Gong ou Chorus en lecture seule, via les intégrations officielles. Vous pouvez aussi connecter votre CRM (HubSpot, Salesforce)."}},{"@type":"Question","name":"Quel est le prix de Temonis ?","acceptedAnswer":{"@type":"Answer","text":"Trois plans : Starter à 249 € HT/mois (4 témoignages), Growth à 499 €/mois (12 + distribution auto), Scale à 849 €/mois (40 témoignages + scoring IA). Sans engagement en mensuel, 15 % de moins en annuel."}},{"@type":"Question","name":"Temonis est-il conforme au RGPD ?","acceptedAnswer":{"@type":"Answer","text":"Oui. Hébergement UE, consentement client recueilli avant publication, données conservées 12 mois maximum."}},{"@type":"Question","name":"Quel retour sur investissement attendre ?","acceptedAnswer":{"@type":"Answer","text":"Le plan Starter à 249 €/mois remplace un processus que nous estimons à 1 115 €/mois, soit 866 € d'économie directe par mois, environ 3,5 fois le prix de l'abonnement. L'effet sur le taux de closing n'est pas inclus dans ce calcul, il dépend de votre cycle de vente."}},{"@type":"Question","name":"Y a-t-il un engagement de durée ?","acceptedAnswer":{"@type":"Answer","text":"Non en mensuel : résiliable à tout moment, sans frais ni préavis. L'abonnement annuel, 15 % moins cher, engage pour 12 mois."}}]}</script>
 <style>/* Démarrer gratuitement (inscription libre, 22/09) */
 .nav-connexion{margin-right:6px;white-space:nowrap}.btn-nav-demo{white-space:nowrap}.nav-cta .btn{white-space:nowrap}
 .lien-demo{display:inline-block;margin:12px 0 0 14px;background:none;border:0;padding:0;font:inherit;font-size:15px;color:inherit;opacity:.85;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
@@ -673,6 +683,14 @@
       <h2>Choisissez jusqu'où Temonis va pour vous</h2>
       <p>Trois paliers, une même promesse : zéro intervention de votre part. Chacun ajoute une couche de travail en moins, créer, puis diffuser, puis convertir.</p>
     </div>
+    <div class="periode fade">
+      <div class="periode-choix" role="group" aria-label="Période de facturation">
+        <button type="button" data-periode="mensuel" aria-pressed="false">Mensuel</button>
+        <button type="button" data-periode="annuel" aria-pressed="true">Annuel <span class="remise">−15 %</span></button>
+      </div>
+      <p class="periode-aide" id="periodeAide">Engagement 12 mois, facturé en une fois. Économisez 15 % par rapport au mensuel.</p>
+    </div>
+
     <div class="calc-wrap fade">
       <p class="calc-label">Combien de témoignages par mois souhaitez-vous produire ?</p>
       <div class="calc-btns" id="calcBtns">
@@ -694,8 +712,9 @@
       <div class="price-card fade">
         <div class="price-name">Starter</div>
         <div class="price-desc">Vos témoignages créés et prêts à l'emploi.</div>
-        <div class="price-amount"><span class="big">249 €</span><span class="per">HT / mois</span></div>
-        <div class="price-unit">4 témoignages / mois, soit ~62 € pièce</div>
+        <div class="price-amount"><span class="big" data-mensuel="249 €" data-annuel="212 €">212 €</span><span class="per">HT / mois</span></div>
+        <div class="price-annuel" data-mensuel="Sans engagement, résiliable à tout moment" data-annuel="Soit 2 540 € HT par an, &lt;b&gt;448 € économisés&lt;/b&gt;">Soit 2 540 € HT par an, <b>448 € économisés</b></div>
+        <div class="price-unit" data-mensuel="4 témoignages / mois, soit ~62 € pièce" data-annuel="4 témoignages / mois, soit ~53 € pièce">4 témoignages / mois, soit ~53 € pièce</div>
         <ul class="price-list">
           <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> 4 témoignages / mois, collectés automatiquement</li>
           <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> Connexion Modjo ou Gong</li>
@@ -711,8 +730,9 @@
         <span class="price-flag">Le plus populaire</span>
         <div class="price-name">Growth</div>
         <div class="price-desc">Vos témoignages créés ET diffusés automatiquement.</div>
-        <div class="price-amount"><span class="big">499 €</span><span class="per">HT / mois</span></div>
-        <div class="price-unit">12 témoignages / mois, soit ~42 € pièce</div>
+        <div class="price-amount"><span class="big" data-mensuel="499 €" data-annuel="424 €">424 €</span><span class="per">HT / mois</span></div>
+        <div class="price-annuel" data-mensuel="Sans engagement, résiliable à tout moment" data-annuel="Soit 5 090 € HT par an, &lt;b&gt;898 € économisés&lt;/b&gt;">Soit 5 090 € HT par an, <b>898 € économisés</b></div>
+        <div class="price-unit" data-mensuel="12 témoignages / mois, soit ~42 € pièce" data-annuel="12 témoignages / mois, soit ~35 € pièce">12 témoignages / mois, soit ~35 € pièce</div>
         <ul class="price-list">
           <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> Tout le plan Starter, et&nbsp;:</li>
           <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> 12 témoignages / mois</li>
@@ -728,8 +748,9 @@
       <div class="price-card fade">
         <div class="price-name">Scale</div>
         <div class="price-desc">Vos témoignages travaillent activement pour convertir.</div>
-        <div class="price-amount"><span class="big">849 €</span><span class="per">HT / mois</span></div>
-        <div class="price-unit">40 témoignages / mois, soit ~21 € pièce</div>
+        <div class="price-amount"><span class="big" data-mensuel="849 €" data-annuel="722 €">722 €</span><span class="per">HT / mois</span></div>
+        <div class="price-annuel" data-mensuel="Sans engagement, résiliable à tout moment" data-annuel="Soit 8 660 € HT par an, &lt;b&gt;1 528 € économisés&lt;/b&gt;">Soit 8 660 € HT par an, <b>1 528 € économisés</b></div>
+        <div class="price-unit" data-mensuel="40 témoignages / mois, soit ~21 € pièce" data-annuel="40 témoignages / mois, soit ~18 € pièce">40 témoignages / mois, soit ~18 € pièce</div>
         <ul class="price-list">
           <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> Tout le plan Growth, et&nbsp;:</li>
           <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> 40 témoignages / mois</li>
@@ -744,7 +765,7 @@
 
     </div>
     <p class="price-foot fade">
-      Sans engagement · Résiliable à tout moment · <b>Premier témoignage offert</b> pendant la démo.
+      14 jours d'essai · Sans carte bancaire · <b>Premier témoignage offert</b> pendant l'essai.
     </p>
   </div>
 </section>
@@ -846,11 +867,11 @@
       </div>
       <div class="faq-item">
         <button class="faq-q">Quel est le prix de Temonis ?<span class="faq-ic"></span></button>
-        <div class="faq-a"><p>Trois plans : Starter à 249 € HT/mois (4 témoignages), Growth à 499 €/mois (12 témoignages + distribution auto), Scale à 849 €/mois (40 témoignages + scoring IA). Sans engagement, résiliable à tout moment.</p></div>
+        <div class="faq-a"><p>Trois plans : Starter à 249 € HT/mois (4 témoignages), Growth à 499 €/mois (12 témoignages + distribution auto), Scale à 849 €/mois (40 témoignages + scoring IA). Sans engagement en mensuel, résiliable à tout moment ; 15 % de moins en annuel (soit 212, 424 et 722 € HT/mois).</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q">Y a-t-il un engagement de durée ?<span class="faq-ic"></span></button>
-        <div class="faq-a"><p>Non. Abonnement mensuel, résiliable à tout moment, sans frais ni préavis.</p></div>
+        <div class="faq-a"><p>Pas en mensuel : résiliable à tout moment, sans frais ni préavis. L'abonnement annuel, 15 % moins cher, engage pour 12 mois.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q">Temonis est-il conforme au RGPD ?<span class="faq-ic"></span></button>
@@ -1062,9 +1083,12 @@
     const btns=document.querySelectorAll('.calc-btn');
     const volEl=document.getElementById('calcVol'),unitEl=document.getElementById('calcUnit'),saveEl=document.getElementById('calcSave'),planEl=document.getElementById('calcPlan');
     if(!btns.length)return;
-    const plans={4:{price:249,name:'Starter - 249 €/mois'},12:{price:499,name:'Growth - 499 €/mois'},40:{price:849,name:'Scale - 849 €/mois'}};
+    const plans={4:{m:249,a:212,nom:'Starter'},12:{m:499,a:424,nom:'Growth'},40:{m:849,a:722,nom:'Scale'}};
+    let courant=4;
     function update(v){
-      const p=plans[v];
+      courant=v;
+      const annuel=window.temonisPeriode==='annuel';
+      const q=plans[v]; const p={price:annuel?q.a:q.m,name:q.nom+', '+(annuel?q.a:q.m)+' €/mois'+(annuel?' en annuel':'')};
       const unit=Math.round(p.price/v);
       const manual=Math.round(v*275);
       volEl.textContent=v;
@@ -1074,7 +1098,25 @@
       btns.forEach(b=>{b.classList.toggle('active',parseInt(b.dataset.vol)===v);});
     }
     btns.forEach(b=>b.addEventListener('click',()=>update(parseInt(b.dataset.vol))));
+    window.temonisCalc=()=>update(courant);
     update(4);
+  })();
+
+  /* Bascule mensuel / annuel (22/09) */
+  (function(){
+    const btns=document.querySelectorAll('.periode-choix button');
+    if(!btns.length)return;
+    const aide=document.getElementById('periodeAide');
+    const textes={mensuel:'Sans engagement, résiliable à tout moment. Passez en annuel pour économiser 15 %.',annuel:'Engagement 12 mois, facturé en une fois. Économisez 15 % par rapport au mensuel.'};
+    function choisir(per){
+      window.temonisPeriode=per;
+      btns.forEach(b=>b.setAttribute('aria-pressed',b.dataset.periode===per?'true':'false'));
+      document.querySelectorAll('#pricing [data-mensuel]').forEach(el=>{el.innerHTML=el.getAttribute('data-'+per);});
+      aide.textContent=textes[per];
+      if(window.temonisCalc)window.temonisCalc();
+    }
+    btns.forEach(b=>b.addEventListener('click',()=>choisir(b.dataset.periode)));
+    choisir('annuel');
   })();
 
   /* Scroll-spy: highlight the active nav link */
@@ -1253,13 +1295,13 @@
   const KB = [
     {k:["comment","marche","fonctionne","fonctionnement","principe"],a:"Temonis se connecte à vos outils (Modjo, Gong, HubSpot, Salesforce), identifie automatiquement les conversations clients à fort potentiel, puis génère un témoignage complet - rédigé, mis en page à votre charte. Vous validez d'un clic."},
     {k:["qu'est","temonis","c'est quoi","présent"],a:"Temonis est une plateforme qui génère automatiquement vos témoignages clients à partir de vos conversations Modjo ou Gong. Sans brief, sans relance, sans agence. Le tout mis en page à votre charte graphique."},
-    {k:["prix","tarif","coût","coûte","combien","cher","abonnement"],a:"Trois plans : Starter à 249 € HT/mois (4 témoignages), Growth à 499 €/mois (12 + distribution auto), Scale à 849 €/mois (40 témoignages + scoring IA). Sans engagement, résiliable à tout moment. Le premier témoignage est offert pendant la démo !"},
+    {k:["prix","tarif","coût","coûte","combien","cher","abonnement"],a:"Trois plans : Starter à 249 € HT/mois (4 témoignages), Growth à 499 €/mois (12 + distribution auto), Scale à 849 €/mois (40 témoignages + scoring IA). Sans engagement en mensuel, 15 % de moins en annuel (212, 424 et 722 € HT/mois). Le premier témoignage est offert pendant l'essai de 14 jours !"},
     {k:["intégr","connect","outil","compatible","modjo","gong","hubspot","salesforce","crm","aircall","chorus"],a:"Temonis s'intègre avec Modjo, Gong, Chorus et Aircall pour les conversations, et HubSpot et Salesforce côté CRM. La connexion se fait en lecture seule, via les API officielles, en environ 30 minutes."},
     {k:["format","pdf","linkedin","slide","image","déclin"],a:"Selon votre plan : PDF, image web, posts LinkedIn, slides et one-pager. Sur Growth et Scale, chaque témoignage est automatiquement décliné dans tous les formats nécessaires."},
     {k:["charte","graphique","design","mise en page","couleur","typo","logo"],a:"Vous renseignez votre charte une fois (couleurs, typographies, logo, ton) et l'IA l'applique à chaque production. Chaque témoignage ressemble à vos contenus, comme s'il sortait de votre studio."},
     {k:["valid","relire","modifier","approuv","publi","client"],a:"Chaque témoignage vous est soumis pour validation. Le client reçoit un e-mail et valide en un clic. Rien n'est publié sans accord explicite. Vous pouvez aussi ajuster le contenu avant envoi."},
-    {k:["essai","gratuit","test","offert","démo","demo"],a:"Le premier témoignage est offert pendant la démo de 15 minutes. Temonis produit un vrai témoignage à partir de vos conversations, mis en page à votre charte. Vous repartez avec, sans engagement. Cliquez sur 'Demander une démo' pour réserver !"},
-    {k:["engagement","résili","annul","mensuel","sans engagement"],a:"Aucun engagement. L'abonnement est mensuel, résiliable à tout moment, sans frais ni préavis."},
+    {k:["essai","gratuit","test","offert","démo","demo"],a:"Oui : 14 jours d'essai, sans carte bancaire, et votre premier témoignage est offert. Temonis le produit à partir de vos conversations, mis en page à votre charte. Cliquez sur 'Démarrer gratuitement' pour ouvrir votre espace, ou demandez une démo si vous préférez être accompagné."},
+    {k:["engagement","résili","annul","mensuel","sans engagement"],a:"Pas en mensuel : résiliable à tout moment, sans frais ni préavis. L'abonnement annuel, 15 % moins cher, engage pour 12 mois."},
     {k:["différence","plan","starter","growth","scale","palier"],a:"Starter = créer vos témoignages (4/mois). Growth = créer + diffuser automatiquement sur LinkedIn, Google Business, CRM (12/mois). Scale = créer + diffuser + convertir avec scoring IA, A/B testing et multi-langue (40/mois)."},
     {k:["quota","dépasse","plus","limite"],a:"Vous pouvez passer au plan supérieur à tout moment. La mise à niveau est immédiate et le prix unitaire baisse à chaque palier."},
     {k:["sécurité","donnée","héberg","serveur","eu","europe","souveraineté"],a:"Vos données sont hébergées dans l'Union Européenne, conformément au RGPD. Les conversations sont accédées en lecture seule et ne sont jamais stockées au-delà du nécessaire. C'est un avantage clé face aux solutions américaines."},
