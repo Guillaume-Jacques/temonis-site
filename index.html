@@ -440,6 +440,13 @@
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Temonis","url":"https://temonis.com","logo":"https://temonis.com/favicon-192x192.png","description":"Vos témoignages clients générés automatiquement","address":{"@type":"PostalAddress","streetAddress":"27 rue Daguerre","addressLocality":"Cormeilles-en-Parisis","postalCode":"95240","addressCountry":"FR"},"contactPoint":{"@type":"ContactPoint","email":"contact@temonis.com","contactType":"sales"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Comment Temonis accède-t-il à mes conversations clients ?","acceptedAnswer":{"@type":"Answer","text":"Temonis se connecte à Modjo, Gong ou Chorus en lecture seule, via les intégrations officielles. Vous pouvez aussi connecter votre CRM (HubSpot, Salesforce)."}},{"@type":"Question","name":"Quel est le prix de Temonis ?","acceptedAnswer":{"@type":"Answer","text":"Trois plans : Starter à 249 € HT/mois (4 témoignages), Growth à 499 €/mois (12 + distribution auto), Scale à 849 €/mois (40 témoignages + scoring IA). Sans engagement."}},{"@type":"Question","name":"Temonis est-il conforme au RGPD ?","acceptedAnswer":{"@type":"Answer","text":"Oui. Hébergement UE, consentement client recueilli avant publication, données conservées 12 mois maximum."}},{"@type":"Question","name":"Quel retour sur investissement attendre ?","acceptedAnswer":{"@type":"Answer","text":"Le plan Starter à 249 €/mois remplace un processus que nous estimons à 1 115 €/mois, soit 866 € d'économie directe par mois, environ 3,5 fois le prix de l'abonnement. L'effet sur le taux de closing n'est pas inclus dans ce calcul, il dépend de votre cycle de vente."}},{"@type":"Question","name":"Y a-t-il un engagement de durée ?","acceptedAnswer":{"@type":"Answer","text":"Non. Abonnement mensuel, résiliable à tout moment, sans frais ni préavis."}}]}</script>
+<style>/* Démarrer gratuitement (inscription libre, 22/09) */
+.nav-connexion{margin-right:6px;white-space:nowrap}.btn-nav-demo{white-space:nowrap}.nav-cta .btn{white-space:nowrap}
+.lien-demo{display:inline-block;margin:12px 0 0 14px;background:none;border:0;padding:0;font:inherit;font-size:15px;color:inherit;opacity:.85;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.lien-demo:hover{opacity:1}.cta-rassurance{margin-top:14px;font-size:14px;opacity:.8}
+@media (max-width:1599px){.btn-nav-demo{display:none}}
+@media (max-width:960px){.btn-nav-demo{display:inline-flex}.nav-connexion{margin:0}.lien-demo{margin-left:0;display:block}}
+</style>
 </head>
 <body>
 
@@ -456,7 +463,7 @@
       <a class="navlink" href="/blog">Ressources</a>
       <a class="navlink" href="/pourquoi-temonis">Notre approche</a>
       <a class="navlink" href="/faq">Centre d'aide</a>
-      <div class="nav-cta"><button class="btn btn-primary" data-demo>Demander une démo</button></div>
+      <div class="nav-cta"><a class="navlink nav-connexion" href="https://app.temonis.com">Se connecter</a><button class="btn btn-ghost-light btn-nav-demo" data-demo>Demander une démo</button><a class="btn btn-primary" href="https://app.temonis.com/?inscription=1&amp;depuis=site-entete">Démarrer gratuitement</a></div>
     </div>
     <div class="burger" id="burger"><span></span><span></span><span></span></div>
   </div>
@@ -477,9 +484,10 @@
         mis en page et à votre charte graphique grâce à l'IA. Sans brief, sans relance, sans agence.
       </p>
       <div class="hero-actions reveal-h d4">
-        <button class="btn btn-primary" data-demo>Demander une démo<span class="btn-arrow">→</span></button>
-        <a class="btn btn-ghost-light" href="#how">Voir comment ça marche</a>
+        <a class="btn btn-primary" href="https://app.temonis.com/?inscription=1&amp;depuis=accueil-haut">Démarrer gratuitement<span class="btn-arrow">→</span></a>
+        <button class="btn btn-ghost-light" data-demo>Demander une démo</button>
       </div>
+      <p class="cta-rassurance reveal-h d4">14 jours d’essai · premier témoignage offert · sans carte bancaire</p>
       <div class="hero-stats reveal-h d5">
         <div class="hstat"><div class="n" data-count="79" data-suffix=" %">79 %</div><div class="l">des acheteurs B2B ont consulté une étude de cas dans l'année</div></div>
         <div class="hstat"><div class="n" data-count="100" data-suffix=" %">100 %</div><div class="l">automatisé, jusqu'à la publication</div></div>
@@ -695,7 +703,7 @@
           <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> Workflow d'approbation client automatisé (validation email 1 clic)</li>
           <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> 2 formats de sortie : PDF + image web</li>
         </ul>
-        <button class="btn btn-ghost-navy" data-demo>Demander une démo<span class="btn-arrow">→</span></button>
+        <a class="btn btn-ghost-navy" href="https://app.temonis.com/?inscription=1&amp;depuis=tarifs">Démarrer gratuitement<span class="btn-arrow">→</span></a>
       </div>
 
       <!-- GROWTH (featured) -->
@@ -713,7 +721,7 @@
           <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> Intégration CRM : push automatique HubSpot / Salesforce</li>
           <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> Dashboard de performance (clics et engagement par témoignage)</li>
         </ul>
-        <button class="btn btn-primary" data-demo>Demander une démo<span class="btn-arrow">→</span></button>
+        <a class="btn btn-primary" href="https://app.temonis.com/?inscription=1&amp;depuis=tarifs">Démarrer gratuitement<span class="btn-arrow">→</span></a>
       </div>
 
       <!-- SCALE -->
@@ -731,7 +739,7 @@
           <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> Multi-langue automatique (FR / EN / DE)</li>
           <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> Accès API pour l'intégration à votre outbound</li>
         </ul>
-        <button class="btn btn-ghost-navy" data-demo>Demander une démo<span class="btn-arrow">→</span></button>
+        <a class="btn btn-ghost-navy" href="https://app.temonis.com/?inscription=1&amp;depuis=tarifs">Démarrer gratuitement<span class="btn-arrow">→</span></a>
       </div>
 
     </div>
@@ -865,7 +873,7 @@
     <div class="cta-box fade">
       <h2>Prêt à transformer vos appels clients en preuves commerciales ?</h2>
       <p>Votre prochain témoignage sera généré automatiquement. Le premier est offert.</p>
-      <button class="btn btn-navy" data-demo>Demander une démo<span class="btn-arrow">→</span></button>
+      <a class="btn btn-navy" href="https://app.temonis.com/?inscription=1&amp;depuis=index">Démarrer gratuitement<span class="btn-arrow">→</span></a><button class="lien-demo" data-demo>ou demander une démo</button>
     </div>
   </div>
 </section>
@@ -893,7 +901,7 @@
         <a href="#how">Fonctionnement</a>
         <a href="#features">Automatisation</a>
         <a href="#pricing">Tarifs</a>
-        <a href="#" data-demo>Demander une démo</a>
+        <a href="https://app.temonis.com/?inscription=1&amp;depuis=pied-de-page">Démarrer gratuitement</a> <a href="#" data-demo>Demander une démo</a> <a href="https://app.temonis.com">Se connecter</a>
       </div>
       <div class="foot-col">
         <h4>Ressources</h4>
@@ -1192,7 +1200,7 @@
 <div class="sticky-cta" id="stickyCta">
   <div class="sticky-cta-inner">
     <p>Premier témoignage <b>offert</b> pendant la démo</p>
-    <button class="btn btn-primary" data-demo>Demander une démo<span class="btn-arrow">→</span></button>
+    <a class="btn btn-primary" href="https://app.temonis.com/?inscription=1&amp;depuis=tarifs">Démarrer gratuitement<span class="btn-arrow">→</span></a>
   </div>
 </div>
 

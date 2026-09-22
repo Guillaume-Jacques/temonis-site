@@ -49,6 +49,13 @@
   @media(max-width:940px){.nav-links{display:none;}.burger{display:flex;}.nav-links.open{display:flex;position:absolute;top:78px;left:0;right:0;flex-direction:column;background:var(--navy-2);padding:22px 28px;gap:18px;}.foot-grid{grid-template-columns:1fr 1fr;}}
   @media(max-width:560px){.wrap{padding:0 20px;}.foot-grid{grid-template-columns:1fr;}}
 </style>
+<style>/* Démarrer gratuitement (inscription libre, 22/09) */
+.nav-connexion{margin-right:6px;white-space:nowrap}.btn-nav-demo{white-space:nowrap}.nav-cta .btn{white-space:nowrap}
+.lien-demo{display:inline-block;margin:12px 0 0 14px;background:none;border:0;padding:0;font:inherit;font-size:15px;color:inherit;opacity:.85;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.lien-demo:hover{opacity:1}.cta-rassurance{margin-top:14px;font-size:14px;opacity:.8}
+@media (max-width:1599px){.btn-nav-demo{display:none}}
+@media (max-width:960px){.btn-nav-demo{display:inline-flex}.nav-connexion{margin:0}.lien-demo{margin-left:0;display:block}}
+</style>
 </head>
 <body>
 <nav id="nav" class="scrolled">
@@ -61,7 +68,7 @@
       <a class="navlink" href="/blog">Ressources</a>
       <a class="navlink" href="/pourquoi-temonis">Notre approche</a>
       <a class="navlink" href="/faq">Centre d'aide</a>
-      <div class="nav-cta"><button class="btn btn-primary" data-demo>Demander une démo</button></div>
+      <div class="nav-cta"><a class="navlink nav-connexion" href="https://app.temonis.com">Se connecter</a><button class="btn btn-ghost-light btn-nav-demo" data-demo>Demander une démo</button><a class="btn btn-primary" href="https://app.temonis.com/?inscription=1&amp;depuis=site-entete">Démarrer gratuitement</a></div>
     </div>
     <div class="burger" id="burger"><span></span><span></span><span></span></div>
   </div>
