@@ -42,6 +42,7 @@
 
   /* Search */
   .search-wrap{max-width:680px;margin:-28px auto 36px;position:relative;z-index:10;}
+  @media (max-width:720px){.search-wrap{margin-left:16px;margin-right:16px;}}
   .search-box{width:100%;padding:16px 22px 16px 52px;border-radius:14px;border:2px solid var(--line);background:var(--white);font-family:inherit;font-size:16px;color:var(--text);box-shadow:var(--shadow);transition:border .2s;}
   .search-box:focus{outline:none;border-color:var(--gold);}
   .search-icon{position:absolute;left:20px;top:50%;transform:translateY(-50%);color:var(--muted);pointer-events:none;}
@@ -339,13 +340,15 @@ function showCat(cat){
 }
 
 // ===== BACK TO GRID =====
-function showGrid(){
+// garderSaisie : true quand on revient à la grille depuis la recherche,
+// pour ne pas effacer ce que la personne est en train de taper.
+function showGrid(garderSaisie){
   currentCat=null;
   catDetail.classList.remove('show');
   searchResults.classList.remove('show');
   catGrid.style.display='';
   countEl.textContent='';
-  searchInput.value='';
+  if(garderSaisie!==true) searchInput.value='';
 }
 
 // ===== EVENT LISTENERS =====
@@ -365,7 +368,7 @@ searchInput.addEventListener('input',()=>{
   if(q.length<2){
     suggestionsEl.classList.remove('show');
     countEl.textContent='';
-    if(!currentCat){showGrid();}else{
+    if(!currentCat){showGrid(true);}else{
       searchResults.classList.remove('show');
       catDetail.classList.add('show');
     }
