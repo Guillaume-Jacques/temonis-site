@@ -1,0 +1,5 @@
+# En-tetes Netlify
+# Les polices peuvent etre lues depuis app.temonis.com (espace client) : autorisation CORS, cache long.
+/fonts/*
+  Access-Control-Allow-Origin: *
+  Cache-Control: public, max-age=31536000, immutable
