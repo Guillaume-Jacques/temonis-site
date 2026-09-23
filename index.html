@@ -976,13 +976,21 @@
     if (stickyCta) stickyCta.classList.toggle('show', y > 600);
     if (bttBtn) bttBtn.classList.toggle('show', y > 800);
     /* Hero parallax: background zooms out, content fades up */
+    /* Sur téléphone et tablette, le texte reste net : pas de fondu (23/09).
+       Sur ordinateur, le fondu ne commence qu'à mi-hauteur et reste léger. */
     if (!reduceMotion && heroBg) {
-      const heroH = 650;
-      if (y < heroH) {
+      const heroH = heroContent.offsetHeight || 650;
+      if (y < heroH * 1.2) {
         const p = Math.min(y / heroH, 1);
         heroBg.style.transform = 'scale(' + (1.15 - p * 0.15) + ')';
-        heroContent.style.opacity = 1 - p * 1.3;
-        heroContent.style.transform = 'translateY(' + (y * 0.35) + 'px)';
+        if (window.innerWidth >= 900) {
+          const q = Math.max(0, (p - 0.5) / 0.5);
+          heroContent.style.opacity = 1 - q * 0.6;
+          heroContent.style.transform = 'translateY(' + (y * 0.2) + 'px)';
+        } else {
+          heroContent.style.opacity = '';
+          heroContent.style.transform = '';
+        }
       }
     }
   }
