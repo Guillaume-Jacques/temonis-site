@@ -456,6 +456,25 @@
 @media (max-width:1599px){.btn-nav-demo{display:none}}
 @media (max-width:960px){.btn-nav-demo{display:inline-flex}.nav-connexion{margin:0}.lien-demo{margin-left:0;display:block}}
 </style>
+<style id="ccm-accueil">
+  .ccm-accueil{display:grid;grid-template-columns:5fr 6fr;gap:60px;align-items:center;}
+  .ccm-accueil>*{min-width:0;}
+  .ccm-accueil h2{font-size:clamp(28px,3.2vw,40px);margin:10px 0 16px;}
+  .ccm-accueil-texte>p{color:var(--muted);font-size:18px;margin-bottom:22px;}
+  .ccm-args{list-style:none;margin:0 0 30px;padding:0;}
+  .ccm-args li{position:relative;padding-left:30px;margin-bottom:14px;font-size:16.5px;line-height:1.6;}
+  .ccm-args li::before{content:"";position:absolute;left:4px;top:9px;width:11px;height:11px;border-radius:3px;background:var(--gold);}
+  .ccm-args strong{color:var(--navy);}
+  .ccm-accueil-visuels{position:relative;padding-bottom:70px;}
+  .ecran{margin:0;background:#fff;border:1px solid var(--line-strong);border-radius:12px;overflow:hidden;box-shadow:var(--shadow-lg);}
+  .ecran-barre{display:flex;gap:6px;padding:9px 12px;background:var(--bg-alt);border-bottom:1px solid var(--line);}
+  .ecran-barre span{width:9px;height:9px;border-radius:50%;background:var(--line-strong);}
+  .ecran img{display:block;width:100%;height:auto;}
+  .ecran-principal{width:88%;}
+  .ecran-pdf{position:absolute;right:0;bottom:0;width:46%;border-radius:10px;}
+  .ccm-accueil-note{position:absolute;left:0;bottom:0;font-size:12.5px;color:var(--muted);margin:0;}
+  @media(max-width:900px){.ccm-accueil{grid-template-columns:1fr;gap:36px;}.ecran-principal{width:94%;}.ccm-accueil-visuels{padding-bottom:60px;}}
+</style>
 </head>
 <body>
 
@@ -466,8 +485,7 @@
   <div class="wrap nav-inner">
     <a href="/" class="logo"><span class="logo-mark"><svg viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="56" height="56" rx="13" fill="#4A6B4E" fill-opacity="0.10"/><rect width="55" height="55" x="0.5" y="0.5" rx="12.5" fill="none" stroke="#4A6B4E" stroke-opacity="0.32"/><rect x="11" y="14" width="34" height="7" rx="3.5" fill="#4A6B4E"/><rect x="24.5" y="21" width="7" height="18" rx="3.5" fill="#4A6B4E"/><circle cx="28" cy="43" r="3.5" fill="#4A6B4E"/></svg></span> Temonis</a>
     <div class="nav-links" id="navLinks">
-      <a class="navlink" href="#how">Fonctionnement</a>
-      <a class="navlink" href="#features">Automatisation</a>
+      <a class="navlink" href="/comment-ca-marche/">Comment ça marche</a>
       <a class="navlink" href="#pricing">Tarifs</a>
       <a class="navlink" href="/blog">Ressources</a>
       <a class="navlink" href="/pourquoi-temonis">Notre approche</a>
@@ -610,66 +628,22 @@
 
 <!-- ============ HOW IT WORKS ============ -->
 <section class="sec" id="how" style="background:var(--white);">
-  <div class="wrap">
-    <div class="sec-head fade">
+  <div class="wrap ccm-accueil">
+    <div class="ccm-accueil-texte fade">
       <span class="eyebrow">Comment ça marche</span>
-      <h2>Trois étapes, aucune intervention</h2>
-      <p>Vous branchez Temonis une fois. Ensuite, chaque témoignage se produit, se met en page et se publie sans que vous ayez à y penser.</p>
+      <h2>Vous déposez un appel, Temonis livre le témoignage</h2>
+      <p>Pas de questionnaire, pas d'entretien, pas de rédaction. Temonis part de ce que votre client a déjà dit et s'occupe du reste, jusqu'à son accord.</p>
+      <ul class="ccm-args">
+        <li><strong>Rédigé par l'IA.</strong> Contexte, résultats chiffrés et citations tirés de l'appel.</li>
+        <li><strong>À vos couleurs.</strong> Votre charte est lue sur votre site, appliquée à chaque témoignage.</li>
+        <li><strong>Validé par votre client.</strong> Un clic de sa part, un accord horodaté, puis le PDF, LinkedIn et votre site.</li>
+      </ul>
+      <a class="btn btn-ghost-navy" href="/comment-ca-marche/">Voir comment ça marche, en images<span class="btn-arrow">→</span></a>
     </div>
-    <div class="steps">
-      <div class="step fade">
-        <div class="step-line"></div>
-        <div class="step-num">1</div>
-        <div class="step-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 17H7A5 5 0 017 7h2M15 7h2a5 5 0 010 10h-2M8 12h8"/></svg></div>
-        <h3>Connectez vos outils</h3>
-        <p>Liez Modjo, Gong, HubSpot ou Salesforce en quelques clics. Temonis analyse vos conversations clients existantes, rien à enregistrer en plus.</p>
-      </div>
-      <div class="step fade">
-        <div class="step-line"></div>
-        <div class="step-num">2</div>
-        <div class="step-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l2.4 7.4H22l-6 4.5 2.3 7.1L12 16.6 5.7 21l2.3-7.1-6-4.5h7.6z"/></svg></div>
-        <h3>Temonis repère vos pépites</h3>
-        <p>L'IA identifie les clients dont les résultats et les verbatims feront les meilleurs témoignages, puis structure le récit.</p>
-      </div>
-      <div class="step fade">
-        <div class="step-num">3</div>
-        <div class="step-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 15V3M7 10l5 5 5-5M5 21h14"/></svg></div>
-        <h3>Le témoignage est publié</h3>
-        <p>Rédigé, mis en page à votre charte graphique et publié automatiquement. Vous validez d'un clic, ou vous laissez Temonis publier.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ FEATURES (NAVY) ============ -->
-<section class="sec dark on-navy" id="features">
-  <div class="wrap">
-    <div class="sec-head fade">
-      <span class="eyebrow">L'automatisation, de bout en bout</span>
-      <h2>Une chaîne de production complète</h2>
-      <p>Temonis produit entièrement un témoignage, de l'analyse de l'appel jusqu'à la page mise en forme.</p>
-    </div>
-    <div class="feat-grid">
-      <div class="feat fade">
-        <div class="feat-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1018 0 9 9 0 00-18 0zM12 7v5l3 3"/></svg></div>
-        <h3>Zéro brief, zéro relance</h3>
-        <p>Aucun questionnaire à envoyer, aucun client à relancer. Temonis travaille à partir de ce qui s'est déjà dit dans vos appels.</p>
-      </div>
-      <div class="feat fade">
-        <div class="feat-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3zM18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><circle cx="11" cy="11" r="2"/></svg></div>
-        <h3>Mise en page à votre charte</h3>
-        <p>Couleurs, typographies, logo : l'IA applique votre identité visuelle. Chaque témoignage ressemble aux vôtres, comme s'il sortait de votre studio.</p>
-      </div>
-      <div class="feat fade">
-        <div class="feat-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg></div>
-        <h3>Prêt à publier partout</h3>
-        <p>Page web, PDF commercial, one-pager, posts LinkedIn : chaque étude est déclinée dans les formats dont vos équipes ont besoin.</p>
-      </div>
-      <div class="feat fade">
-        <div class="feat-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4M12 3l7 4v5c0 5-3 8-7 9-4-1-7-4-7-9V7l7-4z"/></svg></div>
-        <h3>Validation avant publication</h3>
-        <p>Rien ne sort sans votre accord. Vous relisez, ajustez si besoin, puis publiez, ou laissez Temonis le faire pour vous.</p>
-      </div>
+    <div class="ccm-accueil-visuels fade">
+      <figure class="ecran ecran-principal"><div class="ecran-barre" aria-hidden="true"><span></span><span></span><span></span></div><img src="/comment-ca-marche/app-temoignages.webp" alt="Liste des témoignages dans l’espace Temonis" width="1270" height="772" loading="lazy" decoding="async" /></figure>
+      <figure class="ecran ecran-pdf"><img src="/comment-ca-marche/app-pdf.webp" alt="Témoignage mis en page en PDF aux couleurs de la marque" width="810" height="716" loading="lazy" decoding="async" /></figure>
+      <p class="ccm-accueil-note">Espace de démonstration : entreprises fictives.</p>
     </div>
   </div>
 </section>
@@ -918,8 +892,7 @@
       </div>
       <div class="foot-col">
         <h4>Produit</h4>
-        <a href="#how">Fonctionnement</a>
-        <a href="#features">Automatisation</a>
+        <a href="/comment-ca-marche/">Comment ça marche</a>
         <a href="#pricing">Tarifs</a>
         <a href="https://app.temonis.com/?inscription=1&amp;depuis=pied-de-page">Démarrer gratuitement</a> <a href="#" data-demo>Demander une démo</a> <a href="https://app.temonis.com">Se connecter</a>
       </div>
