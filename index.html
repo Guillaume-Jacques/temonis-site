@@ -711,7 +711,7 @@
 <rect x="302" y="132" width="120" height="7" rx="3.5" class="ia-ligne"/>
 <rect x="302" y="146" width="92" height="7" rx="3.5" class="ia-ligne"/>
 <text x="302" y="178" class="ia-chiffre">−60 %</text>
-<text x="360" y="178" class="ia-titre">de temps passé</text>
+<text x="374" y="178" class="ia-titre">de temps passé</text>
 <g class="ia-valide"><rect x="302" y="192" width="72" height="22" rx="11" class="ia-badge"/><path d="M312 203l4 4 7-8" class="ia-coche"/><text x="328" y="207" class="ia-badge-txt">Validé</text></g>
 </g>
 <text x="282" y="62" class="ia-label">Votre témoignage</text>
@@ -1591,5 +1591,6 @@ footer{background:var(--bg-alt);color:var(--text);border-top:1px solid var(--lin
     .nav-links.open .nav-cta{flex-direction:column;align-items:stretch;width:100%;}
   }
 </style>
+<script>(function(){var v=document.querySelector(".ecran-principal video");if(!v)return;if(window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches){v.removeAttribute("autoplay");v.pause();return}if(!("IntersectionObserver" in window))return;new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){var p=v.play();if(p&&p.catch)p.catch(function(){})}else{v.pause()}})},{threshold:.25}).observe(v)})();</script>
 </body>
 </html>
