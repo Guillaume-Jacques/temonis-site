@@ -470,10 +470,40 @@
   .ecran-barre{display:flex;gap:6px;padding:9px 12px;background:var(--bg-alt);border-bottom:1px solid var(--line);}
   .ecran-barre span{width:9px;height:9px;border-radius:50%;background:var(--line-strong);}
   .ecran img{display:block;width:100%;height:auto;}
+  .ecran video{display:block;width:100%;height:auto;}
   .ecran-principal{width:88%;}
   .ecran-pdf{position:absolute;right:0;bottom:0;width:46%;border-radius:10px;}
   .ccm-accueil-note{position:absolute;left:0;bottom:0;font-size:12.5px;color:var(--muted);margin:0;}
   @media(max-width:900px){.ccm-accueil{grid-template-columns:1fr;gap:36px;}.ecran-principal{width:94%;}.ccm-accueil-visuels{padding-bottom:60px;}}
+
+  /* Illustration « Pourquoi maintenant » (24/09) */
+  .sec-intro{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:56px;align-items:center;margin-bottom:56px}
+  .sec-intro .sec-head{margin-bottom:0}
+  .illus-appels{margin:0}
+  .illus-appels svg{display:block;width:100%;height:auto;overflow:visible}
+  .illus-appels figcaption{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  .ia-label{font:600 11px/1 Inter,system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;fill:var(--gold-deep)}
+  .ia-carte{fill:#fff;stroke:var(--line-strong);stroke-width:1}
+  .ia-carte-t{filter:drop-shadow(0 10px 24px rgba(51,55,47,.10))}
+  .ia-pastille{fill:var(--gold-soft);stroke:var(--gold-border)}
+  .ia-tel{fill:none;stroke:var(--gold-deep);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+  .ia-titre{font:500 10.5px/1 Inter,system-ui,sans-serif;fill:var(--muted)}
+  .ia-onde{fill:var(--gold);opacity:.55;transform-box:fill-box;transform-origin:center;animation:iaOnde 1.6s ease-in-out infinite;animation-delay:var(--k)}
+  .ia-lien{fill:none;stroke:var(--gold-border);stroke-width:1.2;stroke-dasharray:3 5}
+  .ia-flux{fill:none;stroke:var(--gold-deep);stroke-width:2;stroke-linecap:round;stroke-dasharray:10 120;animation:iaFlux 2.8s linear infinite}
+  .ia-accent{fill:var(--gold-deep)}
+  .ia-guillemet{font:700 38px/1 Georgia,serif;fill:var(--gold)}
+  .ia-ligne{fill:var(--line)}
+  .ia-chiffre{font:800 18px/1 "Plus Jakarta Sans",Inter,sans-serif;fill:var(--navy)}
+  .ia-badge{fill:var(--gold-soft);stroke:var(--gold-border)}
+  .ia-coche{fill:none;stroke:var(--gold-deep);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .ia-badge-txt{font:600 11px/1 Inter,system-ui,sans-serif;fill:var(--gold-deep)}
+  .ia-valide{animation:iaValide 5.6s ease-in-out infinite}
+  @keyframes iaOnde{0%,100%{transform:scaleY(.45)}50%{transform:scaleY(1)}}
+  @keyframes iaFlux{from{stroke-dashoffset:130}to{stroke-dashoffset:0}}
+  @keyframes iaValide{0%,55%{opacity:0;transform:translateY(4px)}65%,100%{opacity:1;transform:none}}
+  @media(max-width:900px){.sec-intro{grid-template-columns:1fr;gap:32px}.illus-appels{max-width:440px}}
+  @media(prefers-reduced-motion:reduce){.ia-onde,.ia-flux,.ia-valide{animation:none}.ia-valide{opacity:1}}
 </style>
 </head>
 <body>
@@ -572,10 +602,122 @@
 <!-- ============ PROBLEM ============ -->
 <section class="sec">
   <div class="wrap">
+    <div class="sec-intro">
     <div class="sec-head fade">
       <span class="eyebrow">Pourquoi maintenant</span>
       <h2>La preuve client existe déjà, personne ne la produit</h2>
       <p>Vos acheteurs réclament des références. Vos équipes, elles, n'ont ni le temps ni les outils pour les produire au rythme attendu.</p>
+    </div>
+    <figure class="illus-appels fade" aria-label="Vos appels clients contiennent déjà vos témoignages : Temonis les transforme en témoignage validé">
+<svg viewBox="0 0 460 300" role="img" aria-hidden="true" focusable="false">
+<defs><clipPath id="ia-clip"><rect x="282" y="72" width="178" height="156" rx="14"/></clipPath></defs>
+<text x="0" y="8" class="ia-label">Vos appels enregistrés</text>
+<g class="ia-appel" style="--d:0.0s">
+<rect x="0" y="18" width="190" height="44" rx="10" class="ia-carte"/>
+<circle cx="22" cy="40" r="11" class="ia-pastille"/>
+<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" class="ia-tel" transform="translate(15.4 33.4) scale(0.55)"/>
+<text x="42" y="36" class="ia-titre">Appel client · 38 min</text>
+<rect x="42.0" y="50.0" width="3.2" height="8" rx="1.6" class="ia-onde" style="--k:0.00s"/>
+<rect x="48.5" y="46.0" width="3.2" height="16" rx="1.6" class="ia-onde" style="--k:0.09s"/>
+<rect x="55.0" y="48.5" width="3.2" height="11" rx="1.6" class="ia-onde" style="--k:0.18s"/>
+<rect x="61.5" y="44.0" width="3.2" height="20" rx="1.6" class="ia-onde" style="--k:0.27s"/>
+<rect x="68.0" y="47.5" width="3.2" height="13" rx="1.6" class="ia-onde" style="--k:0.36s"/>
+<rect x="74.5" y="50.5" width="3.2" height="7" rx="1.6" class="ia-onde" style="--k:0.45s"/>
+<rect x="81.0" y="45.5" width="3.2" height="17" rx="1.6" class="ia-onde" style="--k:0.54s"/>
+<rect x="87.5" y="49.0" width="3.2" height="10" rx="1.6" class="ia-onde" style="--k:0.63s"/>
+<rect x="94.0" y="47.0" width="3.2" height="14" rx="1.6" class="ia-onde" style="--k:0.72s"/>
+<rect x="100.5" y="51.0" width="3.2" height="6" rx="1.6" class="ia-onde" style="--k:0.81s"/>
+<rect x="107.0" y="48.0" width="3.2" height="12" rx="1.6" class="ia-onde" style="--k:0.90s"/>
+</g>
+<g class="ia-appel" style="--d:0.4s">
+<rect x="0" y="74" width="190" height="44" rx="10" class="ia-carte"/>
+<circle cx="22" cy="96" r="11" class="ia-pastille"/>
+<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" class="ia-tel" transform="translate(15.4 89.4) scale(0.55)"/>
+<text x="42" y="92" class="ia-titre">Point trimestriel · 52 min</text>
+<rect x="42.0" y="106.0" width="3.2" height="8" rx="1.6" class="ia-onde" style="--k:0.40s"/>
+<rect x="48.5" y="102.0" width="3.2" height="16" rx="1.6" class="ia-onde" style="--k:0.49s"/>
+<rect x="55.0" y="104.5" width="3.2" height="11" rx="1.6" class="ia-onde" style="--k:0.58s"/>
+<rect x="61.5" y="100.0" width="3.2" height="20" rx="1.6" class="ia-onde" style="--k:0.67s"/>
+<rect x="68.0" y="103.5" width="3.2" height="13" rx="1.6" class="ia-onde" style="--k:0.76s"/>
+<rect x="74.5" y="106.5" width="3.2" height="7" rx="1.6" class="ia-onde" style="--k:0.85s"/>
+<rect x="81.0" y="101.5" width="3.2" height="17" rx="1.6" class="ia-onde" style="--k:0.94s"/>
+<rect x="87.5" y="105.0" width="3.2" height="10" rx="1.6" class="ia-onde" style="--k:1.03s"/>
+<rect x="94.0" y="103.0" width="3.2" height="14" rx="1.6" class="ia-onde" style="--k:1.12s"/>
+<rect x="100.5" y="107.0" width="3.2" height="6" rx="1.6" class="ia-onde" style="--k:1.21s"/>
+<rect x="107.0" y="104.0" width="3.2" height="12" rx="1.6" class="ia-onde" style="--k:1.30s"/>
+</g>
+<g class="ia-appel" style="--d:0.8s">
+<rect x="0" y="130" width="190" height="44" rx="10" class="ia-carte"/>
+<circle cx="22" cy="152" r="11" class="ia-pastille"/>
+<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" class="ia-tel" transform="translate(15.4 145.4) scale(0.55)"/>
+<text x="42" y="148" class="ia-titre">Bilan projet · 45 min</text>
+<rect x="42.0" y="162.0" width="3.2" height="8" rx="1.6" class="ia-onde" style="--k:0.80s"/>
+<rect x="48.5" y="158.0" width="3.2" height="16" rx="1.6" class="ia-onde" style="--k:0.89s"/>
+<rect x="55.0" y="160.5" width="3.2" height="11" rx="1.6" class="ia-onde" style="--k:0.98s"/>
+<rect x="61.5" y="156.0" width="3.2" height="20" rx="1.6" class="ia-onde" style="--k:1.07s"/>
+<rect x="68.0" y="159.5" width="3.2" height="13" rx="1.6" class="ia-onde" style="--k:1.16s"/>
+<rect x="74.5" y="162.5" width="3.2" height="7" rx="1.6" class="ia-onde" style="--k:1.25s"/>
+<rect x="81.0" y="157.5" width="3.2" height="17" rx="1.6" class="ia-onde" style="--k:1.34s"/>
+<rect x="87.5" y="161.0" width="3.2" height="10" rx="1.6" class="ia-onde" style="--k:1.43s"/>
+<rect x="94.0" y="159.0" width="3.2" height="14" rx="1.6" class="ia-onde" style="--k:1.52s"/>
+<rect x="100.5" y="163.0" width="3.2" height="6" rx="1.6" class="ia-onde" style="--k:1.61s"/>
+<rect x="107.0" y="160.0" width="3.2" height="12" rx="1.6" class="ia-onde" style="--k:1.70s"/>
+</g>
+<g class="ia-appel" style="--d:1.2s">
+<rect x="0" y="186" width="190" height="44" rx="10" class="ia-carte"/>
+<circle cx="22" cy="208" r="11" class="ia-pastille"/>
+<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" class="ia-tel" transform="translate(15.4 201.4) scale(0.55)"/>
+<text x="42" y="204" class="ia-titre">Appel de suivi · 31 min</text>
+<rect x="42.0" y="218.0" width="3.2" height="8" rx="1.6" class="ia-onde" style="--k:1.20s"/>
+<rect x="48.5" y="214.0" width="3.2" height="16" rx="1.6" class="ia-onde" style="--k:1.29s"/>
+<rect x="55.0" y="216.5" width="3.2" height="11" rx="1.6" class="ia-onde" style="--k:1.38s"/>
+<rect x="61.5" y="212.0" width="3.2" height="20" rx="1.6" class="ia-onde" style="--k:1.47s"/>
+<rect x="68.0" y="215.5" width="3.2" height="13" rx="1.6" class="ia-onde" style="--k:1.56s"/>
+<rect x="74.5" y="218.5" width="3.2" height="7" rx="1.6" class="ia-onde" style="--k:1.65s"/>
+<rect x="81.0" y="213.5" width="3.2" height="17" rx="1.6" class="ia-onde" style="--k:1.74s"/>
+<rect x="87.5" y="217.0" width="3.2" height="10" rx="1.6" class="ia-onde" style="--k:1.83s"/>
+<rect x="94.0" y="215.0" width="3.2" height="14" rx="1.6" class="ia-onde" style="--k:1.92s"/>
+<rect x="100.5" y="219.0" width="3.2" height="6" rx="1.6" class="ia-onde" style="--k:2.01s"/>
+<rect x="107.0" y="216.0" width="3.2" height="12" rx="1.6" class="ia-onde" style="--k:2.10s"/>
+</g>
+<g class="ia-appel" style="--d:1.6s">
+<rect x="0" y="242" width="190" height="44" rx="10" class="ia-carte"/>
+<circle cx="22" cy="264" r="11" class="ia-pastille"/>
+<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" class="ia-tel" transform="translate(15.4 257.4) scale(0.55)"/>
+<text x="42" y="260" class="ia-titre">Revue annuelle · 60 min</text>
+<rect x="42.0" y="274.0" width="3.2" height="8" rx="1.6" class="ia-onde" style="--k:1.60s"/>
+<rect x="48.5" y="270.0" width="3.2" height="16" rx="1.6" class="ia-onde" style="--k:1.69s"/>
+<rect x="55.0" y="272.5" width="3.2" height="11" rx="1.6" class="ia-onde" style="--k:1.78s"/>
+<rect x="61.5" y="268.0" width="3.2" height="20" rx="1.6" class="ia-onde" style="--k:1.87s"/>
+<rect x="68.0" y="271.5" width="3.2" height="13" rx="1.6" class="ia-onde" style="--k:1.96s"/>
+<rect x="74.5" y="274.5" width="3.2" height="7" rx="1.6" class="ia-onde" style="--k:2.05s"/>
+<rect x="81.0" y="269.5" width="3.2" height="17" rx="1.6" class="ia-onde" style="--k:2.14s"/>
+<rect x="87.5" y="273.0" width="3.2" height="10" rx="1.6" class="ia-onde" style="--k:2.23s"/>
+<rect x="94.0" y="271.0" width="3.2" height="14" rx="1.6" class="ia-onde" style="--k:2.32s"/>
+<rect x="100.5" y="275.0" width="3.2" height="6" rx="1.6" class="ia-onde" style="--k:2.41s"/>
+<rect x="107.0" y="272.0" width="3.2" height="12" rx="1.6" class="ia-onde" style="--k:2.50s"/>
+</g>
+<path d="M190 40 C 235 40, 245 150, 282 150" class="ia-lien"/>
+<path d="M190 96 C 235 96, 245 150, 282 150" class="ia-lien"/>
+<path d="M190 152 C 235 152, 245 150, 282 150" class="ia-lien"/>
+<path d="M190 208 C 235 208, 245 150, 282 150" class="ia-lien"/>
+<path d="M190 264 C 235 264, 245 150, 282 150" class="ia-lien"/>
+<path d="M190 152 C 235 152, 245 150, 282 150" class="ia-flux"/>
+<g class="ia-temoignage">
+<rect x="282" y="72" width="178" height="156" rx="14" class="ia-carte ia-carte-t"/>
+<rect x="282" y="72" width="5" height="156" class="ia-accent" clip-path="url(#ia-clip)"/>
+<text x="302" y="108" class="ia-guillemet">“</text>
+<rect x="302" y="118" width="136" height="7" rx="3.5" class="ia-ligne"/>
+<rect x="302" y="132" width="120" height="7" rx="3.5" class="ia-ligne"/>
+<rect x="302" y="146" width="92" height="7" rx="3.5" class="ia-ligne"/>
+<text x="302" y="178" class="ia-chiffre">−60 %</text>
+<text x="360" y="178" class="ia-titre">de temps passé</text>
+<g class="ia-valide"><rect x="302" y="192" width="72" height="22" rx="11" class="ia-badge"/><path d="M312 203l4 4 7-8" class="ia-coche"/><text x="328" y="207" class="ia-badge-txt">Validé</text></g>
+</g>
+<text x="282" y="62" class="ia-label">Votre témoignage</text>
+</svg>
+<figcaption>Illustration : la matière de vos témoignages est déjà dans vos appels.</figcaption>
+</figure>
     </div>
     <div class="prob-grid">
       <div class="prob-card fade">
@@ -641,7 +783,7 @@
       <a class="btn btn-ghost-navy" href="/comment-ca-marche/">Voir comment ça marche, en images<span class="btn-arrow">→</span></a>
     </div>
     <div class="ccm-accueil-visuels fade">
-      <figure class="ecran ecran-principal"><div class="ecran-barre" aria-hidden="true"><span></span><span></span><span></span></div><img src="/comment-ca-marche/app-temoignages.webp" alt="Liste des témoignages dans l’espace Temonis" width="1270" height="772" loading="lazy" decoding="async" /></figure>
+      <figure class="ecran ecran-principal"><div class="ecran-barre" aria-hidden="true"><span></span><span></span><span></span></div><video src="/comment-ca-marche/video-pdf.mp4" autoplay muted loop playsinline preload="metadata" width="1280" height="652" aria-label="Vidéo : ouvrir un témoignage et son PDF depuis l’espace Temonis"></video></figure>
       <figure class="ecran ecran-pdf"><img src="/comment-ca-marche/app-pdf.webp" alt="Témoignage mis en page en PDF aux couleurs de la marque" width="810" height="716" loading="lazy" decoding="async" /></figure>
       <p class="ccm-accueil-note">Espace de démonstration : entreprises fictives.</p>
     </div>
