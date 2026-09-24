@@ -170,7 +170,7 @@
   <div class="cat-card" data-cat="securite">
     <div class="cat-card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div>
     <h3>Sécurité et RGPD</h3>
-    <p>3 questions</p>
+    <p>10 questions</p>
   </div>
   <div class="cat-card" data-cat="resultats">
     <div class="cat-card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
@@ -280,9 +280,16 @@ const DATA={
     {q:"Quels moyens de paiement acceptez-vous ?",a:"Carte bancaire (Visa, Mastercard, American Express) et virement bancaire pour les plans Growth et Scale. Facturation mensuelle en euros HT."},
   ]},
   securite:{title:"Sécurité et RGPD",questions:[
-    {q:"Où sont hébergées mes données ?",a:"Vos données sont hébergées dans l'Union Européenne, conformément au RGPD. Vos conversations ne sont jamais stockées au-delà du traitement nécessaire."},
-    {q:"Temonis est-il conforme au RGPD ?",a:"Oui. Consentement client recueilli avant publication, droit de retrait garanti, données conservées pendant la durée du contrat, preuve d'accord des témoins gardée 5 ans. Consultez notre <a href='confidentialite.html'>politique de confidentialité</a>."},
-    {q:"Mes conversations clients sont-elles stockées par Temonis ?",a:"Non. Temonis accède aux conversations en lecture seule pour l'analyse. Les transcripts complets ne sont pas stockés."},
+    {q:"Où sont hébergées mes données ?",a:"Vos transcriptions, témoignages, PDF et preuves d'accord sont stockés dans l'Union européenne (Paris), et les automatisations tournent en Europe. Trois prestataires sont situés aux États-Unis : la rédaction par IA (Anthropic), l'envoi des emails (Resend) et l'hébergement de l'interface (Netlify), avec des transferts encadrés par les clauses contractuelles types. La liste complète est sur notre page <a href='/securite'>Sécurité</a>."},
+    {q:"L'IA est-elle entraînée sur mes données ?",a:"Non. Le modèle Claude d'Anthropic est appelé depuis nos serveurs, et ses conditions commerciales interdisent d'utiliser vos contenus pour entraîner ses modèles. Les échanges sont supprimés de ses serveurs sous 30 jours. L'IA propose un texte, elle ne publie rien sans validation."},
+    {q:"Temonis est-il une solution française et souveraine ?",a:"Temonis est développé en France par une société française, et vos données sont stockées dans l'Union européenne. Par transparence, certains prestataires sont des sociétés américaines : nous ne revendiquons donc pas de qualification de souveraineté comme SecNumCloud. Le passage de la rédaction par IA en Europe est en préparation."},
+    {q:"Temonis est-il conforme au RGPD ?",a:"Oui. Vous êtes responsable du traitement, Temonis est sous-traitant (article 28). Notre <a href='/traitement-des-donnees'>accord de traitement des données</a> est public, l'accord de chaque témoin est recueilli avant publication et sa preuve est gardée 5 ans. Voir aussi la <a href='/confidentialite'>politique de confidentialité</a>."},
+    {q:"Temonis conserve-t-il mes conversations clients ?",a:"Oui, les transcriptions que vous importez ou que vos outils envoient sont conservées dans votre espace pendant la durée du contrat, pour rédiger et retravailler vos témoignages. Elles sont supprimées à la fin du contrat, ou avant sur simple demande à support@temonis.com."},
+    {q:"Qui peut accéder à mes données ?",a:"Uniquement les membres de votre organisation : chaque espace est cloisonné dans la base de données elle-même, et la double authentification est obligatoire. Le propriétaire du compte gère l'équipe et les réglages. L'équipe Temonis ne lit pas vos témoignages : son écran d'administration n'affiche que des compteurs."},
+    {q:"Mes données sont-elles chiffrées ?",a:"Oui. Toutes les communications passent en HTTPS (TLS), les données sont chiffrées au repos par nos hébergeurs (AES-256), et les jetons qui relient Temonis à vos outils sont stockés dans un coffre chiffré, révocables à tout moment."},
+    {q:"Que se passe-t-il en cas d'incident de sécurité ?",a:"Nous vous prévenons sous 48 heures si un incident touche vos données, avec sa nature, les données concernées et les mesures prises. Vous gardez ainsi le temps de notifier la CNIL dans le délai légal de 72 heures si nécessaire."},
+    {q:"Temonis est-il certifié ISO 27001 ou SOC 2 ?",a:"Pas encore. Nous nous appuyons sur des prestataires certifiés (Supabase, Anthropic, Resend, Netlify notamment) et un test d'intrusion par un cabinet indépendant est prévu avant l'accueil de nos premiers grands comptes."},
+    {q:"Mon service informatique m'envoie un questionnaire sécurité, comment faire ?",a:"Les réponses aux questions courantes sont sur notre page <a href='/securite'>Sécurité</a> et dans le centre d'aide de votre espace, rubrique Sécurité et RGPD. Pour un questionnaire au format de votre entreprise, écrivez à support@temonis.com : nous le remplissons avec vous."},
   ]},
   resultats:{title:"Résultats et ROI",questions:[
     {q:"Quel retour sur investissement attendre ?",a:"Le plan Starter à 249 €/mois remplace un processus que nous estimons à 1 115 €/mois, soit 866 € d'économie directe par mois, environ 3,5 fois le prix de l'abonnement. L'effet sur le taux de closing n'est pas inclus dans ce calcul, il dépend de votre cycle de vente."},
