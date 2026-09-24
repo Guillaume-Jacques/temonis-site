@@ -252,8 +252,8 @@ burger.addEventListener('click',()=>navLinks.classList.toggle('open'));
 // ===== FAQ DATA =====
 const DATA={
   fonctionnement:{title:"Comment ça marche",questions:[
-    {q:"Comment Temonis accède-t-il à mes conversations clients ?",a:"Temonis se connecte à Modjo, Gong ou Chorus en lecture seule, via les intégrations officielles. Aucune donnée n'est modifiée. Vous pouvez aussi connecter votre CRM (HubSpot, Salesforce) pour enrichir le contexte client. Vous gardez le contrôle des accès à tout moment."},
-    {q:"Combien de temps pour recevoir mon premier témoignage ?",a:"La mise en place prend environ 30 minutes (connexion de vos outils). Ensuite, la production est entièrement automatisée : dès que Temonis détecte une conversation client à fort potentiel, le témoignage est généré, mis en page et soumis à votre validation."},
+    {q:"Comment Temonis accède-t-il à mes conversations clients ?",a:"Temonis se connecte en lecture seule à Modjo, Gong, Aircall et HubSpot : vous branchez l'outil vous-même en deux minutes. Pour Chorus et Salesforce, nous faisons la connexion avec vous. Vous pouvez aussi déposer la transcription d'un appel. Aucune donnée n'est modifiée, vous gardez le contrôle des accès à tout moment."},
+    {q:"Combien de temps pour recevoir mon premier témoignage ?",a:"La mise en place prend quelques minutes (connexion de votre outil ou dépôt d'un appel). Ensuite, la production est entièrement automatisée : dès que Temonis détecte une conversation client à fort potentiel, le témoignage est généré, mis en page et soumis à votre validation."},
     {q:"Comment se passe la validation par le client ?",a:"Le client reçoit un e-mail avec un aperçu du témoignage et le valide en un clic. Pas de questionnaire, pas d'entretien. Il peut demander des modifications si nécessaire. Rien n'est publié sans son accord explicite."},
     {q:"Les témoignages respectent-ils vraiment ma charte graphique ?",a:"Oui. Vous renseignez votre charte une fois - couleurs, typographies, logo, ton - et l'IA l'applique à chaque production. Le résultat ressemble à vos contenus, pas à un modèle générique."},
     {q:"Puis-je relire et modifier avant publication ?",a:"Absolument. Chaque témoignage vous est soumis pour validation. Vous pouvez l'ajuster, le publier d'un clic, ou laisser Temonis le publier automatiquement selon vos règles."},
@@ -261,18 +261,18 @@ const DATA={
     {q:"Est-ce que le client doit être interviewé ?",a:"Non. Temonis travaille à partir des conversations déjà enregistrées dans Modjo ou Gong. Le client n'est sollicité que pour une validation en un clic avant publication."},
   ]},
   integrations:{title:"Intégrations",questions:[
-    {q:"Quels outils sont compatibles avec Temonis ?",a:"Temonis s'intègre avec les outils d'intelligence conversationnelle (Modjo, Gong, Chorus, Aircall) et les CRM (HubSpot, Salesforce). La connexion se fait via les API officielles, en lecture seule, en environ 30 minutes."},
-    {q:"Combien de temps pour connecter Temonis à mes outils ?",a:"Environ 30 minutes. La connexion se fait via les intégrations officielles de Modjo, Gong, HubSpot ou Salesforce. Pas de développement technique nécessaire."},
+    {q:"Quels outils sont compatibles avec Temonis ?",a:"Branchement direct, en deux minutes : Modjo, Gong, Aircall et HubSpot. Avec notre aide : Chorus et Salesforce. Pour tous les autres outils (Teams, Zoom, Google Meet, Ringover…), vous déposez la transcription de l'appel. Toujours en lecture seule."},
+    {q:"Combien de temps pour connecter Temonis à mes outils ?",a:"Deux minutes pour Modjo, Gong, Aircall ou HubSpot : vous collez une clé ou vous vous connectez avec votre compte. Pour Chorus et Salesforce, nous faisons la connexion avec vous. Pas de développement technique nécessaire."},
     {q:"Les données de mes conversations sont-elles modifiées ?",a:"Non, jamais. Temonis accède à vos conversations en lecture seule. Aucune donnée n'est modifiée, déplacée ou supprimée dans vos outils."},
-    {q:"Temonis fonctionne-t-il avec d'autres outils que Modjo et Gong ?",a:"Oui. Temonis est aussi compatible avec Chorus, Aircall, HubSpot et Salesforce. D'autres intégrations sont en développement. Contactez-nous si vous utilisez un outil non listé."},
+    {q:"Temonis fonctionne-t-il avec d'autres outils que Modjo et Gong ?",a:"Oui. Aircall et HubSpot se branchent directement, Chorus et Salesforce avec notre aide, et tout autre outil par dépôt de la transcription. Contactez-nous si vous utilisez un outil non listé."},
   ]},
   formats:{title:"Formats et publication",questions:[
-    {q:"Quels formats de témoignages sont disponibles ?",a:"Selon votre plan : PDF, image web, posts LinkedIn, slides, one-pager. Sur le plan Growth et Scale, chaque témoignage est automatiquement décliné dans tous les formats nécessaires."},
-    {q:"Les témoignages peuvent-ils être publiés automatiquement sur LinkedIn ?",a:"Oui, à partir du plan Growth. Temonis peut publier sur LinkedIn, Google Business Profile, et intégrer un widget sur votre site web."},
+    {q:"Quels formats de témoignages sont disponibles ?",a:"Selon votre plan : PDF et image web dès Starter. Sur Growth et Scale, chaque témoignage est aussi décliné en post LinkedIn, encart email et avis Google, et s'affiche tout seul dans le widget de votre site."},
+    {q:"Comment diffuser mes témoignages sur LinkedIn et sur mon site ?",a:"À partir du plan Growth, chaque témoignage validé est décliné en post LinkedIn prêt à copier, et le widget à coller une fois sur votre site affiche automatiquement vos nouveaux témoignages."},
     {q:"Puis-je intégrer les témoignages directement sur mon site web ?",a:"Oui. Le plan Growth inclut un widget embarquable que vous pouvez intégrer sur votre site en quelques minutes."},
   ]},
   tarifs:{title:"Tarifs et abonnement",questions:[
-    {q:"Quel est le prix de Temonis ?",a:"Trois plans : Starter à 249 € HT/mois (4 témoignages), Growth à 499 € HT/mois (12 témoignages + distribution auto + CRM), Scale à 849 € HT/mois (40 témoignages + scoring IA + multi-langue). Sans engagement en mensuel ; 15 % de moins en annuel, soit 212, 424 et 722 € HT/mois."},
+    {q:"Quel est le prix de Temonis ?",a:"Trois plans : Starter à 249 € HT/mois (4 témoignages), Growth à 499 € HT/mois (12 témoignages + formats de diffusion et widget), Scale à 849 € HT/mois (40 témoignages). Sans engagement en mensuel ; 15 % de moins en annuel, soit 212, 424 et 722 € HT/mois."},
     {q:"Le premier témoignage est-il vraiment offert ?",a:"Oui. Sans carte bancaire, Temonis produit un vrai témoignage à partir de vos conversations, mis en page à votre charte. Vous le gardez, sans engagement."},
     {q:"Que se passe-t-il si je dépasse mon quota mensuel ?",a:"Vous pouvez passer au plan supérieur à tout moment. La mise à niveau est immédiate, sans interruption de service."},
     {q:"Y a-t-il un engagement de durée ?",a:"Pas en mensuel : résiliable à tout moment, sans frais ni préavis. L'abonnement annuel, 15 % moins cher, engage pour 12 mois."},
@@ -280,13 +280,13 @@ const DATA={
   ]},
   securite:{title:"Sécurité et RGPD",questions:[
     {q:"Où sont hébergées mes données ?",a:"Vos données sont hébergées dans l'Union Européenne, conformément au RGPD. Vos conversations ne sont jamais stockées au-delà du traitement nécessaire."},
-    {q:"Temonis est-il conforme au RGPD ?",a:"Oui. Consentement client recueilli avant publication, droit de retrait garanti, données conservées 12 mois maximum. Consultez notre <a href='confidentialite.html'>politique de confidentialité</a>."},
+    {q:"Temonis est-il conforme au RGPD ?",a:"Oui. Consentement client recueilli avant publication, droit de retrait garanti, données conservées pendant la durée du contrat, preuve d'accord des témoins gardée 5 ans. Consultez notre <a href='confidentialite.html'>politique de confidentialité</a>."},
     {q:"Mes conversations clients sont-elles stockées par Temonis ?",a:"Non. Temonis accède aux conversations en lecture seule pour l'analyse. Les transcripts complets ne sont pas stockés."},
   ]},
   resultats:{title:"Résultats et ROI",questions:[
     {q:"Quel retour sur investissement attendre ?",a:"Le plan Starter à 249 €/mois remplace un processus que nous estimons à 1 115 €/mois, soit 866 € d'économie directe par mois, environ 3,5 fois le prix de l'abonnement. L'effet sur le taux de closing n'est pas inclus dans ce calcul, il dépend de votre cycle de vente."},
     {q:"Combien de témoignages puis-je produire par mois ?",a:"4 (Starter), 12 (Growth) ou 40 (Scale) témoignages par mois, selon votre plan et le volume de conversations enregistrées."},
-    {q:"En combien de temps vais-je voir des résultats ?",a:"Les premiers témoignages sont générés dès la mise en place (30 minutes). L'impact sur le closing se mesure généralement à partir du deuxième mois."},
+    {q:"En combien de temps vais-je voir des résultats ?",a:"Le premier témoignage est généré dès le dépôt de votre premier appel. L'impact sur le closing se mesure généralement à partir du deuxième mois."},
   ]}
 };
 
