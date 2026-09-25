@@ -84,7 +84,18 @@
 .ccm-videos-grille{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;margin-top:30px;}
 @media (max-width:1000px){.ccm-videos-grille{grid-template-columns:repeat(2,1fr);}}
 .ccm-videos-grille figure{margin:0;}
-.ccm-videos-grille video{display:block;width:100%;aspect-ratio:4/5;border-radius:14px;border:1px solid var(--line);background:#f4f5f1;box-shadow:0 18px 40px -26px rgba(20,27,40,.35);}
+.ccm-video{position:relative;display:block;width:100%;padding:0;border:1px solid var(--line);background:#f4f5f1;cursor:pointer;border-radius:14px;overflow:hidden;box-shadow:0 18px 40px -26px rgba(20,27,40,.35);transition:transform .2s,box-shadow .2s;}
+.ccm-video:hover,.ccm-video:focus-visible{transform:translateY(-3px);box-shadow:0 26px 50px -24px rgba(20,27,40,.45);}
+.ccm-video video{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;pointer-events:none;}
+.ccm-play{position:absolute;left:50%;top:50%;width:58px;height:58px;margin:-29px 0 0 -29px;border-radius:50%;background:rgba(255,255,255,.94);box-shadow:0 8px 24px rgba(0,0,0,.18);transition:opacity .2s,transform .2s;}
+.ccm-play::after{content:"";position:absolute;left:23px;top:18px;border-style:solid;border-width:11px 0 11px 17px;border-color:transparent transparent transparent #2f4733;}
+.ccm-video:hover .ccm-play{opacity:0;transform:scale(.8);}
+.ccm-modale{position:fixed;inset:0;z-index:1000;display:flex;align-items:center;justify-content:center;padding:20px;}
+.ccm-modale[hidden]{display:none;}
+.ccm-modale-fond{position:absolute;inset:0;background:rgba(20,24,19,.78);}
+.ccm-modale-boite{position:relative;width:min(92vw,calc(86vh * .8));}
+.ccm-modale-boite video{display:block;width:100%;aspect-ratio:4/5;border-radius:14px;background:#000;}
+.ccm-fermer{position:absolute;top:-44px;right:0;width:36px;height:36px;border:0;border-radius:50%;background:#fff;color:#262a22;font-size:22px;line-height:36px;cursor:pointer;}
 .ccm-videos-grille figcaption{margin-top:10px;font-weight:600;font-size:14.5px;line-height:1.35;}
 @media (max-width:640px){.ccm-videos{padding:44px 0 4px;}.ccm-videos-grille{grid-template-columns:1fr;}}
 .ccm-steps{padding:40px 28px 30px;}
@@ -158,13 +169,35 @@
 <h2 id="ccm-videos-titre">Temonis en cinq vidéos de 30 secondes</h2>
 <p class="ccm-videos-intro">Tournées dans notre espace de démonstration, avec des entreprises fictives.</p>
 <div class="ccm-videos-grille">
-<figure><video src="/videos/temonis-demo-1-appel-temoignage.mp4#t=3.5" controls preload="metadata" playsinline aria-label="De l’appel au témoignage, en quatre étapes"></video><figcaption>De l’appel au témoignage, en quatre étapes</figcaption></figure>
-<figure><video src="/videos/temonis-demo-2-connecteurs.mp4#t=3.5" controls preload="metadata" playsinline aria-label="Brancher Zoom, Teams, Meet, HubSpot, Gong, Modjo ou Aircall"></video><figcaption>Brancher Zoom, Teams, Meet, HubSpot, Gong, Modjo ou Aircall</figcaption></figure>
-<figure><video src="/videos/temonis-demo-3-charte.mp4#t=3.5" controls preload="metadata" playsinline aria-label="Votre charte appliquée à chaque témoignage"></video><figcaption>Votre charte appliquée à chaque témoignage</figcaption></figure>
-<figure><video src="/videos/temonis-demo-4-accord.mp4#t=3.5" controls preload="metadata" playsinline aria-label="L’accord de votre client et les relances, sans vous"></video><figcaption>L’accord de votre client et les relances, sans vous</figcaption></figure>
-<figure><video src="/videos/temonis-demo-5-formats.mp4#t=3.5" controls preload="metadata" playsinline aria-label="Un témoignage, six formats prêts à diffuser"></video><figcaption>Un témoignage, six formats prêts à diffuser</figcaption></figure>
+<figure><button type="button" class="ccm-video" data-video="/videos/temonis-demo-1-appel-temoignage.mp4" aria-label="Lire la vidéo : De l’appel au témoignage, en quatre étapes"><video src="/videos/temonis-demo-1-appel-temoignage.mp4#t=3.5" muted playsinline preload="metadata" tabindex="-1"></video><span class="ccm-play" aria-hidden="true"></span></button><figcaption>De l’appel au témoignage, en quatre étapes</figcaption></figure>
+<figure><button type="button" class="ccm-video" data-video="/videos/temonis-demo-2-connecteurs.mp4" aria-label="Lire la vidéo : Brancher Zoom, Teams, Meet, HubSpot, Gong, Modjo ou Aircall"><video src="/videos/temonis-demo-2-connecteurs.mp4#t=3.5" muted playsinline preload="metadata" tabindex="-1"></video><span class="ccm-play" aria-hidden="true"></span></button><figcaption>Brancher Zoom, Teams, Meet, HubSpot, Gong, Modjo ou Aircall</figcaption></figure>
+<figure><button type="button" class="ccm-video" data-video="/videos/temonis-demo-3-charte.mp4" aria-label="Lire la vidéo : Votre charte appliquée à chaque témoignage"><video src="/videos/temonis-demo-3-charte.mp4#t=3.5" muted playsinline preload="metadata" tabindex="-1"></video><span class="ccm-play" aria-hidden="true"></span></button><figcaption>Votre charte appliquée à chaque témoignage</figcaption></figure>
+<figure><button type="button" class="ccm-video" data-video="/videos/temonis-demo-4-accord.mp4" aria-label="Lire la vidéo : L’accord de votre client et les relances, sans vous"><video src="/videos/temonis-demo-4-accord.mp4#t=3.5" muted playsinline preload="metadata" tabindex="-1"></video><span class="ccm-play" aria-hidden="true"></span></button><figcaption>L’accord de votre client et les relances, sans vous</figcaption></figure>
+<figure><button type="button" class="ccm-video" data-video="/videos/temonis-demo-5-formats.mp4" aria-label="Lire la vidéo : Un témoignage, six formats prêts à diffuser"><video src="/videos/temonis-demo-5-formats.mp4#t=3.5" muted playsinline preload="metadata" tabindex="-1"></video><span class="ccm-play" aria-hidden="true"></span></button><figcaption>Un témoignage, six formats prêts à diffuser</figcaption></figure>
 </div>
 </div>
+<div class="ccm-modale" hidden><div class="ccm-modale-fond" data-fermer></div><div class="ccm-modale-boite" role="dialog" aria-modal="true" aria-label="Vidéo de démonstration"><button type="button" class="ccm-fermer" data-fermer aria-label="Fermer">×</button><video controls playsinline></video></div></div>
+<script>
+(function () {
+  var modale = document.querySelector('.ccm-modale');
+  if (!modale) return;
+  var lecteur = modale.querySelector('video');
+  var dernier = null;
+  function fermer() { lecteur.pause(); lecteur.removeAttribute('src'); lecteur.load(); modale.hidden = true; if (dernier) dernier.focus(); }
+  document.querySelectorAll('.ccm-video').forEach(function (b) {
+    var apercu = b.querySelector('video');
+    b.addEventListener('mouseenter', function () { apercu.play().catch(function () {}); });
+    b.addEventListener('mouseleave', function () { apercu.pause(); apercu.currentTime = 3.5; });
+    b.addEventListener('click', function () {
+      dernier = b; lecteur.src = b.getAttribute('data-video'); modale.hidden = false;
+      lecteur.currentTime = 0; lecteur.play().catch(function () {});
+      modale.querySelector('.ccm-fermer').focus();
+    });
+  });
+  modale.querySelectorAll('[data-fermer]').forEach(function (e) { e.addEventListener('click', fermer); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !modale.hidden) fermer(); });
+})();
+</script>
 </section>
 
 <main class="wrap ccm-steps">
